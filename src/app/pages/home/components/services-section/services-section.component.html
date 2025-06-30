@@ -46,16 +46,33 @@
             />
           </ng-container>
           <div class="mt-4">
-            <button
-              pButton
-              label="{{ 'SERVICES.BUTTON.LEARN_MORE' | translate }}"
-              class="mr-xl mb-sm rtl:mr-0 rtl:ml-xl dga-neutral-primary"
-            ></button>
-            <button
-              pButton
-              label="{{ 'SERVICES.BUTTON.BUY_NOW' | translate }}"
-              class="p-button-primary"
-            ></button>
+            <ng-container *ngIf="item.link; else noLink">
+              <ng-container *ngIf="isExternalLink(item.link); else internalLink">
+                <a [href]="item.link" target="_blank" rel="noopener noreferrer">
+                  <button
+                    pButton
+                    label="{{ 'SERVICES.BUTTON.BUY_NOW' | translate }}"
+                    class="p-button-primary"
+                  ></button>
+                </a>
+              </ng-container>
+              <ng-template #internalLink>
+                <button
+                  pButton
+                  [routerLink]="item.link"
+                  label="{{ 'SERVICES.BUTTON.BUY_NOW' | translate }}"
+                  class="p-button-primary"
+                ></button>
+              </ng-template>
+            </ng-container>
+            <ng-template #noLink>
+              <button
+                pButton
+                disabled
+                label="{{ 'SERVICES.BUTTON.BUY_NOW' | translate }}"
+                class="p-button-primary"
+              ></button>
+            </ng-template>
           </div>
         </div>
       </ng-template>

@@ -1,30 +1,59 @@
 {
   "HOME": {
-    "TITLE": "Welcome to AfyaHub",
-    "ABOUT": "Your digital gateway to seamless healthcare."
+    "TITLE": "Welcome to Amanat Hail",
+    "ABOUT": "Learn more about Hail and its tourism."
   },
   "HEADER": {
     "TOPBAR": {
       "CONDITION": "Cloudy",
-      "CITY": "Al-Riyadh"
+      "CITY": "Hail"
     },
     "MENU": {
       "HOME": "Home",
-      "ABOUT": "About",
-      "SERVICES": "Services",
-      "NEWS": "News",
-      "EDUCATION": "Education",
-      "EDUCATION_ITEMS": {
-        "EDUCATION": "Education",
-        "RESEARCH": "Research",
-        "ANNUAL_WELLNESS_EXAM": "Annual Wellness Exam"
+      "MUNICIPALITY": "Hail Municipality",
+      "MUNICIPALITY_ITEMS": {
+        "PRINCE": "Hail Princes",
+        "HEADS": "Municipality Mayors",
+        "LOCATION": "About Hail",
+        "GEOGRAPHY": "Hail History",
+        "GUIDE": "Guide",
+        "MUNICIPALITIES": "Municipalities",
+        "MANAGEMENT": "Departments",
+        "OPEN_DATA": "Open Data",
+        "DATA_SHARING": "Open Source",
+        "STRUCTURE": "Organizational Structure",
+        "SYSTEMS": "Regulations"
       },
-      "CONTACT": "Contact"
+      "STRATEGY": "Municipality Strategy",
+      "STRATEGY_ITEMS": {
+        "VISION": "Our Vision",
+        "GOALS": "Our Goals",
+        "AUDIT": "Internal Audit"
+      },
+      "MAYOR": "Mayor",
+      "MAYOR_ITEMS": {
+        "MAYOR_INFO": "Mayor Info",
+        "MAYOR_CONTACT": "Mayor Contact",
+        "MAYOR_ADMIN": "Mayor Office"
+      },
+      "NEWS": "News",
+      "NEWS_ITEMS": {
+        "HAIL_NEWS": "Hail News",
+        "MUNICIPALITY_NEWS": "Municipality News"
+      },
+      "SERVICES": "Services",
+      "SERVICES_ITEMS": {
+        "INDIVIDUALS": "Individuals Services",
+        "BUSINESS": "Business Services",
+        "GOVERNMENT": "Government Services",
+        "EMPLOYEES": "Employee Services"
+      }
     },
     "BUTTON": {
       "SEARCH": "Search",
       "LANG_AR": "عربي",
       "LANG_EN": "English",
+      "LOGIN": "Login",
       "LOGOUT": "Logout"
     }
   },
@@ -32,114 +61,114 @@
     "MIC": "Microphone",
     "DECREASE": "Decrease text size",
     "INCREASE": "Increase text size",
+    "RESET": "Reset text size",
     "VIEW": "Toggle high contrast"
   },
 
   "HERO": {
     "ITEM1": {
-      "TITLE": "Welcome to AfyaHub",
-      "SUBTITLE": "Your digital gateway to seamless healthcare—find trusted clinics, book appointments, and manage your health journey all in one place.",
-      "LINK_TEXT": "Get Started"
+      "TITLE": "Hail Municipality",
+      "SUBTITLE": "Towards sustainable urban development and distinguished municipal services.",
+      "LINK_TEXT": "Explore services"
     },
     "ITEM2": {
-      "TITLE": "Book Appointments",
-      "SUBTITLE": "Schedule visits with top-rated clinics and experienced practitioners at your convenience, directly through AfyaHub.",
-      "LINK_TEXT": "Book Now"
+      "TITLE": "Digital Services",
+      "SUBTITLE": "An integrated set of digital services for citizens and residents.",
+      "LINK_TEXT": "Start now"
     },
     "ITEM3": {
-      "TITLE": "Discover Nearby Clinics",
-      "SUBTITLE": "Explore our network of certified clinics in your area and choose the best care for you and your family.",
-      "LINK_TEXT": "Explore Clinics"
+      "TITLE": "Municipality Initiatives",
+      "SUBTITLE": "Check out the latest projects and initiatives in the Hail region..",
+      "LINK_TEXT": "Learn more"
     }
   },
 
   "ABOUT": {
-    "TITLE": "About AfyaHub",
-    "TEXT": "AfyaHub is your one-stop portal for seamless access to clinic services, appointment scheduling, and healthcare resources. Discover trusted clinics, connect with expert practitioners, and take charge of your health journey with ease and confidence.",
+    "TITLE": "About Hail Municipality",
+    "TEXT": "Hail Municipality seeks to provide high-quality services through digital transformation, sustainable urban development, and improving the quality of life. We work to give our community access to services easily and transparently, in line with the Kingdom's Vision 2030.",
     "STATS": [
       {
-        "TITLE": "Clinics",
-        "COUNT": "250+"
+        "TITLE": "Services",
+        "COUNT": "100+"
       },
       {
-        "TITLE": "Doctors",
-        "COUNT": "1,200+"
+        "TITLE": "Beneficiaries",
+        "COUNT": "3M+"
       },
       {
-        "TITLE": "Appointments Booked",
+        "TITLE": "Completed Services",
         "COUNT": "75K+"
       },
       {
-        "TITLE": "Patients Served",
-        "COUNT": "500K+"
+        "TITLE": "Beneficiaries",
+        "COUNT": "3M+"
       }
     ]
   },
 
   "SERVICES": {
     "HEADER": {
-      "TITLE": "Our Services",
-      "SUBTITLE": "Explore the full suite of offerings on AfyaHub—designed to simplify access to quality healthcare, whether you need a quick consultation or a comprehensive wellness plan.",
+      "TITLE": "Municipal Services",
+      "SUBTITLE": "A suite of digital and civil services provided by the municipality to help our citizens and residents.",
       "VIEW_ALL": "View All Services"
     },
     "ITEMS": [
       {
-        "TITLE": "Online Consultation",
-        "TAGS": ["Video Visit", "24/7"],
-        "DESCRIPTION": "Connect with a certified clinician from anywhere for non-emergency advice and follow-ups."
+        "TITLE": "Issuing a Building Permit",
+        "TAGS": ["Construction Licenses", "Construction Permit"],
+        "DESCRIPTION": "An electronic service available on the Balady platform that enables beneficiaries to apply for a Building Permit or a Fencing Permit."
       },
       {
-        "TITLE": "Clinic Appointments",
-        "TAGS": ["In-Person", "All Specialties"],
-        "DESCRIPTION": "Find and book slots at partnered clinics across multiple specialties near you."
+        "TITLE": "Issuing a Commercial License",
+        "TAGS": ["Commercial licenses", "Food/drinks", "Medical", "Companies", "Legal"],
+        "DESCRIPTION": "An electronic service available on the Balady platform that allows users to commence commercial activities by issuing a Commercial License."
       },
       {
-        "TITLE": "Health Packages",
-        "TAGS": ["Preventive", "Customizable"],
-        "DESCRIPTION": "Choose from a range of screening and wellness packages tailored to your needs."
+        "TITLE": "Submitting a Report",
+        "TAGS": ["Municipal Complaint Submission", "Customer Relations System"],
+        "DESCRIPTION": "An electronic service available on the Balady platform, allowing individuals to register a complaint or observation related to municipal services."
       },
       {
-        "TITLE": "Lab Services",
-        "TAGS": ["Home Sample", "Fast Results"],
-        "DESCRIPTION": "Order lab tests online and get sample collection at home with quick digital reports."
+        "TITLE": "Hygiene Management",
+        "TAGS": ["Hygiene", "Maintenance"],
+        "DESCRIPTION": "Request cleaning services or report areas that need attention."
       },
       {
-        "TITLE": "Health Records",
-        "TAGS": ["Secure", "Portable"],
-        "DESCRIPTION": "Access and share your consolidated medical records anytime through your dashboard."
+        "TITLE": "Inquiry About Transactions Service",
+        "TAGS": ["Costumer Relations System", "Inquiry"],
+        "DESCRIPTION": "An electronic service available on the Balady platform, allowing beneficiaries to track administrative correspondence transactions recorded in the Murasilat system across the Ministry and its affiliated municipalities."
       },
       {
-        "TITLE": "Wellness Programs",
-        "TAGS": ["Fitness", "Nutrition"],
-        "DESCRIPTION": "Join personalized wellness and lifestyle programs curated by our experts."
+        "TITLE": "Public Parks and Facilities",
+        "TAGS": ["Public Services", "Tourism"],
+        "DESCRIPTION": "View public parks and facilities available to you."
       }
     ],
     "BUTTON": {
-      "BUY_NOW": "Book Now",
-      "LEARN_MORE": "Learn More"
+      "BUY_NOW": "Start Sevice"
     }
   },
 
   "NEWS": {
     "HEADER": {
-      "TITLE": "AfyaHub News",
-      "SUBTITLE": "Stay up to date with the latest clinic openings, health tips, and AfyaHub announcements to help you navigate your care journey.",
-      "VIEW_ALL": "View All"
+      "TITLE": "Municipality News",
+      "SUBTITLE": "Check out the most prominent events, initiatives and achievements implemented by Hail Municipality.",
+      "VIEW_ALL": "View All News"
     },
     "ITEMS": [
       {
-        "TITLE": "New Specialty Clinic Opens in Riyadh",
-        "DESCRIPTION": "AfyaHub welcomes its latest cardiology clinic located in the heart of Riyadh.",
+        "TITLE": "Hail Municipality implements 38 diverse community initiatives",
+        "DESCRIPTION": "During the third quarter of 2024, the Hail Region Municipality implemented 38 diverse community initiatives, as part of voluntary initiatives and programs aimed at developing the local community.",
         "BUTTON": "Read More"
       },
       {
-        "TITLE": "AfyaHub Launches Telehealth Services",
-        "DESCRIPTION": "Connect with board-certified doctors from home—our new telehealth feature goes live this month.",
+        "TITLE": "Hail Municipality showcases best community practices to improve the urban landscape",
+        "DESCRIPTION": "The Hail Region Municipality reviewed best practices in community engagement to improve the urban landscape, upgrade services, and a number of initiatives it is implementing with the aim of enhancing the quality of life.",
         "BUTTON": "Learn More"
       },
       {
-        "TITLE": "5 Tips for Staying Healthy This Summer",
-        "DESCRIPTION": "Keep cool and safe with these practical health tips from AfyaHub’s expert clinicians.",
+        "TITLE": "The Prince of Hail receives the first semi-annual media report on completed projects",
+        "DESCRIPTION": "His Highness Prince Abdulaziz bin Saad received the first semi-annual media report, which covers the completed projects of the region’s secretariat in the city of Hail and its affiliated governorates.",
         "BUTTON": "Read More"
       }
     ]
@@ -156,9 +185,9 @@
     "SOCIAL_MEDIA": "Social Media",
     "ACCESSIBILITY_TOOLS": "Accessibility Tools",
     "OVERVIEW_LINKS": {
-      "ABOUT": "About AfyaHub",
+      "ABOUT": "About Hail Municipality",
       "PRIVACY": "Privacy and terms of use",
-      "HOW_TO_USE": "How to use AfyaHub",
+      "HOW_TO_USE": "How to use Hail Municipality",
       "NEWS_EVENTS": "News and events",
       "SLA_STATS": "Service level agreement statistics"
     },
@@ -244,5 +273,222 @@
     "linksWithinText": "Links within a text body just like this example are underlined with a bold green color and",
     "standaloneLinks": "standalone links",
     "linkExample": "Link example"
+  },
+
+  "HELPSUPPORT": {
+    "breadcrumb": {
+      "parent": "Link",
+      "current": "Link"
+    },
+    "page": {
+      "title": "Help & Support",
+      "description": "We work continuously to make your experience through government services easier, see what support channel suits better your necessities."
+    },
+    "card1": {
+      "title": "Contact Us",
+      "description": "Here you can add a brief description of the content page. Usually this content page structure is used for standard content pages.",
+      "availability": {
+        "label": "Service availability:",
+        "value": "all week."
+      },
+      "response": {
+        "label": "Response time:",
+        "value": "within 5 days."
+      }
+    },
+    "card2": {
+      "title": "FAQs",
+      "description": "Here you can add a brief description of the content page. Usually this content page structure is used for standard content pages."
+    }
+  },
+  
+  "FAQs": {
+    "breadcrumb": {
+      "parent": "Link",
+      "current": "Link"
+    },
+    "page": {
+      "title": "FAQs",
+      "description": "Find answers to common questions about our products, services, and policies."
+    },
+    "contact": {
+      "title": "Comments & suggestions",
+      "description": "For any inquiry or feedback on Government Services, please fill the required information.",
+      "button": "Contact us"
+      },
+    "items": {
+      "q1": {
+        "question": "What is this FAQ section for?",
+        "answer": "answer"
+      },
+      "q2": {
+        "question": "How do I get started?",
+        "answer": "answer"
+      },
+      "q3": {
+        "question": "Can I customize this platform?",
+        "answer": "answer"
+      },
+      "q4": {
+        "question": "How do I contact support?",
+        "answer": "answer"
+      },
+      "q5": {
+        "question": "Where can I find more information?",
+        "answer": "answer"
+      },
+      "q6": {
+        "question": "Question",
+        "answer": "answer"
+      }
+    }
+  },
+
+  "CONTACTUS": {
+    "breadcrumb": {
+      "parent": "Link",
+      "current": "Link"
+    },
+    "page": {
+      "title": "Contact us",
+      "description": "Service description example To buy a plot to build your house, this requires documenting the sale and purchase process in the notarial offices or notary services to register the property in your name."
+    },
+    "form": {
+      "firstname": "First Name",
+      "lastname": "Last Name",
+      "email": "Email",
+      "phone": "Phone",
+      "subject": "Subject",
+      "category": {
+        "title": "Category",
+        "placeholder": "Choose a category",
+        "label1": "Category 1",
+        "value1": "cat 1",
+        "label2": "Category 2",
+        "value2": "cat 2",
+        "label3": "Category 3",
+        "value3": "cat 3"
+      },
+      "help": "How Can We Help? ",
+      "helptext": "Placeholder text",
+      "upload": "Upload files",
+      "filesize": "Maximum file size allowed is 2MB, supported file formats include .jpg, .png, and .pdf.",
+      "uploadbutton": "Browse Files",
+      "submit": "Request permit"
+    },
+    "info": {
+      "title": "Contact Hail Municipality",
+      "sms": "SMS",
+      "fax": "FAX",
+      "locationtext": "Location",
+      "location": "Hail",
+      "follow": "Follow us",
+      "emergency": "Emergency contacts",
+      "civil": "Civil Defence: ",
+      "police": "Police: ",
+      "ambulance": "Ambulance: ",
+      "viewmore": "View more"
+    }
+  },
+  "ABOUTUS": {
+    "breadcrumb": {
+      "parent": "Home",
+      "current": "About The Entity"
+    },
+    "page": {
+      "title": "About The Entity",
+      "description": "The About the Entity page should serve as a landing page, allowing users to click on the About the Entity button on the homepage instead of selecting one of the topics displayed in the dropdown menu."
+    },
+    "cards": {
+      "about": "About us",
+      "structure": "Organizational Structure",
+      "strategy": "Strategy, Policies, and Regulations",
+      "budget": "Budget and Expenditures",
+      "tenders": "Tenders and Procurements",
+      "participation": "E-Participation",
+      "partners": "Our Partners / Partnerships",
+      "sustainable": "Sustainable Development",
+      "careers": "Careers",
+      "news": "News and Events",
+      "contact": "Contact Us"
+    }
+  },
+
+  "SERVICE": {
+    "breadcrumb": {
+      "parent": "Link",
+      "current": "Link"
+    },
+    "page": {
+      "title": "Building permit",
+      "description": "Service description example To buy a plot to build your house, this requires documenting the sale and purchase process in the notarial offices or notary services to register the property in your name.",
+      "getstarted": "Get started",
+      "sla": "Service Level Agreement"
+    },
+    "tags": {
+      "tag1": "Building Permit",
+      "tag2": "Building License",
+      "tag3": "Construction Permit"
+    },
+    "tabs": {
+      "steps": "Steps",
+      "conditions": "Conditions",
+      "documents": "Required Documents"
+    },
+    "steps": {
+      "step1": "Login to the National Single Sign-on portal via the Balady platform.",
+      "step2": "Select Construction License Services, then Issue Construction.",
+      "step3": "License Services, then the required municipality.",
+      "step4": "Select the engineering office, then enter the number and year of issuance of the building survey, and attach a copy of the deed.",
+      "step5": "Submit the request to the identified engineering office, then complete the information and attachments in the engineering office and send it to the municipality.",
+      "step6": "Verify the information of the request, attachments and approvals by the municipality.",
+      "step7": "Approve the request and issue a SADAD payment. Pay the fees and print the license."
+    },
+    "conditions": {
+      "condition1": "Enter conditions here"
+    },
+    "documents": {
+      "doc1": "Enter document details here"
+    },
+    "info": {
+      "audience": "Target audience",
+      "audiencevalue": "Citizens, GCC countries nationalities, investors and foreigners",
+      "duration": "Service duration",
+      "durationvalue": "5.0 Day(s)",
+      "servicechannel": "Service channels",
+      "servicechannelvalue": "Web and mobile app",
+      "fees": "Service cost",
+      "feesvalue": "Free",
+      "paymentchannel": "Payment channels:",
+      "faq": "Frequently Asked Questions",
+      "faqlink": "Ministry-FAQ's-page",
+      "mobileapp": "Mobile Application",
+      "manual": "Download user manual"
+    },
+    "related": {
+      "title": "Related Services ",
+      "description": "Service description example To buy a plot to build your house, this requires documenting the sale and purchase process in the notarial offices or notary services to register the property in your name.",
+      "viewall": "View all",
+      "card1": {
+        "title": "Building Permit Inquiry",
+        "desc": "Electronic only",
+        "tag1": "Unified Objections Platform"
+      },
+      "card2": {
+        "title": "Issuing a building restoration permit",
+        "desc": "Electronic only, Not instant, There is a fee",
+        "tag1": "Construction licenses"
+      },
+      "card3": {
+        "title": "Issuing a Building Demolition Permit",
+        "desc": "Electronic only, Not instant, There is a fee",
+        "tag1": "Construction licenses"
+      },
+      "card4": {
+        "title": "Request for Issuance of a New Excavation Permit",
+        "desc": "Electronic only, Not instant, There is a fee",
+        "tag1": "Infrastructure coordination services"
+      }
+    }
   }
 }

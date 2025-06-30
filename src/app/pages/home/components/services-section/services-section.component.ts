@@ -1,5 +1,6 @@
 import { CommonModule } from '@angular/common';
 import { Component } from '@angular/core';
+import { RouterModule } from '@angular/router';
 import { ButtonModule } from 'primeng/button';
 import { CarouselModule, CarouselResponsiveOptions } from 'primeng/carousel';
 import { TagModule } from 'primeng/tag';
@@ -14,6 +15,7 @@ import { TranslateModule } from '@ngx-translate/core';
     ButtonModule,
     TagModule,
     TranslateModule,
+    RouterModule
   ],
   templateUrl: './services-section.component.html',
   styleUrl: './services-section.component.scss',
@@ -26,36 +28,42 @@ export class ServicesSectionComponent {
       title: 'SERVICES.ITEMS.0.TITLE',
       tags: ['SERVICES.ITEMS.0.TAGS.0', 'SERVICES.ITEMS.0.TAGS.1'],
       desc: 'SERVICES.ITEMS.0.DESCRIPTION',
+      link: '/service',
     },
     {
       icon: './assets/images/icon-checkmark-circle.svg',
       title: 'SERVICES.ITEMS.1.TITLE',
       tags: ['SERVICES.ITEMS.1.TAGS.0', 'SERVICES.ITEMS.1.TAGS.1'],
       desc: 'SERVICES.ITEMS.1.DESCRIPTION',
+      link: 'https://balady.gov.sa/ar/services/%D8%A5%D8%B5%D8%AF%D8%A7%D8%B1-%D8%B1%D8%AE%D8%B5%D8%A9-%D8%AA%D8%AC%D8%A7%D8%B1%D9%8A%D8%A9',
     },
     {
       icon: './assets/images/icon-checkmark-circle.svg',
       title: 'SERVICES.ITEMS.2.TITLE',
       tags: ['SERVICES.ITEMS.2.TAGS.0', 'SERVICES.ITEMS.2.TAGS.1'],
       desc: 'SERVICES.ITEMS.2.DESCRIPTION',
+      link: 'https://balady.gov.sa/ar/services/%D8%AA%D9%82%D8%AF%D9%8A%D9%85-%D8%A8%D9%84%D8%A7%D8%BA',
     },
     {
       icon: './assets/images/icon-checkmark-circle.svg',
       title: 'SERVICES.ITEMS.3.TITLE',
       tags: ['SERVICES.ITEMS.3.TAGS.0', 'SERVICES.ITEMS.3.TAGS.1'],
       desc: 'SERVICES.ITEMS.3.DESCRIPTION',
+      link: 'https://balady.gov.sa/ar/node/11735',
     },
     {
       icon: './assets/images/icon-checkmark-circle.svg',
       title: 'SERVICES.ITEMS.4.TITLE',
       tags: ['SERVICES.ITEMS.4.TAGS.0', 'SERVICES.ITEMS.4.TAGS.1'],
       desc: 'SERVICES.ITEMS.4.DESCRIPTION',
+      link: 'https://balady.gov.sa/ar/services/%D8%A7%D9%84%D8%A7%D8%B3%D8%AA%D9%81%D8%B3%D8%A7%D8%B1-%D8%B9%D9%86-%D9%85%D8%B9%D8%A7%D9%85%D9%84%D8%A9#:~:text=%D9%8A%D9%85%D9%83%D9%86%20%D8%A7%D9%84%D8%A7%D8%B3%D8%AA%D8%B9%D9%84%D8%A7%D9%85%20%D8%B9%D9%86%20%D9%85%D8%B9%D8%A7%D9%85%D9%84%D8%A9%20%D8%B9%D9%86,%D9%85%D8%B9%20%D9%85%D9%88%D8%B8%D9%81%20%D9%85%D8%B1%D9%83%D8%B2%20%D8%A7%D9%84%D8%A7%D8%AA%D8%B5%D8%A7%D9%84%20199040.',
     },
     {
       icon: './assets/images/icon-checkmark-circle.svg',
       title: 'SERVICES.ITEMS.5.TITLE',
       tags: ['SERVICES.ITEMS.5.TAGS.0', 'SERVICES.ITEMS.5.TAGS.1'],
       desc: 'SERVICES.ITEMS.5.DESCRIPTION',
+      link: 'https://www.amanathail.gov.sa/new_portal/HailGuide/View?id=3',
     },
   ];
   responsiveServicesOptions: CarouselResponsiveOptions[] | undefined;
@@ -96,5 +104,9 @@ export class ServicesSectionComponent {
       default:
         return 'p-tag-contrast';
     }
+  }
+
+  isExternalLink(link: string): boolean {
+  return /^https?:\/\//.test(link);
   }
 }

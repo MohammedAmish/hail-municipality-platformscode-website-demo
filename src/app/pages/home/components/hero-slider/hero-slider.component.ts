@@ -20,12 +20,17 @@ import { TranslateModule } from '@ngx-translate/core';
   standalone: true,
 })
 export class HeroSliderComponent {
+  isVideo(url: string): boolean {
+  return url?.toLowerCase().endsWith('.mp4');
+   }
+
+  
   heroItems: HeroSliderDto[] = [
     {
       title: 'HERO.ITEM1.TITLE',
       subtitle: 'HERO.ITEM1.SUBTITLE',
       route: '/home',
-      backgroundImage: './assets/images/hero-01.jpg',
+      backgroundImage: './assets/images/Amanat_Hail.mp4',
       linkText: 'HERO.ITEM1.LINK_TEXT',
     },
     {
@@ -54,17 +59,17 @@ export class HeroSliderComponent {
         numScroll: 1,
       },
       {
-        breakpoint: '1199px',
+        breakpoint: '1200px',
         numVisible: 1,
         numScroll: 1,
       },
       {
-        breakpoint: '767px',
+        breakpoint: '800px',
         numVisible: 1,
         numScroll: 1,
       },
       {
-        breakpoint: '575px',
+        breakpoint: '600px',
         numVisible: 1,
         numScroll: 1,
       },

@@ -19,3 +19,19 @@
   color: var(--text-primary-paragraph);
   padding: 0 var(--spacing-xl);
 }
+
+/* High contrast mode */
+.high-contrast {
+  background-color: #1e1e1e !important;
+  color: #f1f1f1 !important;
+
+  * {
+    background-color: inherit !important;
+    color: inherit !important;
+    border-color: #f1f1f1 !important;
+  }
+
+  button, a {
+    color: #f1f1f1 !important;
+  }
+}

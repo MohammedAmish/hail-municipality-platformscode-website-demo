@@ -15,7 +15,7 @@
     </p>
   </div>
 
-  <div class="news-content container mx-auto">
+  <div class="news-content container mx-2 mt-2 mb-4 h-full">
     <p-carousel
       [value]="news"
       [numVisible]="3"
@@ -24,10 +24,10 @@
       ngClass="news-carousel"
     >
       <ng-template let-item #item>
-        <div class="news-card mx-2 mt-2 mb-4">
-          <p-card class="w-full">
-            <div class="img-wrap mb-4 rounded-md overflow-hidden">
-              <img [src]="item.thumbnail" [alt]="item.title" />
+        <div class="news-card mx-2 mt-2 mb-4 h-full">
+          <p-card class="w-full h-full">
+            <div class="img-wrap mb-4 rounded-md overflow-hidden h-[180px]">
+              <img [src]="item.thumbnail" [alt]="item.title" class="w-full h-full object-cover" />
             </div>
             <h3 class="font-bold text-lg-bold-font-size text-black mb-2">
               {{ item.title | translate }}
@@ -35,12 +35,32 @@
             <p class="text-black mb-4">
               {{ item.describtion | translate }}
             </p>
-            <button
-              pButton
-              [label]="item.buttonLabel | translate"
-              routerLink="{{ item.buttonLink }}"
-              class="p-button-primary mt-2"
-            ></button>
+
+            <!-- External Link -->
+            <ng-container *ngIf="item.buttonLink.startsWith('http'); else internalLink">
+              <a
+                [href]="item.buttonLink"
+                target="_blank"
+                rel="noopener"
+                class="inline-block mt-2"
+              >
+                <button
+                  pButton
+                  [label]="item.buttonLabel | translate"
+                  class="p-button-primary mt-2"
+                ></button>
+              </a>
+            </ng-container>
+
+            <!-- Internal Link -->
+            <ng-template #internalLink>
+              <button
+                pButton
+                [label]="item.buttonLabel | translate"
+                [routerLink]="item.buttonLink"
+                class="p-button-primary mt-2 h-auto w-auto"
+              ></button>
+            </ng-template>
           </p-card>
         </div>
       </ng-template>

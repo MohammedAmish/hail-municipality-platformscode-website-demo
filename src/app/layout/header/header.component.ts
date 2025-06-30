@@ -21,6 +21,7 @@ import { LocalStorageService } from '../../shared/services/localStorage.service'
   ],
   templateUrl: './header.component.html',
   styleUrl: './header.component.scss',
+  standalone: true,
 })
 export class HeaderComponent implements OnInit {
   topbarItems: MenuItem[] | undefined;
@@ -32,6 +33,11 @@ export class HeaderComponent implements OnInit {
     city: 'Al-Riyadh',
   };
   @HostBinding('attr.dir') dir = 'rtl';
+
+  fontSize = 100;
+  readonly minFontSize = 80;
+  readonly maxFontSize = 150;
+  isHighContrast = false;
 
   constructor(
     private translate: TranslateService,
@@ -49,7 +55,40 @@ export class HeaderComponent implements OnInit {
     this.dir = lang === 'ar' ? 'rtl' : 'ltr';
     this.document.documentElement.dir = this.dir;
   }
+
+  toggleContrast(): void {
+    this.isHighContrast = !this.isHighContrast;
+    this.localStorageService.setItem('contrast', this.isHighContrast.toString());
+    this.updateContrastClass();
+  }
+
+  private loadContrastSetting(): void {
+    const savedContrast = this.localStorageService.getItem('contrast');
+    this.isHighContrast = savedContrast === 'true';
+    this.updateContrastClass();
+  }
+
+  private updateContrastClass(): void {
+    const body = this.document.body;
+    if (this.isHighContrast) {
+      body.classList.add('high-contrast');
+    } else {
+      body.classList.remove('high-contrast');
+    }
+  }
+
   ngOnInit() {
+    
+    this.loadContrastSetting();
+    const savedFontSize = this.localStorageService.getItem('fontSize');
+
+    if (savedFontSize) {
+      this.fontSize = +savedFontSize;
+      this.applyFontSize();
+    }
+
+    
+
     this.topbarItems = [
       {
         label: 'HEADER.TOPBAR.CONDITION',
@@ -71,32 +110,146 @@ export class HeaderComponent implements OnInit {
 
     this.mainItems = [
       { label: 'HEADER.MENU.HOME', routerLink: '/' },
-      { label: 'HEADER.MENU.ABOUT', routerLink: '/content' },
-      { label: 'HEADER.MENU.SERVICES', routerLink: '/content' },
-      { label: 'HEADER.MENU.NEWS', routerLink: '/content' },
-      {
-        label: 'HEADER.MENU.EDUCATION',
+      { label: 'HEADER.MENU.MUNICIPALITY',
         items: [
           {
-            label: 'HEADER.MENU.EDUCATION_ITEMS.EDUCATION',
-            routerLink: '/content',
+            label:'HEADER.MENU.MUNICIPALITY_ITEMS.PRINCE',
+            href: 'https://amanathail.gov.sa/new_portal/Hail/HailPrinces',
           },
           {
-            label: 'HEADER.MENU.EDUCATION_ITEMS.RESEARCH',
-            routerLink: '/content',
+            label:'HEADER.MENU.MUNICIPALITY_ITEMS.HEADS',
+            href: 'https://amanathail.gov.sa/new_portal/Hail/MayorsMunic',
           },
           {
-            label: 'HEADER.MENU.EDUCATION_ITEMS.ANNUAL_WELLNESS_EXAM',
-            routerLink: '/content',
+            label:'HEADER.MENU.MUNICIPALITY_ITEMS.LOCATION',
+            href: 'https://amanathail.gov.sa/new_portal/Hail/AboutHail',
+          },
+          {
+            label:'HEADER.MENU.MUNICIPALITY_ITEMS.GEOGRAPHY',
+            href: 'https://amanathail.gov.sa/new_portal/Hail/HailHistory',
+          },
+          {
+            label:'HEADER.MENU.MUNICIPALITY_ITEMS.GUIDE',
+            href: 'https://amanathail.gov.sa/new_portal/HailGuide',
+          },
+          {
+            label:'HEADER.MENU.MUNICIPALITY_ITEMS.MUNICIPALITIES',
+            href: 'https://amanathail.gov.sa/new_portal/Municipalities',
+          },
+          {
+            label:'HEADER.MENU.MUNICIPALITY_ITEMS.MANAGEMENT',
+            href: 'https://amanathail.gov.sa/new_portal/Departments',
+          },
+          {
+            label:'HEADER.MENU.MUNICIPALITY_ITEMS.OPEN_DATA',
+            href: 'https://amanathail.gov.sa/new_portal/Hail/OpenData',
+          },
+          {
+            label:'HEADER.MENU.MUNICIPALITY_ITEMS.DATA_SHARING',
+            href: 'https://hailportal.amanathail.gov.sa/Open-Source',
+          },
+          {
+            label:'HEADER.MENU.MUNICIPALITY_ITEMS.STRUCTURE',
+            href: 'https://amanathail.gov.sa/new_portal/Hail/organizational',
+          },
+          {
+            label:'HEADER.MENU.MUNICIPALITY_ITEMS.SYSTEMS',
+            href: 'https://amanathail.gov.sa/new_portal/Hail/regulations',
+          },
+        ],
+      },
+      { label: 'HEADER.MENU.STRATEGY',
+         items: [
+          {
+            label:'HEADER.MENU.STRATEGY_ITEMS.VISION',
+            href: 'https://amanathail.gov.sa/new_portal/Hail/OurVision',
+          },
+          {
+            label:'HEADER.MENU.STRATEGY_ITEMS.GOALS',
+            href: 'https://amanathail.gov.sa/new_portal/Hail/OurGoals',
+          },
+          {
+            label:'HEADER.MENU.STRATEGY_ITEMS.AUDIT',
+            href: 'https://amanathail.gov.sa/new_portal/Hail/InternalAudit',
+          },
+        ],
+      },
+      { label: 'HEADER.MENU.MAYOR',
+         items: [
+          {
+            label:'HEADER.MENU.MAYOR_ITEMS.MAYOR_INFO',
+            href: 'https://amanathail.gov.sa/new_portal/Hail/MayorCV',
+          },
+          {
+            label:'HEADER.MENU.MAYOR_ITEMS.MAYOR_CONTACT',
+            href: 'https://amanathail.gov.sa/new_portal/Hail/MayorContact',
+          },
+          {
+            label:'HEADER.MENU.MAYOR_ITEMS.MAYOR_ADMIN',
+            href: 'https://amanathail.gov.sa/new_portal/Hail/MayorOfficeAdmin',
           },
         ],
       },
       {
-        label: 'HEADER.MENU.CONTACT',
-        href: 'https://www.linkedin.com/in/abhar/',
+        label: 'HEADER.MENU.NEWS',
+        items: [
+          {
+            label:'HEADER.MENU.NEWS_ITEMS.HAIL_NEWS',
+            href: 'https://www.amanathail.gov.sa/new_portal/news?type=hail',
+          },
+          {
+            label:'HEADER.MENU.NEWS_ITEMS.MUNICIPALITY_NEWS',
+            href: 'https://www.amanathail.gov.sa/new_portal/news?type=baldaia',
+          },
+        ],
+      },
+      {
+        label: 'HEADER.MENU.SERVICES',
+        items: [
+          {
+            label:'HEADER.MENU.SERVICES_ITEMS.INDIVIDUALS',
+            href: 'https://amanathail.gov.sa/new_portal/services?cat=individuals',
+          },
+          {
+            label:'HEADER.MENU.SERVICES_ITEMS.BUSINESS',
+            href: 'https://amanathail.gov.sa/new_portal/services?cat=company',
+          },
+          {
+            label:'HEADER.MENU.SERVICES_ITEMS.GOVERNMENT',
+            href: 'https://amanathail.gov.sa/new_portal/services?cat=government',
+          },
+          {
+            label:'HEADER.MENU.SERVICES_ITEMS.EMPLOYEES',
+            href: 'https://amanathail.gov.sa/new_portal/services?cat=employee',
+          },
+        ],
       },
     ];
   }
 
   onSearchClick(event: Event) {}
+
+  increaseFont() {
+    if (this.fontSize < this.maxFontSize) {
+      this.fontSize += 10;
+      this.applyFontSize();
+    }
+  }
+
+  decreaseFont() {
+    if (this.fontSize > this.minFontSize) {
+      this.fontSize -= 10;
+      this.applyFontSize();
+    }
+  }
+
+  resetFont() {
+  this.fontSize = 100;
+  this.applyFontSize();
+  }
+
+  applyFontSize() {
+    this.document.documentElement.style.fontSize = `${this.fontSize}%`;
+    this.localStorageService.setItem('fontSize', this.fontSize.toString());
+  }
 }

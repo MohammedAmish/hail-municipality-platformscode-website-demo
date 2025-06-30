@@ -8,24 +8,30 @@
   </ng-template>
   <ng-template #end>
     <button pButton type="button" class="p-button-link ml-2">
-      <img src="assets/images/icon-mic.svg" alt="mic icon" class="h-[18px]" />
+      <img src="assets/images/icon-mic.svg" title="{{'ICONS.MIC' | translate}}" class="h-[18px]" />
     </button>
-    <button pButton type="button" class="p-button-link ml-2">
+    <button pButton type="button" class="p-button-link ml-2" (click)="decreaseFont()">
       <img
         src="assets/images/icon-decrease.svg"
-        alt="mic icon"
+        title="{{'ICONS.DECREASE' | translate}}"
         class="h-[18px]"
       />
     </button>
-    <button pButton type="button" class="p-button-link ml-2">
+    <button pButton type="button" class="p-button-link ml-2" (click)="increaseFont()">
       <img
         src="assets/images/icon-increase.svg"
-        alt="mic icon"
+        title="{{'ICONS.INCREASE' | translate}}"
         class="h-[18px]"
       />
     </button>
-    <button pButton type="button" class="p-button-link ml-2">
-      <img src="assets/images/icon-eye.svg" alt="mic icon" class="h-[18px]" />
+    <button pButton type="button" class="p-button-link ml-2" (click)="resetFont()">
+      <img 
+        src="assets/images/Reset-font.png"
+        title="{{'ICONS.RESET' | translate}}"
+        class="h-[18px]" />
+    </button>
+    <button pButton type="button" class="p-button-link ml-2" (click)="toggleContrast()">
+      <img src="assets/images/icon-eye.svg" title="{{'ICONS.VIEW' | translate}}" class="h-[18px]" />
     </button>
   </ng-template>
 </p-menubar>
@@ -34,12 +40,12 @@
 <p-menubar [model]="mainItems" class="main-navbar">
   <ng-template #start>
     <img
-      src="assets/images/logo.svg"
+      src="assets/images/logo.png"
       alt="logo"
       class="h-[50px] hidden lg:block"
     />
     <img
-      src="assets/images/logo-mobile.svg"
+      src="assets/images/logo-mobile.png"
       alt="logo mobile"
       class="h-[50px] block lg:hidden"
     />
@@ -50,7 +56,7 @@
       class="flex items-center p-menubar-item-link"
       [href]="item.href"
       *ngIf="item.href"
-      target="_blank"
+      [target]="item.href.startsWith('http') ? '_blank' : null"
     >
       <span>{{ item.label | translate }}</span>
       <p-badge

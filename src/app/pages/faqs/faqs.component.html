@@ -1,0 +1,50 @@
+<div class="container mx-auto py-20 lg:px-20">
+  <!-- Page Title & Description -->
+  <h1 class="font-bold text-3xl text-text-display mb-4">
+    {{ "FAQs.page.title" | translate }}
+  </h1>
+  <p class="text-text-secondary-paragraph mb-8">
+    {{ "FAQs.page.description" | translate }}
+  </p>
+  <hr class="border-neutral-primary mb-12" />
+
+  <!-- FAQ List (Accordion Style) -->
+  <p-accordion [multiple]="true" class="mb-12">
+    <p-accordionTab
+      *ngFor="let faq of faqs"
+      [header]="faq.question | translate"
+    >
+      {{ faq.answer | translate }}
+    </p-accordionTab>
+  </p-accordion>
+  <hr class="border-neutral-primary mb-12" />
+
+  <!-- Support Contact Card -->
+  <div class="border border-neutral-300 rounded-xl p-6 flex flex-col gap-4 items-start">
+    <div
+      class="rounded-full bg-[#eafaf1] text-primary-color p-3 flex items-center justify-center"
+    >
+      <img
+        src="assets/images/Email.svg"
+        alt="Mail Icon"
+        class="w-6 h-6"
+      />
+    </div>
+    <div>
+      <p class="font-semibold text-text-display mb-2">
+        {{ "FAQs.contact.title" | translate }}
+      </p>
+      <p class="text-sm text-text-secondary-paragraph mb-4">
+        {{ "FAQs.contact.description" | translate }}
+      </p>
+      <button
+        pButton
+        type="button"
+        class="p-button-sm p-button-success bg-[#1B8354] rounded-sm"
+        [routerLink]="'/contact-us'"
+      >
+        {{ "FAQs.contact.button" | translate }}
+      </button>
+    </div>
+  </div>
+</div>

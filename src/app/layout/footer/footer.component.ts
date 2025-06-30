@@ -13,7 +13,7 @@ import { ButtonModule } from 'primeng/button';
 })
 export class FooterComponent {
   overviewLinks: { key: string; routerLink: string }[] = [
-    { key: 'ABOUT', routerLink: '/content' },
+    { key: 'ABOUT', routerLink: '/about-us' },
     { key: 'PRIVACY', routerLink: '/content' },
     { key: 'HOW_TO_USE', routerLink: '/content' },
     { key: 'NEWS_EVENTS', routerLink: '/content' },
@@ -29,8 +29,8 @@ export class FooterComponent {
   ];
 
   contactLinks: { key: string; routerLink: string }[] = [
-    { key: 'CONTACT_US', routerLink: '/content' },
-    { key: 'ENGAGE_WITH_US', routerLink: '/content' },
+    { key: 'CONTACT_US', routerLink: '/contact-us' },
+    { key: 'ENGAGE_WITH_US', routerLink: '/help-support' },
     { key: 'SUBMIT_COMPLAINT', routerLink: '/content' },
     { key: 'REPORT_CORRUPTION', routerLink: '/content' },
   ];
@@ -39,23 +39,23 @@ export class FooterComponent {
     {
       key: 'TWITTER',
       icon: 'assets/images/icon-x.svg',
-      url: 'https://twitter.com/',
+      url: 'https://x.com/Amanat_Hail',
     },
     {
       key: 'LINKEDIN',
       icon: 'assets/images/icon-linkedin.svg',
-      url: 'https://www.linkedin.com/in/abhar/',
+      url: 'https://www.linkedin.com/company/amanathail/',
     },
     {
       key: 'INSTAGRAM',
       icon: 'assets/images/icon-instagram.svg',
-      url: 'https://instagram.com/',
+      url: 'https://www.instagram.com/amanat_hail',
     },
   ];
 
   accessibilityTools: { label: string; icon: string }[] = [
-    { label: 'Sign Language', icon: 'assets/images/icon-sign-language-c.svg' },
+    { label: 'Sign Language', icon: 'assets/images/icon-view.svg' },
     { label: 'Search Add', icon: 'assets/images/icon-search-add.svg' },
-    { label: 'View Mode', icon: 'assets/images/icon-view.svg' },
+    { label: 'View Mode', icon: 'assets/images/icon-sign-language-c.svg' },
   ];
 }

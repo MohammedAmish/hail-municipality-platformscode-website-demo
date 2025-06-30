@@ -13,4 +13,39 @@ export const routes: Routes = [
         (m) => m.ContentComponent
       ),
   },
+  {
+    path: 'help-support',
+    loadComponent: () =>
+      import('./pages/help-support/help-support.component').then(
+        (m) => m.HelpSupportComponent
+      ),
+  },
+  {
+    path: 'faqs',
+    loadComponent: () =>
+      import('./pages/faqs/faqs.component').then(
+        (m) => m.FAQsComponent
+      ),
+  },
+  {
+    path: 'contact-us',
+    loadComponent: () =>
+      import('./pages/contact-us/contact-us.component').then(
+        (m) => m.ContactUsComponent
+      ),
+  },
+  {
+    path: 'about-us',
+    loadComponent: () =>
+      import('./pages/about-us/about-us.component').then(
+        (m) => m.AboutUsComponent
+      ),
+  },
+  {
+    path: 'service',
+    loadComponent: () =>
+      import('./pages/service/service.component').then(
+        (m) => m.ServiceComponent
+      ),
+  },
 ];

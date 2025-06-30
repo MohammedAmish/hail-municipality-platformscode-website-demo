@@ -1,0 +1,206 @@
+<div class="container mx-auto py-20 lg:px-20 font-ibm">
+  <nav class="flex text-sm text-secondary-paragraph mb-6">
+    <a routerLink="/" class="text-primary-paragraph hover:underline">
+      {{ "SERVICE.breadcrumb.parent" | translate }}
+    </a>
+    <span class="mx-2">›</span>
+    <span class="font-semibold text-text-display">
+      {{ "SERVICE.breadcrumb.current" | translate }}
+    </span>
+  </nav>
+
+  <div class="flex flex-col md:flex-row md:items-center md:justify-between mb-6 gap-4">
+    <div>
+      <h1 class="font-bold text-3xl text-text-display mb-2">
+        {{ "SERVICE.page.title" | translate }}
+      </h1>
+      <div class="flex flex-wrap gap-2">
+        <p-tag *ngFor="let tag of serviceTags" [value]="tag | translate" class="bg-[#eafaf1] text-green-700 px-2 py-1 text-sm font-medium rounded"></p-tag>
+      </div>
+    </div>
+    <a class="p-button p-button-success px-4 py-2 text-sm bg-[#1B8354] rounded-sm" routerLink="www.test.com">
+      {{ "SERVICE.page.getstarted" | translate }}
+    </a>
+  </div>
+
+  <p class="text-text-secondary-paragraph mb-8 text-base text-[#333]">
+    {{ "SERVICE.page.description" | translate }}
+    <a href="https://www.balady.gov.sa/en/terms-conditions" class="text-green-600 hover:underline text-sm">
+      <br /><br />
+      {{ "SERVICE.page.sla" | translate }}
+      <img src="assets/images/green-chain.png" alt="" class="w-4 h-4 inline align-text-bottom" />
+    </a>
+  </p>
+
+  <div class="grid grid-cols-1 lg:grid-cols-3 gap-8 items-start">
+    <div class="lg:col-span-2 space-y-6">
+      <p-tabView>
+        <p-tabPanel header="{{ 'SERVICE.tabs.steps' | translate }}">
+          <div class="relative pb-[56.25%] h-0 overflow-hidden rounded-lg shadow-sm mb-6">
+            <iframe
+              src="https://www.youtube.com/embed/t_C87zZyAjA"
+              title="Tutorial Video"
+              frameborder="0"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+              allowfullscreen
+              class="absolute top-0 left-0 w-full h-full"
+            ></iframe>
+          </div>
+          <ol class="list-decimal pl-5 space-y-2">
+            <li *ngFor="let step of steps">
+              {{ step | translate }}
+            </li>
+          </ol>
+        </p-tabPanel>
+        <p-tabPanel header="{{ 'SERVICE.tabs.conditions' | translate }}">
+          <ul class="list-disc pl-5 space-y-2">
+            <li *ngFor="let condition of conditions">
+              {{ condition | translate }}
+            </li>
+          </ul>
+        </p-tabPanel>
+        <p-tabPanel header="{{ 'SERVICE.tabs.documents' | translate }}">
+          <ul class="list-disc pl-5 space-y-2">
+            <li *ngFor="let doc of documents">
+              {{ doc | translate }}
+            </li>
+          </ul>
+        </p-tabPanel>
+      </p-tabView>
+    </div>
+
+    <div class="border border-neutral-300 rounded-xl p-6 space-y-6 bg-white shadow-sm h-full self-stretch">
+      <ng-container *ngFor="let info of infoSections">
+        <div class="flex items-start gap-4" *ngIf="info.value">
+          <img src="assets/images/{{info.icon}}.png" alt="{{ info.label }}" class="w-6 h-6 flex-shrink-0" />
+          <div class="flex flex-col">
+            <span class="font-semibold text-sm text-text-display">{{ info.label | translate }}</span>
+            <span class="text-sm text-text-secondary-paragraph">{{ info.value | translate }}</span>
+          </div>
+        </div>
+      </ng-container>
+
+      <div class="mt-4">
+        <span class="font-semibold text-sm text-text-display">{{ 'SERVICE.info.paymentchannel' | translate }}</span>
+        <div class="flex gap-2 mt-2">
+          <img src="assets/images/STC-pay.png" alt="STC Pay" class="w-14 h-9 object-contain" />
+          <img src="assets/images/Mada.png" alt="Mada" class="w-14 h-9 object-contain" />
+        </div>
+      </div>
+
+      <hr class="border-neutral-primary my-8" />
+
+      <div>
+        <h3 class="text-text-display font-semibold text-sm mb-2">{{ "SERVICE.info.faq" | translate }}</h3>
+        <a href="/faqs" class="flex items-center gap-2 text-green-700 hover:underline font-semibold text-sm mb-6">
+          <span>{{ "SERVICE.info.faqlink" | translate }}</span>
+          <img src="assets/images/link-square.png" alt="Arrow" class="w-4 h-4" />
+        </a>
+
+        <div class="flex items-center gap-4">
+          <img src="assets/images/Icon-phone.png" alt="Arrow" class="w-6 h-6 flex-shrink-0" />
+          <div class="flex flex-col">
+            <span class="font-semibold text-sm text-text-display">{{ "CONTACTUS.form.phone" | translate }}</span>
+            <a href="tel:0165335000" class="flex items-center gap-2 text-green-700 hover:underline font-semibold text-sm mb-6">
+              <span>016/5335000</span>
+              <img src="assets/images/link-square.png" alt="Arrow" class="w-4 h-4" />
+            </a>
+          </div>
+        </div>
+
+        <div class="flex items-center gap-4 mt-4">
+          <img src="assets/images/Email.svg" alt="Arrow" class="w-6 h-6 flex-shrink-0" />
+          <div class="flex flex-col">
+            <span class="font-semibold text-sm text-text-display">{{ "CONTACTUS.form.email" | translate }}</span>
+            <a href="mailto:test@gmail.com" class="flex items-center gap-2 text-green-700 hover:underline font-semibold text-sm mb-6">
+              <span>test&#64;gmail.com</span>
+              <img src="assets/images/link-square.png" alt="Arrow" class="w-4 h-4" />
+            </a>
+          </div>
+        </div>
+
+        <a href="#" class="inline-block mt-6 px-4 py-2 bg-gray-200 rounded text-sm font-semibold text-text-display hover:bg-gray-300">
+          {{ "SERVICE.info.manual" | translate }}
+        </a>
+      </div>
+
+      <hr class="border-neutral-primary my-8" />
+
+      <div>
+        <h3 class="text-text-display font-semibold text-sm mb-4">{{ "SERVICE.info.mobileapp" | translate }}</h3>
+        <div class="flex gap-2">
+          <img src="assets/images/App-store-badge.png" alt="App Store" class="w-24 object-contain" />
+          <img src="assets/images/Play-store-badge.png" alt="Play Store" class="w-24 object-contain" />
+          <img src="assets/images/App-gallery-badge.png" alt="App Gallery" class="w-24 object-contain" />
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <hr class="my-12" />
+
+  <div class="bg-[#f9fdfa] px-6 py-8 rounded-xl">
+    <div class="flex justify-between items-center mb-6">
+      <h2 class="text-xl font-semibold text-[#1f2a37]">
+        {{ "SERVICE.related.title" | translate }}
+      </h2>
+      <a href="#" class="text-green-700 text-sm hover:underline">
+        {{ "SERVICE.related.viewall" | translate }}
+      </a>
+    </div>
+
+    <p class="text-sm text-text-secondary-paragraph mb-6">
+      {{ "SERVICE.related.description" | translate }}
+    </p>
+
+    <p-carousel
+      [value]="services"
+      [numVisible]="4"
+      [numScroll]="1"
+      [responsiveOptions]="responsiveServicesOptions"
+    >
+      <ng-template let-item #item>
+        <div class="bg-white border border-neutral-primary rounded-xl p-4 flex flex-col justify-between h-full min-h-[280px]">
+          <div class="mb-4">
+            <div class="rounded-full bg-[#eafaf1] w-14 h-14 flex items-center justify-center mb-4">
+              <img [src]="item.icon" [alt]="item.title | translate" class="w-6 h-6" />
+            </div>
+            <h3 class="text-md font-semibold text-[#1f2a37] mb-2">
+              {{ item.title | translate }}
+            </h3>
+            <p class="text-sm text-[#4b5563] mb-3">
+              {{ item.desc | translate }}
+            </p>
+            <div class="flex flex-wrap gap-1">
+              <p-tag *ngFor="let tag of item.tags; let i = index" [value]="tag | translate" styleClass="text-xs px-2 py-1 rounded-sm border {{ getSeverity(i) }}"></p-tag>
+            </div>
+          </div>
+          <div class="mt-auto">
+            <a [href]="item.link" target="_blank" rel="noopener noreferrer">
+              <button pButton type="button" class="p-button-sm p-button-success bg-[#1B8354] text-white">
+                {{ "SERVICES.BUTTON.BUY_NOW" | translate }}
+              </button>
+            </a>
+          </div>
+        </div>
+      </ng-template>
+    </p-carousel>
+  </div>
+
+  <div class="border border-neutral-300 rounded-xl p-6 mt-12 flex flex-col gap-4 items-start">
+    <div class="rounded-full bg-[#eafaf1] text-primary-color p-3 flex items-center justify-center">
+      <img src="assets/images/Email.svg" alt="Mail Icon" class="w-6 h-6" />
+    </div>
+    <div>
+      <p class="font-semibold text-text-display mb-2">
+        {{ "FAQs.contact.title" | translate }}
+      </p>
+      <p class="text-sm text-text-secondary-paragraph mb-4">
+        {{ "FAQs.contact.description" | translate }}
+      </p>
+      <button pButton type="button" class="p-button-sm p-button-success bg-[#1B8354] rounded-sm" [routerLink]="'/contact-us'">
+        {{ "FAQs.contact.button" | translate }}
+      </button>
+    </div>
+  </div>
+</div>

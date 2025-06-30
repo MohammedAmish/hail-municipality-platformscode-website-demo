@@ -9,29 +9,85 @@
       showNavigators="false"
     >
       <ng-template let-item #item>
-        <div
-          class="hero-item"
-          style="background-image: linear-gradient(rgba(9, 42, 30, 0.8), rgba(9, 42, 30, 0.8)),
-          url('{{ item.backgroundImage }}');"
-        >
-          <div class="container mx-auto pt-5xl px-lg lg:px-md">
-            <div class="w-full lg:w-1/2">
-              <h3 class="text-xl-semibold-font-size mb-4 mt-[90px]">
-                {{ item.title | translate }}
-              </h3>
-              <p class="text-xl-regular-font-size mb-5xl">
-                {{ item.subtitle | translate }}
-              </p>
-              <button
-                class="dga-neutral-primary"
-                pButton
-                type="button"
-                routerLink="{{ item.link }}"
-              >
-                {{ item.linkText | translate }}
-              </button>
+        <div class="hero-slide" style="position: relative; overflow: hidden; height: 80vh; min-height: 400px;">
+          <!-- Check if backgroundImage is a video -->
+          <ng-container *ngIf="isVideo(item.backgroundImage); else imageBackground">
+            <video
+              class="hero-video exclude-contrast"
+              autoplay
+              muted
+              loop
+              playsinline
+              preload="auto"
+              class="hero-slide"
+              [src]="item.backgroundImage"
+              style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; object-fit: cover; z-index: -1;"
+            ></video>
+
+            <div
+              class="video-overlay"
+              style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;
+                     z-index: 0;"
+            ></div>
+
+            <div class="container mx-auto pt-5xl px-lg lg:px-md" style="position: relative; z-index: 1; height: 100%;">
+              <div class="w-full lg:w-1/2 h-full flex flex-col justify-center">
+                <h3 class="text-xl-semibold-font-size mb-4">
+                  {{ item.title | translate }}
+                </h3>
+                <p class="text-xl-regular-font-size mb-5xl">
+                  {{ item.subtitle | translate }}
+                </p>
+                <button
+                  class="dga-neutral-primary"
+                  pButton
+                  type="button"
+                  routerLink="{{ item.link }}"
+                >
+                  {{ item.linkText | translate }}
+                </button>
+              </div>
             </div>
-          </div>
+          </ng-container>
+
+          <!-- Image background fallback -->
+          <ng-template #imageBackground>
+            <div
+              class="hero-image exclude-contrast"
+              style="
+                position: absolute;
+                top: 0;
+                left: 0;
+                width: 100%;
+                height: 100%;
+                background-image: linear-gradient(rgba(9, 42, 30, 0.8), rgba(9, 42, 30, 0.8)),
+                  url('{{ item.backgroundImage }}');
+                background-position: center;
+                background-repeat: no-repeat;
+                background-size: cover;
+                z-index: -1;
+              "
+            ></div>
+
+            <div class="container mx-auto pt-5xl px-lg lg:px-md" style="position: relative; z-index: 1; height: 100%;">
+              <div class="w-full lg:w-1/2 h-full flex flex-col justify-center">
+                <h3 class="text-xl-semibold-font-size mb-4">
+                  {{ item.title | translate }}
+                </h3>
+                <p class="text-xl-regular-font-size mb-5xl">
+                  {{ item.subtitle | translate }}
+                </p>
+                <button
+                  class="dga-neutral-primary"
+                  pButton
+                  type="button"
+                  routerLink="{{ item.link }}"
+                >
+                  {{ item.linkText | translate }}
+                </button>
+              </div>
+            </div>
+          </ng-template>
         </div>
       </ng-template>
     </p-carousel>

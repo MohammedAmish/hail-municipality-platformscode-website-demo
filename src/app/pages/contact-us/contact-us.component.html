@@ -1,0 +1,176 @@
+<div class="container mx-auto py-20 lg:px-20 font-ibm">
+  <!-- Breadcrumb -->
+  <nav class="flex text-sm text-secondary-paragraph mb-6">
+    <a routerLink="/" class="text-primary-paragraph hover:underline">
+      {{ "CONTACTUS.breadcrumb.parent" | translate }}
+    </a>
+    <span class="mx-2">›</span>
+    <span class="font-semibold text-text-display">
+      {{ "CONTACTUS.breadcrumb.current" | translate }}
+    </span>
+  </nav>
+
+  <!-- Title & Description -->
+  <h1 class="font-bold text-3xl text-text-display mb-4">
+    {{ "CONTACTUS.page.title" | translate }}
+  </h1>
+  <p class="text-text-secondary-paragraph mb-8 text-base text-[#333]">
+    {{ "CONTACTUS.page.description" | translate }}
+  </p>
+  <hr class="border-neutral-primary mb-12" />
+
+  <!-- Main Layout -->
+  <div class="grid grid-cols-1 lg:grid-cols-3 gap-8">
+    <!-- Contact Form -->
+    <form class="lg:col-span-2 space-y-6">
+      <!-- Name -->
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+        <div>
+          <label class="block text-sm font-semibold text-[#1f2a37] mb-1">
+            <strong class="text-[#B42318]">*</strong> {{ "CONTACTUS.form.firstname" | translate }}
+          </label>
+          <input type="text" class="w-full border border-gray-300 px-4 py-2" />
+        </div>
+        <div>
+          <label class="block text-sm font-semibold text-[#1f2a37] mb-1">
+            <strong class="text-[#B42318]">*</strong> {{ "CONTACTUS.form.lastname" | translate }}
+          </label>
+          <input type="text" class="w-full border border-gray-300 px-4 py-2" />
+        </div>
+      </div>
+
+      <!-- Email & Phone -->
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+        <div>
+          <label class="block text-sm font-semibold text-[#1f2a37] mb-1">
+            <strong class="text-[#B42318]">*</strong> {{ "CONTACTUS.form.email" | translate }}
+          </label>
+          <input type="email" class="w-full border border-gray-300 px-4 py-2" />
+        </div>
+        <div>
+          <label class="block text-sm font-semibold text-[#1f2a37] mb-1">
+            <strong class="text-[#B42318]">*</strong> {{ "CONTACTUS.form.phone" | translate }}
+          </label>
+          <input type="tel" class="w-full border border-gray-300 px-4 py-2" placeholder="+966 00 000 0000" />
+        </div>
+      </div>
+
+      <!-- Subject & Category -->
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+        <div>
+          <label class="block text-sm font-semibold text-[#1f2a37] mb-1">
+            {{ "CONTACTUS.form.subject" | translate }}
+          </label>
+          <input type="text" class="w-full border border-gray-300 px-4 py-2" />
+        </div>
+        <div>
+          <label class="block text-sm font-semibold text-[#1f2a37] mb-1">
+            {{ "CONTACTUS.form.category.title" | translate }}
+          </label>
+          <p-dropdown
+            [options]="categories"
+            optionLabel="label"
+            placeholder="{{ 'CONTACTUS.form.category.placeholder' | translate }}"
+            class="w-full"
+          ></p-dropdown>
+        </div>
+      </div>
+
+      <!-- Message + Upload -->
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+        <div>
+          <label class="block text-sm font-semibold text-[#1f2a37] mb-1">
+            {{ "CONTACTUS.form.help" | translate }}
+          </label>
+          <textarea rows="5" class="w-full border border-gray-300 px-4 py-2" placeholder="{{ 'CONTACTUS.form.helptext' | translate }}"></textarea>
+        </div>
+        <div>
+          <label class="block text-sm font-semibold text-[#1f2a37] mb-1">
+            {{ "CONTACTUS.form.upload" | translate }}
+          </label>
+          <small class="text-xs text-gray-500 mt-1 block">
+            {{ "CONTACTUS.form.filesize" | translate }}
+          </small>
+          <p-fileUpload
+            name="file[]"
+            mode="basic"
+            chooseLabel="{{ 'CONTACTUS.form.uploadbutton' | translate}}"
+            accept=".jpg,.png,.pdf"
+            maxFileSize="2000000"
+            class="text-white"
+          ></p-fileUpload>
+        </div>
+      </div>
+
+      <button pButton type="submit" class="p-button-success px-6 py-2 bg-[#1B8354] rounded-sm">
+        {{ "CONTACTUS.form.submit" | translate }}
+      </button>
+    </form>
+
+    <!-- Contact Info Box -->
+    <div class="border border-gray-200 rounded-xl p-6 space-y-4 shadow-sm">
+      <h3 class="font-semibold text-lg text-[#1f2a37]">
+        {{ "CONTACTUS.info.title" | translate }}
+      </h3>
+
+      <div class="space-y-2 text-sm text-[#1f2a37]">
+        <div class="flex gap-2">
+          <img src="assets/images/Icon-phone.png" alt="Phone" class="w-5 h-5" />
+          <div>
+            <p class="font-semibold text-sm mb-1">{{ "CONTACTUS.form.phone" | translate }}</p>
+            <span class="text-green-600 text-sm mt-2">016/5335000</span>
+          </div>
+        </div>
+        <div class="flex items-center gap-2">
+          <img src="assets/images/icon-textbubble.png" alt="SMS" class="w-5 h-5" />
+          <div>
+            <p class="font-semibold text-sm mb-1">{{ "CONTACTUS.info.sms" | translate }}</p>
+            <span class="text-green-600 text-sm mt-2">199099</span>
+          </div>
+        </div>
+        <div class="flex items-center gap-2">
+          <img src="assets/images/Email.svg" alt="Email" class="w-5 h-5" />
+          <div>
+            <p class="font-semibold text-sm mb-1">{{ "CONTACTUS.form.email" | translate }}</p>
+            <span class="text-green-600 text-sm mt-2">test&#64;gmail.com</span>
+          </div>
+        </div>
+        <div class="flex items-center gap-2">
+          <img src="assets/images/Email.svg" alt="Fax" class="w-5 h-5" />
+          <div>
+            <p class="font-semibold text-sm mb-1">{{ "CONTACTUS.info.fax" | translate }}</p>
+            <span class="text-green-600 text-sm mt-2">016/5432174</span>
+          </div>
+        </div>
+        <div class="flex items-center gap-2">
+          <img src="assets/images/Icon-location-g.png" alt="Location" class="w-5 h-5" />
+          <div>
+            <p class="font-semibold text-sm mb-1">{{ "CONTACTUS.info.locationtext" | translate }}</p>
+            <span class="text-green-600 text-sm mt-2">{{ "CONTACTUS.info.location" | translate }}</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="mt-4">
+        <p class="font-semibold text-lg mb-1">{{ "CONTACTUS.info.follow" | translate }}</p>
+        <div class="flex gap-3">
+          <img src="assets/images/Icon-x-b.png" alt="X" class="w-4 h-4" />
+          <img src="assets/images/Icon-linkedin-b.png" alt="LinkedIn" class="w-4 h-4" />
+          <img src="assets/images/Icon-instagram-b.png" alt="Instagram" class="w-4 h-4" />
+        </div>
+      </div>
+
+      <hr class="my-4" />
+
+      <div class="text-lg text-[#1f2a37]">
+        <p class="font-semibold mb-1">{{ "CONTACTUS.info.emergency" | translate }}</p>
+        <p class="text-green-600 text-sm mt-2"><strong class="text-[#1f2a37]">{{ "CONTACTUS.info.civil" | translate }}</strong> 998</p>
+        <p class="text-green-600 text-sm mt-2"><strong class="text-[#1f2a37]">{{ "CONTACTUS.info.police" | translate }}</strong> 999</p>
+        <p class="text-green-600 text-sm mt-2"><strong class="text-[#1f2a37]">{{ "CONTACTUS.info.ambulance" | translate }}</strong> 997</p>
+        <a href="#" class="text-green-600 text-sm mt-2 inline-block">
+          {{ "CONTACTUS.info.viewmore" | translate }}
+        </a>
+      </div>
+    </div>
+  </div>
+</div>

@@ -3,4 +3,5 @@ export interface ServicesDto {
   title: string;
   tags: string[];
   desc: string;
+  link: string;
 }
