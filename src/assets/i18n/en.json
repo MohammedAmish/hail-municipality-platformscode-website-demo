@@ -393,10 +393,10 @@
   "ABOUTUS": {
     "breadcrumb": {
       "parent": "Home",
-      "current": "About The Entity"
+      "current": "About Hail Municipality"
     },
     "page": {
-      "title": "About The Entity",
+      "title": "About Hail Municipality",
       "description": "The About the Entity page should serve as a landing page, allowing users to click on the About the Entity button on the homepage instead of selecting one of the topics displayed in the dropdown menu."
     },
     "cards": {
@@ -489,6 +489,24 @@
         "desc": "Electronic only, Not instant, There is a fee",
         "tag1": "Infrastructure coordination services"
       }
+    }
+  },
+
+  "SITEMAP": {
+    "breadcrumb": {
+      "parent": "Link",
+      "current": "Link"
+    },
+    "page": {
+      "title": "Sitemap",
+      "home": "Home",
+      "aboutus": "About Hail Municipality",
+      "contactus": "Contact Us",
+      "faq": "Frequently Asked Questions",
+      "help": "Help & Support",
+      "content": "Content",
+      "blank": "Page Link",
+      "subblank": "Sub Page Link"
     }
   }
 }

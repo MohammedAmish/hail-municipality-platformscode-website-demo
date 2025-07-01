@@ -1,0 +1,36 @@
+<div class="container mx-auto py-20 lg:px-20 font-ibm">
+  <!-- Breadcrumb -->
+  <nav class="flex text-sm text-secondary-paragraph mb-6">
+    <a routerLink="/" class="text-primary-paragraph hover:underline">
+      {{ "SITEMAP.breadcrumb.parent" | translate }}
+    </a>
+    <span class="mx-2">›</span>
+    <span class="font-semibold text-text-display">
+      {{ "SITEMAP.breadcrumb.current" | translate }}
+    </span>
+  </nav>
+
+  <!-- Title -->
+  <h1 class="font-bold text-3xl text-text-display mb-8">
+    {{ "SITEMAP.page.title" | translate }}
+  </h1>
+
+  <!-- Sitemap Tree with Bullets -->
+  <ul class="space-y-4 list-disc list-inside text-green-600">
+    <li *ngFor="let page of sitemap">
+      <a [routerLink]="page.link" class="font-semibold hover:underline">
+        {{ page.title | translate }}
+      </a>
+
+      <!-- Subpages -->
+      <ul *ngIf="page.children"
+          class="mt-2 ltr:ml-6 rtl:mr-6 list-disc list-inside space-y-1 text-green-600 text-sm">
+        <li *ngFor="let sub of page.children">
+          <a [routerLink]="sub.link" class="hover:underline">
+            {{ sub.title | translate }}
+          </a>
+        </li>
+      </ul>
+    </li>
+  </ul>
+</div>

@@ -48,4 +48,11 @@ export const routes: Routes = [
         (m) => m.ServiceComponent
       ),
   },
+  {
+    path: 'sitemap',
+    loadComponent: () =>
+      import('./pages/sitemap/sitemap.component').then(
+        (m) => m.SitemapComponent
+      ),
+  },
 ];
