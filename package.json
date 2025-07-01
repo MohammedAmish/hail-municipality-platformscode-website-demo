@@ -13,10 +13,9 @@
     "ng": "ng",
     "start": "ng serve",
     "build": "ng build",
-    "build:prod": "ng build --configuration production --base-href '/store/afya-hub/'  --deploy-url '/store/afya-hub/'",
+    "build:prod": "ng build --configuration production",
     "watch": "ng build --watch --configuration development",
-    "test": "ng test",
-    "serve:ssr:afya-hub": "node dist/afya-hub/server/server.mjs"
+    "test": "ng test"
   },
   "license": "MIT",
   "private": true,

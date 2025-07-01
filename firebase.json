@@ -1,10 +1,16 @@
 {
   "hosting": {
-    "public": "dist/hail-municipality-platformscode-website-demo",
+    "public": "dist/hail-municipality-website/browser",
     "ignore": [
       "firebase.json",
       "**/.*",
       "**/node_modules/**"
+    ],
+    "rewrites": [
+      {
+        "source": "**",
+        "destination": "/index.html"
+      }
     ]
   }
 }
