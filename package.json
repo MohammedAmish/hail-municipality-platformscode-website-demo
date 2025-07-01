@@ -2,23 +2,13 @@
   "name": "hail-municipality",
   "version": "1.0.0",
   "author": {
-    "name": "Abharworks.com",
-    "email": "abdelrahman.haridy01@gmail.com"
+    "name": "",
+    "email": ""
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/Abharworks/afyahub-starter.git"
+    "url": "https://github.com/MohammedAmish/hail-municipality-platformscode-website-demo.git"
   },
-  "bugs": {
-    "url": "https://github.com/Abharworks/afyahub-starter/issues"
-  },
-  "publisher": "Abharworks.com",
-  "displayName": "AfyaHub Starter",
-  "description": "A free, open-source Angular 19 + PrimeNG 19 + Tailwind 4.1 starter template based on the DGA Figma design system.",
-  "contributors": [
-    "Abdelrahman Haridy <abdelrahman.haridy01@gmail.com>"
-  ],
-  "readme": "https://github.com/Abharworks/afyahub-starter/blob/main/README.md",
   "scripts": {
     "ng": "ng",
     "start": "ng serve",

@@ -1,0 +1,10 @@
+{
+  "hosting": {
+    "public": "dist/hail-municipality-platformscode-website-demo",
+    "ignore": [
+      "firebase.json",
+      "**/.*",
+      "**/node_modules/**"
+    ]
+  }
+}
