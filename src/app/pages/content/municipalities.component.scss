@@ -1,0 +1,99 @@
+.bg-white {
+  background: #fff;
+}
+.text-primary-color {
+  color: var(--color-primary-default, #097449);
+}
+.shadow {
+  box-shadow: 0 2px 8px rgba(0,0,0,0.04);
+}
+.border-neutral-primary {
+  border-color: var(--color-neutral-primary, #d2d6db);
+}
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 1rem;
+}
+.grid {
+  display: grid;
+  gap: 1.5rem;
+}
+@media (max-width: 768px) {
+  .container {
+    padding: 0 0.5rem;
+  }
+  .grid {
+    grid-template-columns: 1fr !important;
+  }
+}
+
+.municipality-card {
+  display: flex;
+  flex-direction: column;
+  border-radius: 1rem;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.06);
+  border: 1px solid var(--color-neutral-primary, #d2d6db);
+  background: #fff;
+  margin-bottom: 1.5rem;
+}
+
+.municipality-card-content {
+  display: flex;
+  flex-direction: row;
+  gap: 2rem;
+}
+
+.municipality-info {
+  flex: 1;
+}
+
+.info-row {
+  font-size: 1rem;
+  color: #333;
+  margin-bottom: 0.5rem;
+}
+
+.sub-municipalities {
+  min-width: 160px;
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  gap: 0.75rem;
+}
+
+.sub-municipality-card {
+  background: var(--color-primary-default, #097449);
+  color: #fff;
+  border-radius: 0.5rem;
+  padding: 0.5rem 1rem;
+  text-align: center;
+  font-weight: 500;
+  cursor: pointer;
+  transition: background 0.2s;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.sub-municipality-card:hover {
+  background: var(--color-primary-dark, #065c36);
+}
+
+.icon-building, .icon-phone, .icon-central, .icon-fax, .icon-mayor, .icon-address, .icon-location {
+  display: inline-block;
+  width: 1.2em;
+  height: 1.2em;
+  background: #e0e0e0;
+  border-radius: 50%;
+  margin-left: 0.5em;
+}
+
+@media (max-width: 900px) {
+  .municipality-card-content {
+    flex-direction: column;
+    gap: 1.5rem;
+  }
+  .sub-municipalities {
+    min-width: 0;
+  }
+} 

@@ -25,7 +25,7 @@ export class FooterComponent {
     { key: 'OPEN_GOV_DATA', routerLink: '/content' },
     { key: 'NATIONAL_STRATEGY', routerLink: '/content' },
     { key: 'OPEN_DATA_PORTAL', routerLink: '/content' },
-    { key: 'E_PARTICIPATION', routerLink: '/content' },
+    { key: 'E_PARTICIPATION', routerLink: '/e-participation' },
   ];
 
   contactLinks: { key: string; routerLink: string }[] = [

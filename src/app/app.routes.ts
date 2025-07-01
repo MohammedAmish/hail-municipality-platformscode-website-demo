@@ -55,4 +55,34 @@ export const routes: Routes = [
         (m) => m.SitemapComponent
       ),
   },
+  {
+    path: 'princes',
+    loadComponent: () =>
+      import('./pages/content/princes.component').then((m) => m.PrincesComponent),
+  },
+  {
+    path: 'mayors',
+    loadComponent: () =>
+      import('./pages/content/mayors.component').then((m) => m.MayorsComponent),
+  },
+  {
+    path: 'hail-area',
+    loadComponent: () =>
+      import('./pages/content/hail-area.component').then((m) => m.HailAreaComponent),
+  },
+  {
+    path: 'geography',
+    loadComponent: () =>
+      import('./pages/content/geography.component').then((m) => m.GeographyComponent),
+  },
+  {
+    path: 'municipalities',
+    loadComponent: () =>
+      import('./pages/content/municipalities.component').then((m) => m.MunicipalitiesComponent),
+  },
+  {
+    path: 'e-participation',
+    loadComponent: () =>
+      import('./pages/e-participation/e-participation.component').then((m) => m.EParticipationComponent),
+  },
 ];

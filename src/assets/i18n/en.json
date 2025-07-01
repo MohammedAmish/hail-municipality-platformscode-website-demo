@@ -508,5 +508,76 @@
       "blank": "Page Link",
       "subblank": "Sub Page Link"
     }
+  },
+
+  "PRINCES": {
+    "TITLE": "Region's Princes",
+    "INTRO": "Princes have been appointed to Hail region through the following sequence:",
+    "PRINCE_1": "On 18 Rajab 1438 AH, His Royal Highness Prince Abdulaziz bin Saad bin Abdulaziz Al Saud was appointed as Prince of Hail region until present",
+    "PRINCE_2": "On 16 Sha'ban 1420 AH, His Royal Highness Prince Saud bin Abdulmohsen bin Abdulaziz was appointed as Prince of Hail region until 18 Rajab 1438 AH",
+    "PRINCE_3": "On 2 Jumada al-Awwal 1400 AH, His Royal Highness Prince Muqrin bin Abdulaziz was appointed as Prince of Hail region until 16 Sha'ban 1420 AH",
+    "PRINCE_4": "On 3 Sha'ban 1394 AH, Sheikh Nasser Abdullah bin Sheikh was delegated to act as Deputy Governor of Hail region and exercise the powers of the Prince",
+    "PRINCE_5": "On 1 Sha'ban 1392 AH, His Highness Prince Saad bin Fahd Al Saud was appointed as Prince of Hail region",
+    "PRINCE_6": "On 21 Muharram 1391 AH, His Highness Prince Fahd bin Saad bin Abdulrahman Al Saud was appointed as Prince of Hail region",
+    "PRINCE_7": "In late 1341 AH, His Highness Prince Abdulaziz bin Musaed bin Jalawi Al Saud was appointed as Prince of Hail region until 1391 AH",
+    "PRINCE_8": "On 29 Safar 1340 AH, Ibrahim bin Salim Al-Sabhan was appointed as Prince of Hail region"
+  },
+
+  "MAYORS": {
+    "TITLE": "Municipality Heads and Region's Mayors",
+    "INTRO": "A group of heads have succeeded in heading the municipality (Hail Municipality) since its establishment until the present time, including official and acting heads as follows:",
+    "MAYOR_1": "Engineer / Sultan bin Hamid Al-Zaidi from 1443/2/21 AH until present",
+    "MAYOR_2": "Engineer / Ibrahim bin Saeed Abu Ras from 1433/7/2 AH until 1443/5/27",
+    "MAYOR_3": "Engineer / Abdulaziz bin Ibrahim Al-Toub from 1428/8/12 AH until 1433/7/1 AH",
+    "MAYOR_4": "Dr. / Abdulaziz bin Yusuf Al-Amar from 1425/1/30 AH until 1428/8/11 AH",
+    "MAYOR_5": "Engineer / Jadae bin Nahar Al-Qahtani from 1409 AH until 1425/1/29 AH",
+    "MAYOR_6": "Dr. / Mohammed bin Ibrahim Al-Mousa from 1404 AH until 1409 AH",
+    "MAYOR_7": "Mr. / Ibrahim bin Abdullah Al-Bulaihi from 1396 AH until 1404 AH",
+    "MAYOR_8": "Sulaiman Al-Mamdoh - Hamad Al-Mubarak - Abdullah Al-Sunaidi - Abdullah Al-Rashid - Hamad Al-Sagheer",
+    "MAYOR_9": "Sheikh / Mamdouh bin Sulaiman Al-Ali (from 1381 AH until 1392/8/27 AH)"
+  },
+
+  "HAIL_AREA": {
+    "TITLE": "Hail Region",
+    "HISTORICAL_OVERVIEW": "Historical Overview of Hail Region",
+    "CONTENT": "The history of Hail region extends to prehistoric times, through the pre-Islamic era and Islamic periods, where it was one of the most fortified places in the Arabian Peninsula, which protected it from the invasion of the kings of Al-Hira in Iraq, as well as the Ghassanid kings in Syria, until the unification of the Kingdom of Saudi Arabia in 1351 AH (1932 AD). Hail is associated with the famous legend embodied in the character of Hatim Al-Ta'i, known for his generous hospitality. Hail was also connected to the ancient historical routes of commercial caravans and pilgrims, and Hail has produced a number of poets and writers, and was visited by several well-known European travelers in the twentieth century despite the difficult and arduous journey to reach it. Hail is originally the name of the valley on which the city is located. It was formerly known as Al-Qaryah, or Qaryat Hail. With the passage of time, people neglected the name Al-Qaryah and it became known by its valley name, Hail. As for the reason for the naming, it was said that this valley, which is now known as Al-Adira', used to flow in ancient times and would separate the people of Aja and Salma. In 1340 AH, King Abdul Aziz - may God have mercy on him - annexed Hail to this great entity, and since that date, the region has been living in the blessing of security and stability, and it has grown and flourished to become one of the main regions of the Kingdom. Within the framework of the comprehensive modern renaissance that the Kingdom is witnessing, Hail region has achieved a high status in all aspects of economic, social, service and other life."
+  },
+
+  "GEOGRAPHY": {
+    "TITLE": "Geographical Overview of Hail",
+    "LOCATION_TITLE": "Location:",
+    "LOCATION_TEXT": "Hail region is one of the administrative regions of the Kingdom of Saudi Arabia, with its capital in Hail city. It is located in northern Najd in the northwest of the Kingdom and ranks seventh in area (120,000 km2) and eighth in population (731,147 in 2019) among the Kingdom's regions. Administratively, it is divided into 8 governorates in addition to the Hail Emirate, and is famous for the Aja and Salma mountains and the historical symbol of generosity, Hatim Al-Tai.",
+    "AREA_TITLE": "Area:",
+    "AREA_TEXT": "The total area of Hail region is about 120,000 km2, which is 6.1% of the total area of the Kingdom, ranking seventh by area among the regions. Hail extends about 400 km from north to south and about 500 km from east to west. The total population according to the latest 2019 statistics is about 731,147, making it the eighth most populous region in the Kingdom.",
+    "POPULATION_TITLE": "Population:",
+    "POPULATION_TABLE_TITLE": "General Authority for Statistics Periodic Data Product",
+    "POPULATION_TABLE": {
+      "HEADER_YEAR": "Year",
+      "HEADER_POPULATION": "Population",
+      "YEARS": ["2010","2011","2012","2013","2014","2015","2016","2017","2018","2019"],
+      "VALUES": ["610,718","623,709","636,087","648,346","660,711","672,961","685,423","700,865","716,021","731,147"]
+    },
+    "POPULATION_LAST_UPDATE": "Last updated 05/09/2022"
+  },
+
+  "MUNICIPALITIES": {
+    "TITLE": "Municipalities of Hail Region",
+    "PHONE": "Phone",
+    "CENTRAL": "Central",
+    "FAX": "Fax",
+    "MAYOR": "Mayor",
+    "ADDRESS": "Address",
+    "SUBS": "Sub-municipalities",
+    "VIEW_LOCATION": "View Location"
+  },
+
+  "E_PARTICIPATION": {
+    "TITLE": "E-Participation Portal",
+    "COMMUNICATION": "Contact Us",
+    "ACCOUNTS": "Official Accounts",
+    "SURVEYS": "Surveys",
+    "COMPLAINTS": "Complaints & Suggestions",
+    "LINKS": "Important Links",
+    "PLACEHOLDER": "Content will be added soon"
   }
 }

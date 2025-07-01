@@ -1,0 +1,34 @@
+<div class="container mx-auto py-5xl lg:px-md">
+  <h1 class="font-bold text-3xl text-text-display mb-8 text-center">
+    {{ 'MUNICIPALITIES.TITLE' | translate }}
+  </h1>
+  <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+    <div *ngFor="let m of municipalities" class="municipality-card bg-white rounded-lg shadow p-6 border border-neutral-primary flex flex-col">
+      <div class="municipality-card-content flex flex-row gap-6">
+        <!-- Right: Municipality Info -->
+        <div class="municipality-info flex-1">
+          <h2 class="font-bold text-xl text-primary-color mb-4 flex items-center">
+            <span class="icon-building mr-2"></span>{{ m.name }}
+          </h2>
+          <div class="info-row mb-2 flex items-center"><span class="icon-phone ml-2"></span><strong>{{ 'MUNICIPALITIES.PHONE' | translate }}:</strong> {{ m.phone }}</div>
+          <div class="info-row mb-2 flex items-center"><span class="icon-central ml-2"></span><strong>{{ 'MUNICIPALITIES.CENTRAL' | translate }}:</strong> {{ m.central }}</div>
+          <div class="info-row mb-2 flex items-center"><span class="icon-fax ml-2"></span><strong>{{ 'MUNICIPALITIES.FAX' | translate }}:</strong> {{ m.fax }}</div>
+          <div class="info-row mb-2 flex items-center"><span class="icon-mayor ml-2"></span><strong>{{ 'MUNICIPALITIES.MAYOR' | translate }}:</strong> {{ m.mayor }}</div>
+          <div class="info-row mb-2 flex items-center"><span class="icon-address ml-2"></span><strong>{{ 'MUNICIPALITIES.ADDRESS' | translate }}:</strong> {{ m.address }}</div>
+          <div class="info-row mb-4 flex items-center" *ngIf="m.location">
+            <button class="btn btn-primary flex items-center" (click)="openLocation(m.location)">
+              <span class="icon-location ml-2"></span>{{ 'MUNICIPALITIES.VIEW_LOCATION' | translate }}
+            </button>
+          </div>
+        </div>
+        <!-- Left: Sub-Municipalities -->
+        <div class="sub-municipalities flex flex-col gap-3 min-w-[140px]">
+          <div class="font-semibold mb-2 text-center">{{ 'MUNICIPALITIES.SUBS' | translate }}</div>
+          <div *ngFor="let sub of m.subMunicipalities" class="sub-municipality-card bg-primary-color text-white rounded-md p-2 flex items-center justify-center cursor-pointer hover:bg-primary-dark transition">
+            <span class="icon-building ml-2"></span>{{ sub }}
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div> 

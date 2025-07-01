@@ -114,19 +114,19 @@ export class HeaderComponent implements OnInit {
         items: [
           {
             label:'HEADER.MENU.MUNICIPALITY_ITEMS.PRINCE',
-            href: 'https://amanathail.gov.sa/new_portal/Hail/HailPrinces',
+            routerLink: '/princes',
           },
           {
             label:'HEADER.MENU.MUNICIPALITY_ITEMS.HEADS',
-            href: 'https://amanathail.gov.sa/new_portal/Hail/MayorsMunic',
+            routerLink: '/mayors',
           },
           {
             label:'HEADER.MENU.MUNICIPALITY_ITEMS.LOCATION',
-            href: 'https://amanathail.gov.sa/new_portal/Hail/AboutHail',
+            routerLink: '/hail-area',
           },
           {
             label:'HEADER.MENU.MUNICIPALITY_ITEMS.GEOGRAPHY',
-            href: 'https://amanathail.gov.sa/new_portal/Hail/HailHistory',
+            routerLink: '/geography',
           },
           {
             label:'HEADER.MENU.MUNICIPALITY_ITEMS.GUIDE',
@@ -134,7 +134,7 @@ export class HeaderComponent implements OnInit {
           },
           {
             label:'HEADER.MENU.MUNICIPALITY_ITEMS.MUNICIPALITIES',
-            href: 'https://amanathail.gov.sa/new_portal/Municipalities',
+            routerLink: '/municipalities',
           },
           {
             label:'HEADER.MENU.MUNICIPALITY_ITEMS.MANAGEMENT',

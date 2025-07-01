@@ -1,0 +1,31 @@
+<div class="container mx-auto py-5xl lg:px-md">
+  <!-- Breadcrumb -->
+  <nav class="flex text-sm text-secondary-paragraph mb-6">
+    <a routerLink="/" class="text-primary-paragraph hover:underline">
+      {{ "CONTENT.breadcrumb.parent" | translate }}
+    </a>
+    <span class="mx-2">›</span>
+    <span class="font-semibold text-text-display">
+      {{ 'HAIL_AREA.TITLE' | translate }}
+    </span>
+  </nav>
+
+  <!-- Page title -->
+  <h1 class="font-bold text-3xl text-text-display mb-4 text-center">
+    {{ 'HAIL_AREA.TITLE' | translate }}
+  </h1>
+
+  <hr class="border-neutral-primary mb-12" />
+
+  <!-- Historical Overview Card -->
+  <section class="mb-12">
+    <div class="bg-white rounded-lg shadow p-6 border border-neutral-primary">
+      <h2 class="font-bold text-xl text-text-display mb-4">
+        {{ 'HAIL_AREA.HISTORICAL_OVERVIEW' | translate }}
+      </h2>
+      <div class="text-text-secondary-paragraph text-lg leading-8 whitespace-pre-line">
+        {{ 'HAIL_AREA.CONTENT' | translate }}
+      </div>
+    </div>
+  </section>
+</div> 
