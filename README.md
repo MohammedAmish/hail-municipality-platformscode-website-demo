@@ -1,1 +1,1 @@
-Awuigdgwgceqwjhduiqk
+This is a website made using DGA Platforms Code template, made by Mohammed Amish and Abdulaziz Mohammad
