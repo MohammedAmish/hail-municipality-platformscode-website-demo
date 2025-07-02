@@ -1,1 +1,107 @@
-<p>rating works!</p>
+<div class="bg-white w-full p-4 rounded-lg shadow-md">
+  <!-- Initial Rating Bar View -->
+  <div *ngIf="!isRatingMode" class="flex flex-col sm:flex-row justify-between items-center gap-4">
+    <!-- Left Group: Text + Stars + Reviews -->
+    <div class="flex flex-col sm:flex-row items-center gap-2 text-sm text-gray-700 font-medium">
+      <!-- Left Text: changes after submit -->
+      <span *ngIf="!submitted">
+        This service is rated with an average of {{ averageRating | number: '1.1-1' }}
+      </span>
+      <span *ngIf="submitted">
+        Your rated this service as ({{ userRating }})
+      </span>
+
+      <div class="flex items-center space-x-1">
+        <ng-container *ngFor="let star of stars; let i = index">
+          <svg
+            class="w-5 h-5"
+            [attr.fill]="i < getDisplayedRating() ? '#1B8354' : '#E5E7EB'"
+            viewBox="0 0 20 20"
+          >
+            <path
+              d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.286 
+              3.955h4.163c.969 0 1.371 1.24.588 1.81l-3.37 2.448 
+              1.287 3.955c.3.921-.755 1.688-1.54 
+              1.118L10 13.347l-3.37 2.448c-.784.57-1.838-.197-1.539-1.118
+              l1.287-3.955-3.37-2.448c-.783-.57-.38-1.81.588-1.81h4.163
+              l1.286-3.955z"
+            />
+          </svg>
+        </ng-container>
+      </div>
+
+      <!-- Reviews text disappears after submit -->
+      <span *ngIf="!submitted" class="text-xs text-gray-500">1544 reviews</span>
+    </div>
+
+    <!-- Right: Button or Submission Text -->
+    <div
+      class="text-sm text-gray-700 font-medium text-center sm:text-right w-full sm:w-auto flex items-center justify-center sm:justify-end gap-2"
+    >
+      <ng-container *ngIf="!submitted; else submittedText">
+        <button
+          (click)="startRating()"
+          class="text-white px-4 py-2 rounded"
+          [ngStyle]="{ backgroundColor: '#1B8354' }"
+        >
+          Rate This Service
+        </button>
+      </ng-container>
+
+      <ng-template #submittedText>
+        <!-- Checkmark image to the left -->
+        <img src="../../../assets/images/Icon-green-checkmark.png" alt="Checkmark" class="w-5 h-5" />
+        <div>Your feedback is submitted!</div>
+      </ng-template>
+    </div>
+  </div>
+
+  <!-- Feedback Form -->
+  <div *ngIf="isRatingMode" class="mt-4">
+    <p class="mb-2 font-medium">How would you rate this service?</p>
+
+    <!-- Star Rating Input -->
+    <div class="flex mb-3">
+      <ng-container *ngFor="let star of stars; let i = index">
+        <button (click)="selectRating(i + 1)" type="button">
+          <svg
+            class="w-6 h-6"
+            [attr.fill]="i < userRating! ? '#1B8354' : '#E5E7EB'"
+            viewBox="0 0 20 20"
+          >
+            <path
+              d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.286 
+              3.955h4.163c.969 0 1.371 1.24.588 1.81l-3.37 2.448 
+              1.287 3.955c.3.921-.755 1.688-1.54 
+              1.118L10 13.347l-3.37 2.448c-.784.57-1.838-.197-1.539-1.118
+              l1.287-3.955-3.37-2.448c-.783-.57-.38-1.81.588-1.81h4.163
+              l1.286-3.955z"
+            />
+          </svg>
+        </button>
+      </ng-container>
+    </div>
+
+    <!-- Optional Comment -->
+    <textarea
+      [(ngModel)]="comment"
+      rows="3"
+      class="w-full p-2 border border-gray-300 rounded mb-3"
+      placeholder="Add a comment (optional)"
+    ></textarea>
+
+    <!-- Submit Button -->
+    <button
+      (click)="submitRating()"
+      [disabled]="!userRating"
+      class="text-white px-4 py-2 rounded disabled:opacity-50"
+      [ngStyle]="{
+        backgroundColor: '#1B8354',
+        opacity: !userRating ? 0.5 : 1,
+        cursor: !userRating ? 'not-allowed' : 'pointer'
+      }"
+    >
+      Submit Feedback
+    </button>
+  </div>
+</div>
