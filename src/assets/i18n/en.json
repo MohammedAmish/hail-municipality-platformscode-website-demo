@@ -606,5 +606,24 @@
       "Empowerment and Sustainability in Resource Utilization",
       "Serving Partners and Community"
     ]
+  },
+
+  "MAIN_GOALS": {
+    "BREADCRUMB": {
+      "HOME": "Home",
+      "CURRENT": "Main Goals"
+    },
+    "TITLE": "Main Goals",
+    "GOALS_TITLE": "Strategic Goals:",
+    "GOALS": [
+      "Achieve the highest rates in the Global Cities Prosperity Index.",
+      "Enhance institutional performance and the competencies of employees and service providers.",
+      "Attract local investments and compete globally in the field of logistics services.",
+      "Optimize the use of tourism assets and support them to reach global competitiveness.",
+      "Develop the municipal work system and achieve full automation.",
+      "Support sustainability and achieve maximum efficiency in resource utilization.",
+      "Leverage modern and global technologies and expertise to support municipal projects (infrastructure).",
+      "Achieve comprehensive oversight to enhance the city's visual image and reduce visual distortion."
+    ]
   }
 }

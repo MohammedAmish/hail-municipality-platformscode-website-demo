@@ -166,7 +166,7 @@ export class HeaderComponent implements OnInit {
           },
           {
             label:'HEADER.MENU.STRATEGY_ITEMS.GOALS',
-            href: 'https://amanathail.gov.sa/new_portal/Hail/OurGoals',
+            routerLink: '/main-goals',
           },
           {
             label:'HEADER.MENU.STRATEGY_ITEMS.AUDIT',

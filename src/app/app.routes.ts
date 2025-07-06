@@ -90,4 +90,9 @@ export const routes: Routes = [
     loadComponent: () =>
       import('./pages/content/vision-mission.component').then((m) => m.VisionMissionComponent),
   },
+  {
+    path: 'main-goals',
+    loadComponent: () =>
+      import('./pages/content/main-goals.component').then((m) => m.MainGoalsComponent),
+  },
 ];
