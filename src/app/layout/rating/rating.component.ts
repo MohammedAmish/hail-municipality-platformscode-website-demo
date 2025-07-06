@@ -17,7 +17,7 @@ export class RatingComponent {
   isRatingMode = false;
   submitted = false;
   stars = [1, 2, 3, 4, 5];
-
+  
   startRating() {
     this.isRatingMode = true;
   }

@@ -10,7 +10,7 @@
         {{ 'RATING.ratedthis' | translate}} ({{ userRating }})
       </span>
 
-      <div class="flex items-center space-x-1">
+      <div class="flex items-center space-x-1" dir="ltr">
         <ng-container *ngFor="let star of stars; let i = index">
           <svg
             class="w-5 h-5"
@@ -86,7 +86,7 @@
         </p>
 
         <!-- Half-Star Rating Input -->
-        <div class="flex items-center space-x-1 mb-4">
+        <div class="flex space-x-1 rtl:ml-auto rtl:mr-0 rtl:justify-end" dir="ltr">
           <ng-container *ngFor="let star of stars; let i = index">
             <svg
               (click)="selectRating($event, i)"
