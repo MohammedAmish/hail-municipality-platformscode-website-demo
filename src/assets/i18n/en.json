@@ -178,6 +178,26 @@
     "TITLE": "Our Partners"
   },
 
+  "RATING": {
+    "serviceis": "This service is rated with an average of",
+    "reviews": "1544 reviews",
+    "ratebutton": "Rate this service",
+    "think": "Tell us what you think of this service",
+    "dont": "Please don’t include personal or financial information. Your review will be submitted and recorded to improve services.",
+    "ratethis": "How would you rate this service?",
+    "rating": "Rate your experience from (1) poor to (5) excellent",
+    "info1": "For more information you may review",
+    "info2": "e-participation statement",
+    "info3": "and",
+    "info4": "rules of engagement",
+    "feedback": "Feedback",
+    "writefeedback": "Entered text",
+    "submitbutton": "Submit",
+    "close": "Close",
+    "ratedthis": "You rated this service as",
+    "feedbacksubmit": "Your feedback is submitted!"
+  },
+
   "FOOTER": {
     "OVERVIEW": "Overview",
     "IMPORTANT_LINKS": "Important links",
