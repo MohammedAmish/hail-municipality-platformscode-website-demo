@@ -4,10 +4,10 @@
     <!-- Left Group: Text + Stars + Reviews -->
     <div class="flex flex-col sm:flex-row items-center gap-2 text-sm text-gray-700 font-medium">
       <span *ngIf="!submitted">
-        This service is rated with an average of {{ averageRating | number: '1.1-1' }}
+        {{ 'RATING.serviceis' | translate}} {{ averageRating | number: '1.1-1' }}
       </span>
       <span *ngIf="submitted">
-        You rated this service as ({{ userRating }})
+        {{ 'RATING.ratedthis' | translate}} ({{ userRating }})
       </span>
 
       <div class="flex items-center space-x-1">
@@ -35,7 +35,7 @@
         </ng-container>
       </div>
 
-      <span *ngIf="!submitted" class="text-xs text-gray-500">1544 reviews</span>
+      <span *ngIf="!submitted" class="text-xs text-gray-500">{{ 'RATING.reviews' | translate}}</span>
     </div>
 
     <!-- Right Side -->
@@ -48,13 +48,13 @@
           class="text-white px-4 py-2 rounded"
           [ngStyle]="{ backgroundColor: '#1B8354' }"
         >
-          Rate This Service
+          {{ 'RATING.ratebutton' | translate}}
         </button>
       </ng-container>
 
       <ng-template #submittedText>
         <img src="../../../assets/images/Icon-green-checkmark.png" alt="Checkmark" class="w-5 h-5" />
-        <div>Your feedback is submitted!</div>
+        <div>{{ 'RATING.feedbacksubmit' | translate}}</div>
       </ng-template>
     </div>
   </div>
@@ -65,24 +65,24 @@
       class="absolute top-0 right-0 text-sm text-gray-700 hover:text-black flex items-center"
       (click)="isRatingMode = false"
     >
-      Close <span class="ml-1 text-lg">×</span>
+      {{ 'RATING.close' | translate}} <span class="ml-1 text-lg">×</span>
     </button>
 
     <div class="flex flex-col lg:flex-row gap-6">
       <!-- Left Side -->
       <div class="flex-1">
         <h3 class="font-semibold text-gray-800 mb-1">
-          Tell us what you think of this service
+          {{ 'RATING.think' | translate}}
         </h3>
         <p class="text-sm text-semibold mb-4">
-          Please don't include personal or financial information. Your review will be submitted and recorded to improve services.
+          {{ 'RATING.dont' | translate}}
         </p>
 
         <label class="block font-medium text-sm text-gray-800 mb-1">
-          How would you rate this service?
+          {{ 'RATING.ratethis' | translate}}
         </label>
-        <p class="text-xs text-gray-500 mb-2">
-          Rate your experience from (1) poor to (5) excellent
+        <p class="text-xs mb-2">
+          {{ 'RATING.rating' | translate}}
         </p>
 
         <!-- Half-Star Rating Input -->
@@ -116,13 +116,13 @@
       <!-- Feedback Box -->
       <div class="flex-1">
         <label class="block font-medium text-sm text-gray-800 mb-1">
-          Feedback
+          {{ 'RATING.feedback' | translate}}
         </label>
         <textarea
           [(ngModel)]="comment"
           rows="5"
           class="w-full p-2 border border-gray-300 rounded resize-none"
-          placeholder="Write your feedback here..."
+          placeholder="{{ 'RATING.writefeedback' | translate}}"
         ></textarea>
       </div>
     </div>
@@ -130,10 +130,10 @@
     <!-- Bottom Row -->
     <div class="flex flex-col sm:flex-row justify-between items-center mt-6">
       <p class="text-xs text-semibold text-center sm:text-left">
-        For more information you may review
-        <a href="#" class="text-[#1B8354] underline">e-participation statement</a>
-        and
-        <a href="#" class="text-[#1B8354] underline">rules of engagement</a>.
+        {{ 'RATING.info1' | translate}}
+        <a href="#" class="text-[#1B8354] underline">{{ 'RATING.info2' | translate}}</a>
+        {{ 'RATING.info3' | translate}}
+        <a href="#" class="text-[#1B8354] underline">{{ 'RATING.info4' | translate}}</a>.
       </p>
 
       <button
@@ -146,7 +146,7 @@
           cursor: !userRating ? 'not-allowed' : 'pointer'
         }"
       >
-        Submit
+        {{ 'RATING.submitbutton' | translate}}
       </button>
     </div>
   </div>
