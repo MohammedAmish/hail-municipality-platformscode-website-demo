@@ -1,0 +1,74 @@
+<div class="container mx-auto py-5xl lg:px-md">
+  <!-- Breadcrumb -->
+  <nav class="flex text-sm text-secondary-paragraph mb-6">
+    <a routerLink="/" class="text-primary-paragraph hover:underline">
+      {{ 'VISION_MISSION.BREADCRUMB.HOME' | translate }}
+    </a>
+    <span class="mx-2">›</span>
+    <span class="font-semibold text-text-display">
+      {{ 'VISION_MISSION.BREADCRUMB.CURRENT' | translate }}
+    </span>
+  </nav>
+
+  <!-- Page title -->
+  <h1 class="font-bold text-3xl text-text-display mb-4 text-center">
+    {{ 'VISION_MISSION.TITLE' | translate }}
+  </h1>
+
+  <hr class="border-neutral-primary mb-12" />
+
+  <!-- Vision Section -->
+  <section class="mb-12">
+    <div class="bg-white rounded-lg shadow p-6 border border-neutral-primary">
+      <h2 class="font-bold text-xl text-primary-color mb-2 border-b-2 border-primary-color pb-2">
+        {{ 'VISION_MISSION.VISION_TITLE' | translate }}
+      </h2>
+      <div class="text-text-secondary-paragraph text-lg leading-8">
+        {{ 'VISION_MISSION.VISION_TEXT' | translate }}
+      </div>
+    </div>
+  </section>
+
+  <!-- Mission Section -->
+  <section class="mb-12">
+    <div class="bg-white rounded-lg shadow p-6 border border-neutral-primary">
+      <h2 class="font-bold text-xl text-primary-color mb-2 border-b-2 border-primary-color pb-2">
+        {{ 'VISION_MISSION.MISSION_TITLE' | translate }}
+      </h2>
+      <div class="text-text-secondary-paragraph text-lg leading-8">
+        {{ 'VISION_MISSION.MISSION_TEXT' | translate }}
+      </div>
+    </div>
+  </section>
+
+  <!-- Values Section -->
+  <section class="mb-12">
+    <div class="bg-white rounded-lg shadow p-6 border border-neutral-primary">
+      <h2 class="font-bold text-xl text-primary-color mb-2 border-b-2 border-primary-color pb-2">
+        {{ 'VISION_MISSION.VALUES_TITLE' | translate }}
+      </h2>
+      <ul class="list-disc list-inside text-lg leading-8 pr-6">
+        <li>{{ 'VISION_MISSION.VALUES.0' | translate }}</li>
+        <li>{{ 'VISION_MISSION.VALUES.1' | translate }}</li>
+        <li>{{ 'VISION_MISSION.VALUES.2' | translate }}</li>
+        <li>{{ 'VISION_MISSION.VALUES.3' | translate }}</li>
+        <li>{{ 'VISION_MISSION.VALUES.4' | translate }}</li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- Strategic Pillars Section -->
+  <section class="mb-12">
+    <div class="bg-white rounded-lg shadow p-6 border border-neutral-primary">
+      <h2 class="font-bold text-xl text-primary-color mb-2 border-b-2 border-primary-color pb-2">
+        {{ 'VISION_MISSION.PILLARS_TITLE' | translate }}
+      </h2>
+      <ul class="list-disc list-inside text-lg leading-8 pr-6">
+        <li>{{ 'VISION_MISSION.PILLARS.0' | translate }}</li>
+        <li>{{ 'VISION_MISSION.PILLARS.1' | translate }}</li>
+        <li>{{ 'VISION_MISSION.PILLARS.2' | translate }}</li>
+        <li>{{ 'VISION_MISSION.PILLARS.3' | translate }}</li>
+      </ul>
+    </div>
+  </section>
+</div> 
