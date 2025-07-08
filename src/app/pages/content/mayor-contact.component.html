@@ -1,0 +1,71 @@
+<div class="container mx-auto py-5xl lg:px-md">
+  <h1 class="font-bold text-3xl text-text-display mb-4 text-center">
+    {{ 'MAYOR_CONTACT.TITLE' | translate }}
+  </h1>
+  <hr class="border-neutral-primary mb-12" />
+  <div class="flex flex-col lg:flex-row gap-8">
+    <!-- Card -->
+    <div class="bg-white rounded-lg shadow p-6 border border-neutral-primary w-full lg:w-1/3 flex flex-col items-center">
+      <img src="assets/images/mayor.png" alt="صورة الأمين" class="h-40 w-40 rounded-full object-cover mb-4" />
+      <div class="font-bold text-xl text-center mb-1">
+        {{ 'MAYOR_CONTACT.NAME' | translate }}
+      </div>
+      <div class="text-primary-color text-center mb-4">
+        {{ 'MAYOR_CONTACT.POSITION' | translate }}
+      </div>
+      <div class="w-full text-sm">
+        <div class="flex items-center mb-2">
+          <i class="pi pi-phone mr-2"></i>
+          <span>{{ 'MAYOR_CONTACT.PHONE' | translate }}: 016/5320144</span>
+        </div>
+        <div class="flex items-center mb-2">
+          <i class="pi pi-print mr-2"></i>
+          <span>{{ 'MAYOR_CONTACT.FAX' | translate }}: 016/5432174</span>
+        </div>
+        <div class="flex items-center mb-2">
+          <i class="pi pi-inbox mr-2"></i>
+          <span>{{ 'MAYOR_CONTACT.POBOX' | translate }}: 2700</span>
+        </div>
+        <div class="flex items-center mb-2">
+          <i class="pi pi-envelope mr-2"></i>
+          <span>{{ 'MAYOR_CONTACT.EMAIL' | translate }}: mayor&#64;momra.gov.sa</span>
+        </div>
+      </div>
+    </div>
+    <!-- Info -->
+    <div class="flex-1">
+      <section class="mb-8">
+        <h2 class="font-bold text-xl text-primary-color mb-2 border-b-2 border-primary-color pb-2">
+          {{ 'MAYOR_CONTACT.RECEPTION_TITLE' | translate }}
+        </h2>
+        <div class="text-lg leading-8 pr-6">
+          {{ 'MAYOR_CONTACT.RECEPTION_TIME' | translate }}
+        </div>
+      </section>
+      <section class="mb-8">
+        <h2 class="font-bold text-xl text-primary-color mb-2 border-b-2 border-primary-color pb-2">
+          {{ 'MAYOR_CONTACT.BOOKING_TITLE' | translate }}
+        </h2>
+        <ul class="list-disc list-inside text-lg leading-8 pr-6">
+          <li>
+            <a href="https://balady.gov.sa/ar/services/%D8%AD%D8%AC%D8%B2-%D9%85%D9%88%D8%B9%D8%AF-%D8%A5%D9%84%D9%83%D8%AA%D8%B1%D9%88%D9%86%D9%8A" target="_blank" rel="noopener noreferrer" class="text-primary-color underline hover:text-green-800">
+              {{ 'MAYOR_CONTACT.BOOKING.0' | translate }}
+            </a>
+          </li>
+          <li>{{ 'MAYOR_CONTACT.BOOKING.1' | translate }}</li>
+          <li>{{ 'MAYOR_CONTACT.BOOKING.2' | translate }}</li>
+          <li>{{ 'MAYOR_CONTACT.BOOKING.3' | translate }}</li>
+          <li>{{ 'MAYOR_CONTACT.BOOKING.4' | translate }}</li>
+        </ul>
+      </section>
+      <section class="mb-8">
+        <h2 class="font-bold text-xl text-primary-color mb-2 border-b-2 border-primary-color pb-2">
+          {{ 'MAYOR_CONTACT.RECEPTION_PLACE_TITLE' | translate }}
+        </h2>
+        <div class="text-lg leading-8 pr-6">
+          {{ 'MAYOR_CONTACT.RECEPTION_PLACE' | translate }}
+        </div>
+      </section>
+    </div>
+  </div>
+</div> 

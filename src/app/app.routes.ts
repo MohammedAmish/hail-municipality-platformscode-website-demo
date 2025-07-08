@@ -100,4 +100,14 @@ export const routes: Routes = [
     loadComponent: () =>
       import('./pages/content/internal-audit.component').then((m) => m.InternalAuditComponent),
   },
+  {
+    path: 'mayor-profile',
+    loadComponent: () =>
+      import('./pages/content/mayor-profile.component').then((m) => m.MayorProfileComponent),
+  },
+  {
+    path: 'mayor-contact',
+    loadComponent: () =>
+      import('./pages/content/mayor-contact.component').then((m) => m.MayorContactComponent),
+  },
 ];

@@ -573,6 +573,62 @@
     "MAYOR_9": "Sheikh / Mamdouh bin Sulaiman Al-Ali (from 1381 AH until 1392/8/27 AH)"
   },
 
+  "MAYOR_PROFILE": {
+    "BREADCRUMB": {
+      "HOME": "Home",
+      "CURRENT": "Mayor of Hail Region"
+    },
+    "TITLE": "Mayor of Hail Region",
+    "NAME": "Eng. Sultan bin Hamed bin Mohammed Al-Tayyar",
+    "POSITION": "Mayor of Hail Region",
+    "PHONE": "Phone",
+    "FAX": "Fax",
+    "POBOX": "P.O. Box",
+    "EMAIL": "Email",
+    "EDUCATION_TITLE": "Education",
+    "EDUCATION": {
+      "0": "B.Sc. in Civil Engineering - King Saud University"
+    },
+    "JOBS_TITLE": "Professional Experience",
+    "JOBS": {
+      "0": "General Manager of Engineering Studies & Designs, Riyadh Municipality",
+      "1": "General Manager of Road Projects Implementation, Riyadh Municipality",
+      "2": "General Manager of Stormwater Drainage Projects, Riyadh Municipality",
+      "3": "General Manager of Lighting Projects Implementation, Riyadh Municipality",
+      "4": "Manager of Engineering Studies & Designs, Riyadh Municipality"
+    },
+    "ACHIEVEMENTS_TITLE": "Achievements",
+    "ACHIEVEMENTS": {
+      "0": "Supervised major projects in Riyadh City",
+      "1": "Developed the stormwater drainage system in Riyadh Municipality",
+      "2": "Implemented modern lighting projects in the capital",
+      "3": "Contributed to the development of road infrastructure",
+      "4": "Achieved high quality standards in project implementation"
+    }
+  },
+
+  "MAYOR_CONTACT": {
+    "TITLE": "Mayor Contact",
+    "NAME": "Eng. Sultan bin Hamed Al-Zaidi",
+    "POSITION": "Mayor of Hail Region",
+    "PHONE": "Phone",
+    "FAX": "Fax Number",
+    "POBOX": "P.O. Box",
+    "EMAIL": "Email",
+    "RECEPTION_TITLE": "Reception Times",
+    "RECEPTION_TIME": "Sunday to Wednesday (from 8:30 AM to 10:00 AM)",
+    "BOOKING_TITLE": "Book an Appointment with the Mayor of Hail Region",
+    "BOOKING": {
+      "0": "Appointment booking service - click here",
+      "1": "Login via Balady Digital Wallet",
+      "2": "Customer Service",
+      "3": "Service name: Meeting with the Mayor",
+      "4": "Fill in the appointment information"
+    },
+    "RECEPTION_PLACE_TITLE": "Reception Location",
+    "RECEPTION_PLACE": "Hail Municipality Building - Second Floor - Executive Office"
+  },
+
   "HAIL_AREA": {
     "TITLE": "Hail Region",
     "HISTORICAL_OVERVIEW": "Historical Overview of Hail Region",

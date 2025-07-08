@@ -178,11 +178,11 @@ export class HeaderComponent implements OnInit {
          items: [
           {
             label:'HEADER.MENU.MAYOR_ITEMS.MAYOR_INFO',
-            href: 'https://amanathail.gov.sa/new_portal/Hail/MayorCV',
+            routerLink: '/mayor-profile',
           },
           {
             label:'HEADER.MENU.MAYOR_ITEMS.MAYOR_CONTACT',
-            href: 'https://amanathail.gov.sa/new_portal/Hail/MayorContact',
+            routerLink: '/mayor-contact',
           },
           {
             label:'HEADER.MENU.MAYOR_ITEMS.MAYOR_ADMIN',
