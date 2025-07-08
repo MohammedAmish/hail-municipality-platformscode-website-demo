@@ -110,4 +110,9 @@ export const routes: Routes = [
     loadComponent: () =>
       import('./pages/content/mayor-contact.component').then((m) => m.MayorContactComponent),
   },
+  {
+    path: 'executive-office',
+    loadComponent: () =>
+      import('./pages/content/executive-office.component').then((m) => m.ExecutiveOfficeComponent),
+  },
 ];

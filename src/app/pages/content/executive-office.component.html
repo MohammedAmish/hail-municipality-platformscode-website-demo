@@ -1,0 +1,59 @@
+<div class="container mx-auto py-12 lg:px-4 font-ibm">
+  <h1 class="font-bold text-3xl text-text-display mb-4 text-center">
+    {{ 'EXECUTIVE_OFFICE.TITLE' | translate }}
+  </h1>
+  <hr class="border-neutral-primary mb-8" />
+  <div class="flex justify-center">
+    <div class="border border-gray-200 rounded-xl p-6 shadow-sm w-full max-w-2xl bg-white mx-auto flex flex-col items-center">
+      <div class="font-bold text-lg text-center mb-4">
+        {{ 'EXECUTIVE_OFFICE.NAME' | translate }}
+      </div>
+      <div class="grid grid-cols-2 gap-y-2 gap-x-4 w-full text-sm text-[#1f2a37]">
+        <div class="flex items-center gap-2 justify-end">
+          <img src="assets/images/Email.svg" alt="Email" class="w-5 h-5" />
+          <span class="font-semibold">{{ 'EXECUTIVE_OFFICE.EMAIL' | translate }}</span>
+        </div>
+        <div class="flex items-center">
+          <a class="text-green-600 underline" href="mailto:{{ 'EXECUTIVE_OFFICE.EMAIL_VALUE' | translate }}">
+            {{ 'EXECUTIVE_OFFICE.EMAIL_VALUE' | translate }}
+          </a>
+        </div>
+        <div class="flex items-center gap-2 justify-end">
+          <img src="assets/images/Icon-location-g.png" alt="Postal Code" class="w-5 h-5" />
+          <span class="font-semibold">{{ 'EXECUTIVE_OFFICE.POSTAL_CODE' | translate }}</span>
+        </div>
+        <div class="flex items-center">
+          <span class="text-green-600">{{ 'EXECUTIVE_OFFICE.POSTAL_CODE_VALUE' | translate }}</span>
+        </div>
+        <div class="flex items-center gap-2 justify-end">
+          <img src="assets/images/Email.svg" alt="Fax" class="w-5 h-5" />
+          <span class="font-semibold">{{ 'EXECUTIVE_OFFICE.FAX' | translate }}</span>
+        </div>
+        <div class="flex items-center">
+          <span class="text-green-600">{{ 'EXECUTIVE_OFFICE.FAX_VALUE' | translate }}</span>
+        </div>
+        <div class="flex items-center gap-2 justify-end">
+          <img src="assets/images/Icon-location-g.png" alt="P.O. Box" class="w-5 h-5" />
+          <span class="font-semibold">{{ 'EXECUTIVE_OFFICE.POBOX' | translate }}</span>
+        </div>
+        <div class="flex items-center">
+          <span class="text-green-600">{{ 'EXECUTIVE_OFFICE.POBOX_VALUE' | translate }}</span>
+        </div>
+        <div class="flex items-center gap-2 justify-end">
+          <img src="assets/images/Icon-phone.png" alt="Direct Phone" class="w-5 h-5" />
+          <span class="font-semibold">{{ 'EXECUTIVE_OFFICE.DIRECT_PHONE' | translate }}</span>
+        </div>
+        <div class="flex items-center">
+          <span class="text-green-600">{{ 'EXECUTIVE_OFFICE.DIRECT_PHONE_VALUE' | translate }}</span>
+        </div>
+        <div class="flex items-center gap-2 justify-end">
+          <img src="assets/images/Icon-phone.png" alt="Phone" class="w-5 h-5" />
+          <span class="font-semibold">{{ 'EXECUTIVE_OFFICE.PHONE' | translate }}</span>
+        </div>
+        <div class="flex items-center">
+          <span class="text-green-600">{{ 'EXECUTIVE_OFFICE.PHONE_VALUE' | translate }}</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</div> 

@@ -717,5 +717,22 @@
       { "TITLE": "Knowledge Guide to International Standards for Internal Audit - Final", "LINK": "#" }
     ],
     "DOWNLOAD": "Download"
+  },
+
+  "EXECUTIVE_OFFICE": {
+    "TITLE": "Executive Office",
+    "NAME": "Amal Sabeel Al-Anzi",
+    "PHONE": "Phone",
+    "PHONE_VALUE": "0165335000 / Ext / 202",
+    "DIRECT_PHONE": "Direct Phone",
+    "DIRECT_PHONE_VALUE": "016/5320144",
+    "FAX": "Fax Number",
+    "FAX_VALUE": "0165432174",
+    "POBOX": "P.O. Box",
+    "POBOX_VALUE": "2700",
+    "POSTAL_CODE": "Postal Code",
+    "POSTAL_CODE_VALUE": "81421",
+    "EMAIL": "Email",
+    "EMAIL_VALUE": "ExecutiveOffice.h@amanathail.gov.sa"
   }
 }

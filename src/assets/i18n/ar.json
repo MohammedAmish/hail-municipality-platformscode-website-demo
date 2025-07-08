@@ -723,5 +723,21 @@
       { "TITLE": "دليل المعرفة بالمعايير العالمية للمراجعة الداخلية - نهائي", "LINK": "#" }
     ],
     "DOWNLOAD": "تنزيل"
+  },
+  "EXECUTIVE_OFFICE": {
+    "TITLE": "المكتب التنفيذي",
+    "NAME": "أمل سبيل العنزي",
+    "PHONE": "الهاتف",
+    "PHONE_VALUE": "0165335000 / تحويلة / 202",
+    "DIRECT_PHONE": "الهاتف المباشر",
+    "DIRECT_PHONE_VALUE": "016/5320144",
+    "FAX": "رقم الفاكس",
+    "FAX_VALUE": "0165432174",
+    "POBOX": "صندوق البريد",
+    "POBOX_VALUE": "2700",
+    "POSTAL_CODE": "الرمز البريدي",
+    "POSTAL_CODE_VALUE": "81421",
+    "EMAIL": "البريد الإلكتروني",
+    "EMAIL_VALUE": "ExecutiveOffice.h@amanathail.gov.sa"
   }
 }

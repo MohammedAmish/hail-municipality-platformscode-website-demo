@@ -186,7 +186,7 @@ export class HeaderComponent implements OnInit {
           },
           {
             label:'HEADER.MENU.MAYOR_ITEMS.MAYOR_ADMIN',
-            href: 'https://amanathail.gov.sa/new_portal/Hail/MayorOfficeAdmin',
+            routerLink: '/executive-office',
           },
         ],
       },
