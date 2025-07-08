@@ -198,6 +198,22 @@
     "feedbacksubmit": "Your feedback is submitted!"
   },
 
+  "FEEDBACK": {
+    "useful": "Was this page useful?",
+    "y": "Yes",
+    "n": "No",
+    "users": "60% of users said Yes from 2843 Feedbacks",
+    "tellus": "Please tell us why",
+    "multipleoptions": "(you can select multiple options)",
+    "relevant": "Content is relevant",
+    "wellwritten": "It was well written",
+    "layout": "The layout made it easy to read",
+    "other": "Something else",
+    "i": "I'm",
+    "m": "Male",
+    "f": "Female"
+  },
+
   "FOOTER": {
     "OVERVIEW": "Overview",
     "IMPORTANT_LINKS": "Important links",
