@@ -95,4 +95,9 @@ export const routes: Routes = [
     loadComponent: () =>
       import('./pages/content/main-goals.component').then((m) => m.MainGoalsComponent),
   },
+  {
+    path: 'internal-audit',
+    loadComponent: () =>
+      import('./pages/content/internal-audit.component').then((m) => m.InternalAuditComponent),
+  },
 ];

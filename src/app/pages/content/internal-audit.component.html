@@ -1,0 +1,66 @@
+<div class="container mx-auto py-5xl lg:px-md">
+  <!-- Breadcrumb -->
+  <nav class="flex text-sm text-secondary-paragraph mb-6">
+    <a routerLink="/" class="text-primary-paragraph hover:underline">
+      {{ 'INTERNAL_AUDIT.BREADCRUMB.HOME' | translate }}
+    </a>
+    <span class="mx-2">›</span>
+    <span class="font-semibold text-text-display">
+      {{ 'INTERNAL_AUDIT.BREADCRUMB.CURRENT' | translate }}
+    </span>
+  </nav>
+
+  <!-- Page title -->
+  <h1 class="font-bold text-3xl text-text-display mb-4 text-center">
+    {{ 'INTERNAL_AUDIT.TITLE' | translate }}
+  </h1>
+
+  <hr class="border-neutral-primary mb-12" />
+
+  <p class="text-center text-lg mb-8">
+    {{ 'INTERNAL_AUDIT.INTRO' | translate }}
+  </p>
+
+  <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+    <!-- دليل المراجعة المالية -->
+    <div class="bg-white rounded-lg shadow p-6 border border-neutral-primary flex flex-col items-center">
+      <img src="assets\images\المراجعة الداخلية.jpg" alt="Guide Icon" class="h-20 mb-4" />
+      <div class="font-bold text-center mb-2 text-lg">
+        {{ 'INTERNAL_AUDIT.GUIDES.0.TITLE' | translate }}
+      </div>
+      <a class="btn btn-primary w-full mt-2" href="assets/الدليل الإسترشادي للمراجعة المالية.pdf" download>
+        {{ 'INTERNAL_AUDIT.DOWNLOAD' | translate }}
+      </a>
+    </div>
+    <!-- دليل مراجعة المشاريع -->
+    <div class="bg-white rounded-lg shadow p-6 border border-neutral-primary flex flex-col items-center">
+      <img src="assets\images\المراجعة الداخلية.jpg" alt="Guide Icon" class="h-20 mb-4" />
+      <div class="font-bold text-center mb-2 text-lg">
+        {{ 'INTERNAL_AUDIT.GUIDES.1.TITLE' | translate }}
+      </div>
+      <a class="btn btn-primary w-full mt-2" href="assets/الدليل الاسترشادي لمراجعة المشاريع.pdf" download>
+        {{ 'INTERNAL_AUDIT.DOWNLOAD' | translate }}
+      </a>
+    </div>
+    <!-- دليل مخاطر العمليات -->
+    <div class="bg-white rounded-lg shadow p-6 border border-neutral-primary flex flex-col items-center">
+      <img src="assets\images\المراجعة الداخلية.jpg" alt="Guide Icon" class="h-20 mb-4" />
+      <div class="font-bold text-center mb-2 text-lg">
+        {{ 'INTERNAL_AUDIT.GUIDES.2.TITLE' | translate }}
+      </div>
+      <a class="btn btn-primary w-full mt-2" href="assets/الدليل المعرفي لمخاطر العمليات للمرجعة الداخلية.pdf" download>
+        {{ 'INTERNAL_AUDIT.DOWNLOAD' | translate }}
+      </a>
+    </div>
+    <!-- دليل المعايير العالمية -->
+    <div class="bg-white rounded-lg shadow p-6 border border-neutral-primary flex flex-col items-center">
+      <img src="assets\images\المراجعة الداخلية.jpg" alt="Guide Icon" class="h-20 mb-4" />
+      <div class="font-bold text-center mb-2 text-lg">
+        {{ 'INTERNAL_AUDIT.GUIDES.3.TITLE' | translate }}
+      </div>
+      <a class="btn btn-primary w-full mt-2" href="assets/دليل المعرفة بالمعايير العالمية للمراجعة الداخلية - نهائي .pdf" download>
+        {{ 'INTERNAL_AUDIT.DOWNLOAD' | translate }}
+      </a>
+    </div>
+  </div>
+</div> 

@@ -170,7 +170,7 @@ export class HeaderComponent implements OnInit {
           },
           {
             label:'HEADER.MENU.STRATEGY_ITEMS.AUDIT',
-            href: 'https://amanathail.gov.sa/new_portal/Hail/InternalAudit',
+            routerLink: '/internal-audit',
           },
         ],
       },

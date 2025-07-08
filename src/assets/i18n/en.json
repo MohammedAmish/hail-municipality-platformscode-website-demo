@@ -180,10 +180,10 @@
 
   "RATING": {
     "serviceis": "This service is rated with an average of",
-    "reviews": "1544 reviews",
+    "reviews": "1544 reviews",
     "ratebutton": "Rate this service",
     "think": "Tell us what you think of this service",
-    "dont": "Please don’t include personal or financial information. Your review will be submitted and recorded to improve services.",
+    "dont": "Please don't include personal or financial information. Your review will be submitted and recorded to improve services.",
     "ratethis": "How would you rate this service?",
     "rating": "Rate your experience from (1) poor to (5) excellent",
     "info1": "For more information you may review",
@@ -645,5 +645,21 @@
       "Leverage modern and global technologies and expertise to support municipal projects (infrastructure).",
       "Achieve comprehensive oversight to enhance the city's visual image and reduce visual distortion."
     ]
+  },
+
+  "INTERNAL_AUDIT": {
+    "BREADCRUMB": {
+      "HOME": "Home",
+      "CURRENT": "Internal Audit"
+    },
+    "TITLE": "Internal Audit",
+    "INTRO": "This service aims to display and download the guidance and knowledge manuals for internal audit at Hail Municipality.",
+    "GUIDES": [
+      { "TITLE": "Guidance Manual for Financial Audit", "LINK": "#" },
+      { "TITLE": "Guidance Manual for Project Audit", "LINK": "#" },
+      { "TITLE": "Knowledge Guide for Internal Audit Operational Risks", "LINK": "#" },
+      { "TITLE": "Knowledge Guide to International Standards for Internal Audit - Final", "LINK": "#" }
+    ],
+    "DOWNLOAD": "Download"
   }
 }
