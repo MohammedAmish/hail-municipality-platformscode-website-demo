@@ -81,6 +81,10 @@ export const routes: Routes = [
       import('./pages/content/municipalities.component').then((m) => m.MunicipalitiesComponent),
   },
   {
+    path: 'municipalities/:name',
+    loadComponent: () => import('./pages/content/municipality-details.component').then(m => m.MunicipalityDetailsComponent),
+  },
+  {
     path: 'e-participation',
     loadComponent: () =>
       import('./pages/e-participation/e-participation.component').then((m) => m.EParticipationComponent),

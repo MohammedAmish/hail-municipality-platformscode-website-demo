@@ -1,4 +1,10 @@
 {
+  "PHONE": "Phone",
+  "CENTRAL": "Central",
+  "FAX": "Fax",
+  "MAYOR": "Mayor",
+  "ADDRESS": "Address",
+  "SUB_MUNICIPALITIES": "Sub Municipalities",
   "HOME": {
     "TITLE": "Welcome to Amanat Hail",
     "ABOUT": "Learn more about Hail and its tourism."
@@ -659,8 +665,117 @@
     "FAX": "Fax",
     "MAYOR": "Mayor",
     "ADDRESS": "Address",
-    "SUBS": "Sub-municipalities",
+    "SUBS": "Sub Municipalities",
     "VIEW_LOCATION": "View Location"
+  },
+
+  "municipalities": {
+    "anbuwan": {
+      "name": "Inbuwan Municipality",
+      "mayor": "Ahmed Masnad Al-Shammari",
+      "address": "Hail Region - Inbuwan City - Inbuwan Municipality",
+      "phone": "62634300",
+      "fax": "62634330",
+      "subMunicipalities": ["Dharghat", "Rawd Bin Hadi", "Dhurayghat"]
+    },
+    "baqaa": {
+      "name": "Baqaa Municipality",
+      "mayor": "Alshareef Talal Al Hazm",
+      "address": "Hail Region - Baqaa Governorate - Baqaa Municipality",
+      "phone": "65270076",
+      "fax": "65270188",
+      "subMunicipalities": ["Alshayhiyah", "Dhibayah", "Alnasiriyah"]
+    },
+    "turba": {
+      "name": "Turba Municipality",
+      "mayor": "Saadi Fayez Al-Rashidi",
+      "address": "Hail Region - Turba City - Turba Municipality",
+      "subMunicipalities": ["Al-Hayaniya", "Al-Zubayrah", "Al-Jubaili"]
+    },
+    "jubbah": {
+      "name": "Jubbah Municipality",
+      "mayor": "Saad Abdulrahman Matni Al-Shubrami",
+      "address": "Hail Region - Jubbah City - Jubbah Municipality",
+      "subMunicipalities": ["Qina", "Umm Al-Qalban"]
+    },
+    "alkhuttah": {
+      "name": "Al-Khuttah Municipality",
+      "mayor": "Bandar Fallaj Al-Shammari",
+      "address": "Hail Region - Al-Khuttah City - Al-Khuttah Municipality",
+      "subMunicipalities": ["Al-Qaed", "Al-Tarbiyah"]
+    },
+    "moqaq": {
+      "name": "Moqaq Municipality",
+      "mayor": "Al-Nashmi Mohammed Al-Anazi",
+      "address": "Hail Region - Moqaq City - Moqaq Municipality",
+      "subMunicipalities": ["Al-Shuqaiq", "Al-Hufair", "Dulayhan", "Al-Mahfar"]
+    },
+    "ashshamli": {
+      "name": "Ash-Shamli Municipality",
+      "mayor": "Mousa Aqeel Al-Shammari",
+      "address": "Hail Region - Ash-Shamli City - Ash-Shamli Municipality",
+      "subMunicipalities": ["Faydah Bin Suwaylim"]
+    },
+    "assulaymi": {
+      "name": "As-Sulaymi Municipality",
+      "mayor": "Nasser Salem Al-Harbi",
+      "address": "Hail Region - As-Sulaymi City - As-Sulaymi Municipality",
+      "subMunicipalities": ["Marghan", "Al-Baayith", "Al-Ajajah", "Al-Nuhaytiyah"]
+    },
+    "alhaet": {
+      "name": "Al-Haet Municipality",
+      "mayor": "Abdullah Awad Al-Shammari",
+      "address": "Hail Region - Al-Haet City - Al-Haet Municipality",
+      "subMunicipalities": ["Al-Shuwamis", "Faydah Athqab", "Da' Bin Khalaf"]
+    },
+    "arrawdah": {
+      "name": "Ar-Rawdah Municipality",
+      "mayor": "Shayem Ghafil Al-Shammari",
+      "address": "Hail Region - Ar-Rawdah City - Ar-Rawdah Municipality",
+      "subMunicipalities": ["Qusayr Bin Matrouk", "Al-Mustajiddah", "Al-Ash", "Al-Wuhaybiyah"]
+    },
+    "alkahfah": {
+      "name": "Al-Kahfah Municipality",
+      "mayor": "Abdulaziz Ghabeen Al-Shammari",
+      "address": "Hail Region - Al-Kahfah City - Al-Kahfah Municipality",
+      "subMunicipalities": ["Al-Kuhayfiyah", "Al-Suayrah"]
+    },
+    "samira": {
+      "name": "Samira Municipality",
+      "mayor": "Fahad Musleh Aguwainem Al-Muzaibari",
+      "address": "Hail Region - Samira City - Samira Municipality",
+      "subMunicipalities": ["Ghamrah", "Uqlat Bin Dani", "Al-Udhaim", "Uqlat Bin Tuwalah", "Al-Mudayh", "Katifah"]
+    },
+    "ashshanan": {
+      "name": "Ash-Shanan Municipality",
+      "mayor": "Mishaal Muneef Al-Shammari",
+      "address": "Hail Region - Ash-Shanan City - Ash-Shanan Municipality",
+      "subMunicipalities": ["Tabah wal Hajfah", "Sabi'ah Wark", "Al-Mutrafiyah"]
+    },
+    "alhulayfah": {
+      "name": "Al-Hulayfah Municipality",
+      "mayor": "Mughaylith Ghabeen Tahimer Al-Shammari",
+      "address": "Hail Region - Al-Hulayfah City - Al-Hulayfah Municipality",
+      "subMunicipalities": ["Al-Maghar", "Al-Uthaymah", "Al-Ma'arash", "Sufait", "Al-Raqb", "Faydah Al-Misaar", "Al-Dabiyah", "Al-Hulayfa Al-Ulya"]
+    },
+    "algazalah": {
+      "name": "Al-Ghazalah Municipality",
+      "mayor": "Abed Abdullah Al-Raiqi",
+      "address": "Hail Region - Al-Ghazalah City - Al-Ghazalah Municipality",
+      "subMunicipalities": []
+    },
+    "fayd": {
+      "name": "Fayd Municipality",
+      "mayor": "Raed Faheed Shati Al-Shammari",
+      "address": "Hail Region - Fayd City - Fayd Municipality",
+      "subMunicipalities": []
+    },
+    "alajfar": {
+      "name": "Al-Ajfar Municipality",
+      "mayor": "Farhan Saud Malfi Al-Numasi",
+      "address": "Hail Region - Al-Ajfar City - Al-Ajfar Municipality",
+      "subMunicipalities": ["Al-Khuwair"]
+    }
   },
 
   "E_PARTICIPATION": {
@@ -750,5 +865,7 @@
     "POSTAL_CODE_VALUE": "81421",
     "EMAIL": "Email",
     "EMAIL_VALUE": "ExecutiveOffice.h@amanathail.gov.sa"
-  }
+  },
+  "MUNICIPALITY": "Municipality",
+  "DETAILS": "Details"
 }
