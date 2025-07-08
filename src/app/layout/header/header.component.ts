@@ -162,15 +162,15 @@ export class HeaderComponent implements OnInit {
          items: [
           {
             label:'HEADER.MENU.STRATEGY_ITEMS.VISION',
-            href: 'https://amanathail.gov.sa/new_portal/Hail/OurVision',
+            routerLink: '/vision-mission',
           },
           {
             label:'HEADER.MENU.STRATEGY_ITEMS.GOALS',
-            href: 'https://amanathail.gov.sa/new_portal/Hail/OurGoals',
+            routerLink: '/main-goals',
           },
           {
             label:'HEADER.MENU.STRATEGY_ITEMS.AUDIT',
-            href: 'https://amanathail.gov.sa/new_portal/Hail/InternalAudit',
+            routerLink: '/internal-audit',
           },
         ],
       },

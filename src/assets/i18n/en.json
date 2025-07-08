@@ -168,7 +168,7 @@
       },
       {
         "TITLE": "The Prince of Hail receives the first semi-annual media report on completed projects",
-        "DESCRIPTION": "His Highness Prince Abdulaziz bin Saad received the first semi-annual media report, which covers the completed projects of the region’s secretariat in the city of Hail and its affiliated governorates.",
+        "DESCRIPTION": "His Highness Prince Abdulaziz bin Saad received the first semi-annual media report, which covers the completed projects of the region's secretariat in the city of Hail and its affiliated governorates.",
         "BUTTON": "Read More"
       }
     ]
@@ -180,10 +180,10 @@
 
   "RATING": {
     "serviceis": "This service is rated with an average of",
-    "reviews": "1544 reviews",
+    "reviews": "1544 reviews",
     "ratebutton": "Rate this service",
     "think": "Tell us what you think of this service",
-    "dont": "Please don’t include personal or financial information. Your review will be submitted and recorded to improve services.",
+    "dont": "Please don't include personal or financial information. Your review will be submitted and recorded to improve services.",
     "ratethis": "How would you rate this service?",
     "rating": "Rate your experience from (1) poor to (5) excellent",
     "info1": "For more information you may review",
@@ -615,5 +615,67 @@
     "COMPLAINTS": "Complaints & Suggestions",
     "LINKS": "Important Links",
     "PLACEHOLDER": "Content will be added soon"
+  },
+
+  "VISION_MISSION": {
+    "BREADCRUMB": {
+      "HOME": "Home",
+      "CURRENT": "Vision & Mission"
+    },
+    "TITLE": "Vision & Mission",
+    "VISION_TITLE": "Hail Municipality Vision:",
+    "VISION_TEXT": "Hail... The most beautiful. Community well-being, a sustainable environment, and global investment-attractive tourism.",
+    "MISSION_TITLE": "Hail Municipality Mission:",
+    "MISSION_TEXT": "A creative, smart, and automated administration that achieves sustainability and quality of life, and provides leading municipal services.",
+    "VALUES_TITLE": "Values:",
+    "VALUES": [
+      "Excellence, Innovation, and Creativity",
+      "Transparency and Integrity",
+      "Sustainability and Community Participation",
+      "Effective Performance and Beneficiary Satisfaction",
+      "Comprehensive Oversight"
+    ],
+    "PILLARS_TITLE": "Strategic Pillars",
+    "PILLARS": [
+      "Effective Governance",
+      "Institutional Excellence and Maturity",
+      "Empowerment and Sustainability in Resource Utilization",
+      "Serving Partners and Community"
+    ]
+  },
+
+  "MAIN_GOALS": {
+    "BREADCRUMB": {
+      "HOME": "Home",
+      "CURRENT": "Main Goals"
+    },
+    "TITLE": "Main Goals",
+    "GOALS_TITLE": "Strategic Goals:",
+    "GOALS": [
+      "Achieve the highest rates in the Global Cities Prosperity Index.",
+      "Enhance institutional performance and the competencies of employees and service providers.",
+      "Attract local investments and compete globally in the field of logistics services.",
+      "Optimize the use of tourism assets and support them to reach global competitiveness.",
+      "Develop the municipal work system and achieve full automation.",
+      "Support sustainability and achieve maximum efficiency in resource utilization.",
+      "Leverage modern and global technologies and expertise to support municipal projects (infrastructure).",
+      "Achieve comprehensive oversight to enhance the city's visual image and reduce visual distortion."
+    ]
+  },
+
+  "INTERNAL_AUDIT": {
+    "BREADCRUMB": {
+      "HOME": "Home",
+      "CURRENT": "Internal Audit"
+    },
+    "TITLE": "Internal Audit",
+    "INTRO": "This service aims to display and download the guidance and knowledge manuals for internal audit at Hail Municipality.",
+    "GUIDES": [
+      { "TITLE": "Guidance Manual for Financial Audit", "LINK": "#" },
+      { "TITLE": "Guidance Manual for Project Audit", "LINK": "#" },
+      { "TITLE": "Knowledge Guide for Internal Audit Operational Risks", "LINK": "#" },
+      { "TITLE": "Knowledge Guide to International Standards for Internal Audit - Final", "LINK": "#" }
+    ],
+    "DOWNLOAD": "Download"
   }
 }
