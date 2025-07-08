@@ -1,0 +1,22 @@
+/* Styles for mayor-contact component */
+.bg-white {
+  background: #fff;
+}
+.text-primary-color {
+  color: var(--color-primary-default, #097449);
+}
+.border-primary-color {
+  border-color: var(--color-primary-default, #097449) !important;
+}
+.shadow {
+  box-shadow: 0 2px 8px rgba(0,0,0,0.04);
+}
+img.rounded-full {
+  border-radius: 50%;
+  object-fit: cover;
+}
+@media (max-width: 1024px) {
+  .flex-row {
+    flex-direction: column;
+  }
+} 
