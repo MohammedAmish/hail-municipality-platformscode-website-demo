@@ -1,0 +1,127 @@
+<div class="container mx-auto py-5xl lg:px-md">
+  <!-- Breadcrumb -->
+  <nav class="flex text-sm text-secondary-paragraph mb-6">
+    <a routerLink="/" class="text-primary-paragraph hover:underline">
+      {{ 'OPEN_DATA.BREADCRUMB.HOME' | translate }}
+    </a>
+    <span class="mx-2">›</span>
+    <span class="font-semibold text-text-display">
+      {{ 'OPEN_DATA.BREADCRUMB.CURRENT' | translate }}
+    </span>
+  </nav>
+
+  <!-- Page title -->
+  <h1 class="font-bold text-3xl text-text-display mb-4 text-center">
+    {{ 'OPEN_DATA.TITLE' | translate }}
+  </h1>
+
+  <hr class="border-green-600 mb-8" />
+
+  <!-- Tabs -->
+  <div class="tabs flex border-b border-neutral-primary mb-8">
+    <button class="tab px-4 py-2 font-semibold focus:outline-none border-b-2" [ngClass]="{ 'border-green-600 text-green-700': selectedTab === 0, 'border-transparent text-gray-500': selectedTab !== 0 }" (click)="selectedTab = 0">
+      {{ 'OPEN_DATA.TABS.OPEN_DATA' | translate }}
+    </button>
+    <button class="tab px-4 py-2 font-semibold focus:outline-none border-b-2" [ngClass]="{ 'border-green-600 text-green-700': selectedTab === 1, 'border-transparent text-gray-500': selectedTab !== 1 }" (click)="selectedTab = 1">
+      {{ 'OPEN_DATA.TABS.POLICY' | translate }}
+    </button>
+    <button class="tab px-4 py-2 font-semibold focus:outline-none border-b-2" [ngClass]="{ 'border-green-600 text-green-700': selectedTab === 2, 'border-transparent text-gray-500': selectedTab !== 2 }" (click)="selectedTab = 2">
+      {{ 'OPEN_DATA.TABS.LIBRARY' | translate }}
+    </button>
+    <button class="tab px-4 py-2 font-semibold focus:outline-none border-b-2" [ngClass]="{ 'border-green-600 text-green-700': selectedTab === 3, 'border-transparent text-gray-500': selectedTab !== 3 }" (click)="selectedTab = 3">
+      {{ 'OPEN_DATA.TABS.STATISTICS' | translate }}
+    </button>
+    <!-- Tabs for future: LIBRARY, USAGE, STATISTICS, EVENTS -->
+  </div>
+
+  <!-- Tab Content -->
+  <div *ngIf="selectedTab === 0">
+    <section class="mb-8">
+      <h2 class="font-bold text-xl text-green-700 mb-4">
+        {{ 'OPEN_DATA.OPEN_DATA.WHAT_TITLE' | translate }}
+      </h2>
+      <p class="text-lg mb-6">{{ 'OPEN_DATA.OPEN_DATA.WHAT_TEXT' | translate }}</p>
+      <h3 class="font-bold text-lg text-green-700 mb-2">
+        {{ 'OPEN_DATA.OPEN_DATA.GOALS_TITLE' | translate }}
+      </h3>
+      <ul class="list-disc list-inside text-lg mb-6">
+        <li>{{ 'OPEN_DATA.OPEN_DATA.GOALS.0' | translate }}</li>
+        <li>{{ 'OPEN_DATA.OPEN_DATA.GOALS.1' | translate }}</li>
+        <li>{{ 'OPEN_DATA.OPEN_DATA.GOALS.2' | translate }}</li>
+      </ul>
+      <h3 class="font-bold text-lg text-green-700 mb-2">
+        {{ 'OPEN_DATA.OPEN_DATA.REQUEST_TITLE' | translate }}
+      </h3>
+      <p class="text-lg mb-2">{{ 'OPEN_DATA.OPEN_DATA.REQUEST_TEXT' | translate }}</p>
+      <a class="text-green-700 underline" href="data-sharing" target="_blank">{{ 'OPEN_DATA.OPEN_DATA.REQUEST_LINK' | translate }}</a>
+      <h3 class="font-bold text-lg text-green-700 mt-6 mb-2">
+        {{ 'OPEN_DATA.OPEN_DATA.BROWSE_TITLE' | translate }}
+      </h3>
+      <p class="text-lg mb-2">{{ 'OPEN_DATA.OPEN_DATA.BROWSE_TEXT' | translate }}</p>
+      <a class="text-green-700 underline" href="https://open.data.gov.sa/ar/home" target="_blank">{{ 'OPEN_DATA.OPEN_DATA.BROWSE_LINK' | translate }}</a>
+      <h3 class="font-bold text-lg text-green-700 mt-6 mb-2">
+        {{ 'OPEN_DATA.OPEN_DATA.VISION_TITLE' | translate }}
+      </h3>
+      <p class="text-lg mb-2">{{ 'OPEN_DATA.OPEN_DATA.VISION_TEXT' | translate }}</p>
+      <h3 class="font-bold text-lg text-green-700 mt-6 mb-2">
+        {{ 'OPEN_DATA.OPEN_DATA.MISSION_TITLE' | translate }}
+      </h3>
+      <p class="text-lg mb-2">{{ 'OPEN_DATA.OPEN_DATA.MISSION_TEXT' | translate }}</p>
+    </section>
+  </div>
+  <div *ngIf="selectedTab === 1">
+    <section class="mb-8">
+      <h2 class="font-bold text-xl text-green-700 mb-4">
+        {{ 'OPEN_DATA.POLICY.TITLE' | translate }}
+      </h2>
+      <p class="text-lg mb-4">{{ 'OPEN_DATA.POLICY.INTRO' | translate }}</p>
+      <h3 class="font-bold text-lg text-green-700 mb-2">
+        {{ 'OPEN_DATA.POLICY.SCOPE_TITLE' | translate }}
+      </h3>
+      <p class="text-lg mb-2">{{ 'OPEN_DATA.POLICY.SCOPE_TEXT' | translate }}</p>
+      <h3 class="font-bold text-lg text-green-700 mb-2">
+        {{ 'OPEN_DATA.POLICY.RIGHTS_TITLE' | translate }}
+      </h3>
+      <ul class="list-disc list-inside text-lg mb-2">
+        <li>{{ 'OPEN_DATA.POLICY.RIGHTS.0' | translate }}</li>
+        <li>{{ 'OPEN_DATA.POLICY.RIGHTS.1' | translate }}</li>
+        <li>{{ 'OPEN_DATA.POLICY.RIGHTS.2' | translate }}</li>
+      </ul>
+      <h3 class="font-bold text-lg text-green-700 mb-2">
+        {{ 'OPEN_DATA.POLICY.USER_RESPONSIBILITY_TITLE' | translate }}
+      </h3>
+      <ul class="list-disc list-inside text-lg mb-2">
+        <li>{{ 'OPEN_DATA.POLICY.USER_RESPONSIBILITY.0' | translate }}</li>
+        <li>{{ 'OPEN_DATA.POLICY.USER_RESPONSIBILITY.1' | translate }}</li>
+      </ul>
+      <h3 class="font-bold text-lg text-green-700 mb-2">
+        {{ 'OPEN_DATA.POLICY.AMANAH_RESPONSIBILITY_TITLE' | translate }}
+      </h3>
+      <ul class="list-disc list-inside text-lg mb-2">
+        <li>{{ 'OPEN_DATA.POLICY.AMANAH_RESPONSIBILITY.0' | translate }}</li>
+        <li>{{ 'OPEN_DATA.POLICY.AMANAH_RESPONSIBILITY.1' | translate }}</li>
+        <li>{{ 'OPEN_DATA.POLICY.AMANAH_RESPONSIBILITY.2' | translate }}</li>
+      </ul>
+    </section>
+  </div>
+  <div *ngIf="selectedTab === 2">
+    <section class="mb-8">
+      <h2 class="font-bold text-xl text-green-700 mb-4">{{ 'OPEN_DATA.LIBRARY.TITLE' | translate }}</h2>
+      <p class="text-lg mb-4">{{ 'OPEN_DATA.LIBRARY.INTRO' | translate }}</p>
+      <h3 class="font-bold text-lg text-green-700 mb-2">{{ 'OPEN_DATA.LIBRARY.BROWSE_TITLE' | translate }}</h3>
+      <a class="text-green-700 underline" href="https://open.data.gov.sa/ar/publishers/5a596b58-a91c-49eb-aa1c-2e50d6f5db09" target="_blank">{{ 'OPEN_DATA.LIBRARY.BROWSE_LINK' | translate }}</a>
+    </section>
+  </div>
+  <div *ngIf="selectedTab === 3">
+    <section class="mb-8">
+      <h2 class="font-bold text-xl text-green-700 mb-4">{{ 'OPEN_DATA.STATISTICS.TITLE' | translate }}</h2>
+      <p class="text-lg mb-4">{{ 'OPEN_DATA.STATISTICS.INTRO' | translate }}</p>
+      <ul class="list-disc list-inside text-lg mb-2">
+        <li>{{ 'OPEN_DATA.STATISTICS.ITEMS.0' | translate }}</li>
+        <li>{{ 'OPEN_DATA.STATISTICS.ITEMS.1' | translate }}</li>
+        <li>{{ 'OPEN_DATA.STATISTICS.ITEMS.2' | translate }}</li>
+      </ul>
+      <p class="text-lg mt-4">{{ 'OPEN_DATA.STATISTICS.UPDATE_NOTE' | translate }}</p>
+    </section>
+  </div>
+</div> 

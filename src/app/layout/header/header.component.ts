@@ -142,11 +142,11 @@ export class HeaderComponent implements OnInit {
           },
           {
             label:'HEADER.MENU.MUNICIPALITY_ITEMS.OPEN_DATA',
-            href: 'https://amanathail.gov.sa/new_portal/Hail/OpenData',
+            routerLink: '/open-data',
           },
           {
             label:'HEADER.MENU.MUNICIPALITY_ITEMS.DATA_SHARING',
-            href: 'https://hailportal.amanathail.gov.sa/Open-Source',
+            routerLink: '/data-sharing',
           },
           {
             label:'HEADER.MENU.MUNICIPALITY_ITEMS.STRUCTURE',
