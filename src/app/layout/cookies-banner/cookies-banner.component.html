@@ -1,0 +1,163 @@
+<div
+  *ngIf="!isLoading && !consentGiven"
+  class="fixed inset-0 bg-black/50 z-[9999] flex justify-center items-end md:items-center"
+>
+  <div class="bg-white w-full max-w-screen-lg rounded-t-xl md:rounded-xl p-6 mx-auto shadow-lg">
+    
+    <!-- INITIAL STEP -->
+    <div *ngIf="step === 'initial'" dir="auto" class="space-y-4">
+      <div class="flex items-center justify-between">
+        <div class="flex items-center gap-2">
+          <img src="assets/images/Icon-cookie.png" alt="Cookie Icon" class="w-6 h-6" />
+          <h3 class="text-lg font-semibold">Cookies</h3>
+        </div>
+        <button (click)="close()" class="text-gray-500 hover:text-gray-700 text-xl leading-none">
+          <img src="assets/images/Icon-X.png" alt="Close" class="w-5 h-5" />
+        </button>
+      </div>
+
+      <p class="text-sm text-gray-600 leading-relaxed">
+        Use of Cookies by this site is just to guarantee Ease of Access and better user experience while browsing.
+        Continuation of your browsing acknowledges your approval for Terms and Conditions of this site and its use of Cookies.
+      </p>
+
+      <a
+        href="/privacy-policy"
+        class="text-[#1B8354] hover:underline text-sm font-medium inline-block"
+        target="_blank"
+        rel="noopener"
+      >
+        Privacy Policy
+      </a>
+
+      <div class="flex flex-col items-center gap-2 pt-2">
+        <button
+          class="w-full bg-[#1B8354] text-white py-2 rounded-md font-medium hover:bg-[#166a45] transition"
+          (click)="acceptAll()"
+        >
+          Accept
+        </button>
+        <button
+          class="w-full border border-[#161616] text-[#161616] py-2 rounded-md font-medium hover:bg-gray-100 transition"
+          (click)="rejectAll()"
+        >
+          Reject
+        </button>
+        <button
+          class="text-[#161616] text-sm font-medium hover:underline"
+          (click)="step = 'manage'"
+        >
+          Manage Cookies
+        </button>
+      </div>
+    </div>
+
+    <!-- MANAGE STEP -->
+    <div *ngIf="step === 'manage'" dir="auto" class="space-y-4">
+      <div class="flex items-center justify-between">
+        <div class="flex items-center gap-2">
+          <img src="assets/images/Icon-cookie.png" alt="Cookie Icon" class="w-6 h-6" />
+          <h3 class="text-lg font-semibold">Manage Cookies</h3>
+        </div>
+        <button (click)="close()" class="text-gray-500 hover:text-gray-700 text-xl leading-none">
+          <img src="assets/images/Icon-X.png" alt="Close" class="w-5 h-5" />
+        </button>
+      </div>
+
+      <p class="text-sm text-gray-600 leading-relaxed">
+        When you visit any website, it may store or retrieve information on your browser, mostly in the form of cookies.
+        This information might be about you, your preferences or your device and is mostly used to make the site work
+        as you expect it to. The information does not usually directly identify you, but it can give you a more
+        personalized web experience. Because we respect your right to privacy, you can choose not to allow some types
+        of cookies. Click on the different category headings to find out more and change our default settings. However,
+        blocking some types of cookies may impact your experience of the site and the services we are able to offer.
+      </p>
+
+      <!-- TOGGLE SWITCHES -->
+      <div class="space-y-4">
+        <!-- Strictly Necessary -->
+        <div class="flex items-center justify-between opacity-50 cursor-not-allowed">
+          <span class="text-sm">Strictly Necessary Cookies (Always Active)</span>
+          <label class="relative inline-block w-12 h-6">
+            <input type="checkbox" checked disabled class="sr-only peer" />
+            <div class="absolute inset-0 bg-gray-300 rounded-full transition peer-disabled:cursor-not-allowed"></div>
+            <div class="absolute left-0.5 bottom-0.5 w-5 h-5 bg-white rounded-full transition-transform translate-x-6"></div>
+          </label>
+        </div>
+
+        <!-- Performance -->
+        <div class="flex items-center justify-between">
+          <span class="text-sm">Performance Cookies</span>
+          <label class="relative inline-block w-12 h-6">
+            <input type="checkbox" [(ngModel)]="performance" class="sr-only peer" />
+            <div class="absolute inset-0 bg-gray-300 rounded-full transition peer-checked:bg-[#1B8354]"></div>
+            <div class="absolute left-0.5 bottom-0.5 w-5 h-5 bg-white rounded-full transition-transform peer-checked:translate-x-6"></div>
+          </label>
+        </div>
+
+        <!-- Functional -->
+        <div class="flex items-center justify-between">
+          <span class="text-sm">Functional Cookies</span>
+          <label class="relative inline-block w-12 h-6">
+            <input type="checkbox" [(ngModel)]="functional" class="sr-only peer" />
+            <div class="absolute inset-0 bg-gray-300 rounded-full transition peer-checked:bg-[#1B8354]"></div>
+            <div class="absolute left-0.5 bottom-0.5 w-5 h-5 bg-white rounded-full transition-transform peer-checked:translate-x-6"></div>
+          </label>
+        </div>
+
+        <!-- Targeting -->
+        <div class="flex items-center justify-between">
+          <span class="text-sm">Targeting Cookies</span>
+          <label class="relative inline-block w-12 h-6">
+            <input type="checkbox" [(ngModel)]="targeting" class="sr-only peer" />
+            <div class="absolute inset-0 bg-gray-300 rounded-full transition peer-checked:bg-[#1B8354]"></div>
+            <div class="absolute left-0.5 bottom-0.5 w-5 h-5 bg-white rounded-full transition-transform peer-checked:translate-x-6"></div>
+          </label>
+        </div>
+      </div>
+
+      <!-- ACTION BUTTONS -->
+      <div class="flex flex-col items-center gap-2 pt-2">
+        <button
+          class="w-full bg-[#1B8354] text-white py-2 rounded-md font-medium hover:bg-[#166a45] transition"
+          (click)="savePreferences()"
+        >
+          Confirm my Choices
+        </button>
+        <button
+          class="w-full border border-[#161616] text-[#161616] py-2 rounded-md font-medium hover:bg-gray-100 transition"
+          (click)="rejectAll()"
+        >
+          Reject All
+        </button>
+      </div>
+    </div>
+
+    <!-- CONFIRMATION STEP -->
+    <div *ngIf="step === 'confirmation'" dir="auto" class="space-y-4">
+      <div class="flex items-center justify-between">
+        <div class="flex items-center gap-2">
+          <img src="assets/images/Icon-cookie.png" alt="Cookie Icon" class="w-6 h-6" />
+          <h3 class="text-lg font-semibold">Cookies</h3>
+        </div>
+        <button (click)="close()" class="text-gray-500 hover:text-gray-700 text-xl leading-none">
+          <img src="assets/images/Icon-X.png" alt="Close" class="w-5 h-5" />
+        </button>
+      </div>
+
+      <p class="text-sm text-gray-600 leading-relaxed">
+        Thank you! Your response has been successfully recorded. If you wish to modify or change your answer, you can go back by clicking the Undo button.
+      </p>
+
+      <div class="flex justify-center">
+        <button
+          class="text-black text-sm font-medium hover:underline bg-transparent"
+          (click)="undo()"
+        >
+          Undo
+        </button>
+      </div>
+    </div>
+
+  </div>
+</div>
