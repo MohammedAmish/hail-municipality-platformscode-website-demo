@@ -1,64 +1,129 @@
 export interface Municipality {
-  name: string;
+  key: string;
   phone: string;
   central: string;
   fax: string;
-  mayor: string;
-  address: string;
   location: string;
-  subMunicipalities: string[];
 }
 
 export const MUNICIPALITIES: Municipality[] = [
   {
-    name: 'بقعاء',
+    key: 'baqaa',
     phone: '65270076',
     central: '65270076',
     fax: '65270188',
-    mayor: 'الشريف طلال ال حزم',
-    address: 'منطقة حائل ـ محافظة بقعاء ــ بلدية محافظة بقعاء',
     location: '',
-    subMunicipalities: ['الشيحية', 'ضبيعة', 'الناصرية'],
   },
   {
-    name: 'تربة',
+    key: 'turba',
     phone: '65640007',
     central: '65640007',
     fax: '65640040',
-    mayor: 'سعدي فايز الرشيدي',
-    address: 'منطقة حائل ــ مدينة تربة ــ بلدية مدينة تربة',
     location: '',
-    subMunicipalities: ['الحيانية', 'الزبيرة', 'الجبيلي'],
   },
   {
-    name: 'جبة',
+    key: 'jubbah',
     phone: '65412279',
     central: '65412279',
     fax: '65412058',
-    mayor: 'سعد عبدالرحمن مطني الشبرمي',
-    address: 'منطقة حائل ــ مدينة جبة ــ بلدية مدينة جبة',
     location: '',
-    subMunicipalities: ['قناء', 'ام القلبان'],
   },
   {
-    name: 'الخطة',
+    key: 'alkhuttah',
     phone: '65390027',
     central: '65390027',
     fax: '',
-    mayor: 'بندر فلاج الشمري',
-    address: 'منطقة حائل ــ مدينة الخطة ــ بلدية مدينة الخطة',
     location: '',
-    subMunicipalities: ['القاعد', 'التربية'],
   },
   {
-    name: 'موقق',
+    key: 'moqaq',
     phone: '65380015',
     central: '65380015',
     fax: '65380072',
-    mayor: 'النشمي محمد العنزي',
-    address: 'منطقة حائل ــ مدينة موقق ــ بلدية مدينة موقق',
     location: '',
-    subMunicipalities: ['الشقيق', 'الحفير', 'دليهان', 'المحفر'],
   },
-  // ... (add the rest of the municipalities in the same format)
+  {
+    key: 'ashshamli',
+    phone: '62392158',
+    central: '62392158',
+    fax: '62392355',
+    location: '',
+  },
+  {
+    key: 'assulaymi',
+    phone: '62361121',
+    central: '62361121',
+    fax: '62360788',
+    location: '',
+  },
+  {
+    key: 'alhaet',
+    phone: '62390315',
+    central: '62390315',
+    fax: '62390231',
+    location: '',
+  },
+  {
+    key: 'arrawdah',
+    phone: '62631117',
+    central: '62631117',
+    fax: '62631415',
+    location: '',
+  },
+  {
+    key: 'alkahfah',
+    phone: '65201553',
+    central: '65201553',
+    fax: '65671552',
+    location: '',
+  },
+  {
+    key: 'samira',
+    phone: '65210076',
+    central: '65210076',
+    fax: '65210076',
+    location: '',
+  },
+  {
+    key: 'ashshanan',
+    phone: '65200609',
+    central: '65200609',
+    fax: '65200939',
+    location: '',
+  },
+  {
+    key: 'alhulayfah',
+    phone: '62635594',
+    central: '62635594',
+    fax: '62635591',
+    location: '',
+  },
+  {
+    key: 'algazalah',
+    phone: '62632766',
+    central: '62632766',
+    fax: '62632911',
+    location: '',
+  },
+  {
+    key: 'fayd',
+    phone: '65203505',
+    central: '65203505',
+    fax: '65201771',
+    location: '',
+  },
+  {
+    key: 'alajfar',
+    phone: '65211106',
+    central: '65211106',
+    fax: '65211160',
+    location: '',
+  },
+  {
+    key: 'anbuwan',
+    phone: '62634300',
+    central: '62634300',
+    fax: '62634330',
+    location: '',
+  },
 ]; 

@@ -1,0 +1,46 @@
+<div class="container mx-auto py-10 lg:px-10" *ngIf="municipality">
+  <div class="flex flex-col md:flex-row gap-8">
+    <!-- Municipality Info Card -->
+    <div class="rounded18 shadow-lg border border-gray-200 bg-white p-8 flex-1 flex flex-col gap-6" [ngClass]="{'text-right': currentLang === 'ar', 'text-left': currentLang !== 'ar'}">
+      <div [ngClass]="{'text-right': currentLang === 'ar', 'text-left': currentLang !== 'ar'}">
+        <h2 class="text-2xl font-bold text-green-800 mb-4">
+          {{ 'municipalities.' + municipality.key + '.name' | translate }}
+        </h2>
+      </div>
+      <div class="info-row flex items-center gap-3 p-4 border-b last:border-b-0">
+        <span class="material-icons">call</span>
+        <span class="font-bold">{{ 'PHONE' | translate }}:</span>
+        <span>{{ municipality.phone }}</span>
+      </div>
+      <div class="info-row flex items-center gap-3 p-4 border-b last:border-b-0">
+        <span class="material-icons">phone_in_talk</span>
+        <span class="font-bold">{{ 'CENTRAL' | translate }}:</span>
+        <span>{{ municipality.central }}</span>
+      </div>
+      <div class="info-row flex items-center gap-3 p-4 border-b last:border-b-0">
+        <span class="material-icons">print</span>
+        <span class="font-bold">{{ 'FAX' | translate }}:</span>
+        <span>{{ municipality.fax }}</span>
+      </div>
+      <div class="info-row flex items-center gap-3 p-4 border-b last:border-b-0">
+        <span class="material-icons">account_circle</span>
+        <span class="font-bold">{{ 'MAYOR' | translate }}:</span>
+        <span>{{ ('municipalities.' + municipality.key + '.mayor') | translate }}</span>
+      </div>
+      <div class="info-row flex items-center gap-3 p-4 border-b last:border-b-0">
+        <span class="material-icons">location_on</span>
+        <span class="font-bold">{{ 'ADDRESS' | translate }}:</span>
+        <span>{{ ('municipalities.' + municipality.key + '.address') | translate }}</span>
+      </div>
+      <div class="info-row flex items-center gap-3 p-4" *ngIf="('municipalities.' + municipality.key + '.subMunicipalities' | translate)?.length">
+        <span class="material-icons">apartment</span>
+        <span class="font-bold">{{ 'SUB_MUNICIPALITIES' | translate }}:</span>
+        <div class="w-full">
+          <ul class="list-disc ml-6 mt-2">
+            <li *ngFor="let sub of ('municipalities.' + municipality.key + '.subMunicipalities' | translate)">{{ sub }}</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+</div> 
