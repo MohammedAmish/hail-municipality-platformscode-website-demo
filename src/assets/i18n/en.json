@@ -1,4 +1,10 @@
 {
+  "PHONE": "Phone",
+  "CENTRAL": "Central",
+  "FAX": "Fax",
+  "MAYOR": "Mayor",
+  "ADDRESS": "Address",
+  "SUB_MUNICIPALITIES": "Sub Municipalities",
   "HOME": {
     "TITLE": "Welcome to Amanat Hail",
     "ABOUT": "Learn more about Hail and its tourism."
@@ -168,7 +174,7 @@
       },
       {
         "TITLE": "The Prince of Hail receives the first semi-annual media report on completed projects",
-        "DESCRIPTION": "His Highness Prince Abdulaziz bin Saad received the first semi-annual media report, which covers the completed projects of the region’s secretariat in the city of Hail and its affiliated governorates.",
+        "DESCRIPTION": "His Highness Prince Abdulaziz bin Saad received the first semi-annual media report, which covers the completed projects of the region's secretariat in the city of Hail and its affiliated governorates.",
         "BUTTON": "Read More"
       }
     ]
@@ -180,10 +186,10 @@
 
   "RATING": {
     "serviceis": "This service is rated with an average of",
-    "reviews": "1544 reviews",
+    "reviews": "1544 reviews",
     "ratebutton": "Rate this service",
     "think": "Tell us what you think of this service",
-    "dont": "Please don’t include personal or financial information. Your review will be submitted and recorded to improve services.",
+    "dont": "Please don't include personal or financial information. Your review will be submitted and recorded to improve services.",
     "ratethis": "How would you rate this service?",
     "rating": "Rate your experience from (1) poor to (5) excellent",
     "info1": "For more information you may review",
@@ -573,6 +579,62 @@
     "MAYOR_9": "Sheikh / Mamdouh bin Sulaiman Al-Ali (from 1381 AH until 1392/8/27 AH)"
   },
 
+  "MAYOR_PROFILE": {
+    "BREADCRUMB": {
+      "HOME": "Home",
+      "CURRENT": "Mayor of Hail Region"
+    },
+    "TITLE": "Mayor of Hail Region",
+    "NAME": "Eng. Sultan bin Hamed bin Mohammed Al-Tayyar",
+    "POSITION": "Mayor of Hail Region",
+    "PHONE": "Phone",
+    "FAX": "Fax",
+    "POBOX": "P.O. Box",
+    "EMAIL": "Email",
+    "EDUCATION_TITLE": "Education",
+    "EDUCATION": {
+      "0": "B.Sc. in Civil Engineering - King Saud University"
+    },
+    "JOBS_TITLE": "Professional Experience",
+    "JOBS": {
+      "0": "General Manager of Engineering Studies & Designs, Riyadh Municipality",
+      "1": "General Manager of Road Projects Implementation, Riyadh Municipality",
+      "2": "General Manager of Stormwater Drainage Projects, Riyadh Municipality",
+      "3": "General Manager of Lighting Projects Implementation, Riyadh Municipality",
+      "4": "Manager of Engineering Studies & Designs, Riyadh Municipality"
+    },
+    "ACHIEVEMENTS_TITLE": "Achievements",
+    "ACHIEVEMENTS": {
+      "0": "Supervised major projects in Riyadh City",
+      "1": "Developed the stormwater drainage system in Riyadh Municipality",
+      "2": "Implemented modern lighting projects in the capital",
+      "3": "Contributed to the development of road infrastructure",
+      "4": "Achieved high quality standards in project implementation"
+    }
+  },
+
+  "MAYOR_CONTACT": {
+    "TITLE": "Mayor Contact",
+    "NAME": "Eng. Sultan bin Hamed Al-Zaidi",
+    "POSITION": "Mayor of Hail Region",
+    "PHONE": "Phone",
+    "FAX": "Fax Number",
+    "POBOX": "P.O. Box",
+    "EMAIL": "Email",
+    "RECEPTION_TITLE": "Reception Times",
+    "RECEPTION_TIME": "Sunday to Wednesday (from 8:30 AM to 10:00 AM)",
+    "BOOKING_TITLE": "Book an Appointment with the Mayor of Hail Region",
+    "BOOKING": {
+      "0": "Appointment booking service - click here",
+      "1": "Login via Balady Digital Wallet",
+      "2": "Customer Service",
+      "3": "Service name: Meeting with the Mayor",
+      "4": "Fill in the appointment information"
+    },
+    "RECEPTION_PLACE_TITLE": "Reception Location",
+    "RECEPTION_PLACE": "Hail Municipality Building - Second Floor - Executive Office"
+  },
+
   "HAIL_AREA": {
     "TITLE": "Hail Region",
     "HISTORICAL_OVERVIEW": "Historical Overview of Hail Region",
@@ -603,8 +665,117 @@
     "FAX": "Fax",
     "MAYOR": "Mayor",
     "ADDRESS": "Address",
-    "SUBS": "Sub-municipalities",
+    "SUBS": "Sub Municipalities",
     "VIEW_LOCATION": "View Location"
+  },
+
+  "municipalities": {
+    "anbuwan": {
+      "name": "Inbuwan Municipality",
+      "mayor": "Ahmed Masnad Al-Shammari",
+      "address": "Hail Region - Inbuwan City - Inbuwan Municipality",
+      "phone": "62634300",
+      "fax": "62634330",
+      "subMunicipalities": ["Dharghat", "Rawd Bin Hadi", "Dhurayghat"]
+    },
+    "baqaa": {
+      "name": "Baqaa Municipality",
+      "mayor": "Alshareef Talal Al Hazm",
+      "address": "Hail Region - Baqaa Governorate - Baqaa Municipality",
+      "phone": "65270076",
+      "fax": "65270188",
+      "subMunicipalities": ["Alshayhiyah", "Dhibayah", "Alnasiriyah"]
+    },
+    "turba": {
+      "name": "Turba Municipality",
+      "mayor": "Saadi Fayez Al-Rashidi",
+      "address": "Hail Region - Turba City - Turba Municipality",
+      "subMunicipalities": ["Al-Hayaniya", "Al-Zubayrah", "Al-Jubaili"]
+    },
+    "jubbah": {
+      "name": "Jubbah Municipality",
+      "mayor": "Saad Abdulrahman Matni Al-Shubrami",
+      "address": "Hail Region - Jubbah City - Jubbah Municipality",
+      "subMunicipalities": ["Qina", "Umm Al-Qalban"]
+    },
+    "alkhuttah": {
+      "name": "Al-Khuttah Municipality",
+      "mayor": "Bandar Fallaj Al-Shammari",
+      "address": "Hail Region - Al-Khuttah City - Al-Khuttah Municipality",
+      "subMunicipalities": ["Al-Qaed", "Al-Tarbiyah"]
+    },
+    "moqaq": {
+      "name": "Moqaq Municipality",
+      "mayor": "Al-Nashmi Mohammed Al-Anazi",
+      "address": "Hail Region - Moqaq City - Moqaq Municipality",
+      "subMunicipalities": ["Al-Shuqaiq", "Al-Hufair", "Dulayhan", "Al-Mahfar"]
+    },
+    "ashshamli": {
+      "name": "Ash-Shamli Municipality",
+      "mayor": "Mousa Aqeel Al-Shammari",
+      "address": "Hail Region - Ash-Shamli City - Ash-Shamli Municipality",
+      "subMunicipalities": ["Faydah Bin Suwaylim"]
+    },
+    "assulaymi": {
+      "name": "As-Sulaymi Municipality",
+      "mayor": "Nasser Salem Al-Harbi",
+      "address": "Hail Region - As-Sulaymi City - As-Sulaymi Municipality",
+      "subMunicipalities": ["Marghan", "Al-Baayith", "Al-Ajajah", "Al-Nuhaytiyah"]
+    },
+    "alhaet": {
+      "name": "Al-Haet Municipality",
+      "mayor": "Abdullah Awad Al-Shammari",
+      "address": "Hail Region - Al-Haet City - Al-Haet Municipality",
+      "subMunicipalities": ["Al-Shuwamis", "Faydah Athqab", "Da' Bin Khalaf"]
+    },
+    "arrawdah": {
+      "name": "Ar-Rawdah Municipality",
+      "mayor": "Shayem Ghafil Al-Shammari",
+      "address": "Hail Region - Ar-Rawdah City - Ar-Rawdah Municipality",
+      "subMunicipalities": ["Qusayr Bin Matrouk", "Al-Mustajiddah", "Al-Ash", "Al-Wuhaybiyah"]
+    },
+    "alkahfah": {
+      "name": "Al-Kahfah Municipality",
+      "mayor": "Abdulaziz Ghabeen Al-Shammari",
+      "address": "Hail Region - Al-Kahfah City - Al-Kahfah Municipality",
+      "subMunicipalities": ["Al-Kuhayfiyah", "Al-Suayrah"]
+    },
+    "samira": {
+      "name": "Samira Municipality",
+      "mayor": "Fahad Musleh Aguwainem Al-Muzaibari",
+      "address": "Hail Region - Samira City - Samira Municipality",
+      "subMunicipalities": ["Ghamrah", "Uqlat Bin Dani", "Al-Udhaim", "Uqlat Bin Tuwalah", "Al-Mudayh", "Katifah"]
+    },
+    "ashshanan": {
+      "name": "Ash-Shanan Municipality",
+      "mayor": "Mishaal Muneef Al-Shammari",
+      "address": "Hail Region - Ash-Shanan City - Ash-Shanan Municipality",
+      "subMunicipalities": ["Tabah wal Hajfah", "Sabi'ah Wark", "Al-Mutrafiyah"]
+    },
+    "alhulayfah": {
+      "name": "Al-Hulayfah Municipality",
+      "mayor": "Mughaylith Ghabeen Tahimer Al-Shammari",
+      "address": "Hail Region - Al-Hulayfah City - Al-Hulayfah Municipality",
+      "subMunicipalities": ["Al-Maghar", "Al-Uthaymah", "Al-Ma'arash", "Sufait", "Al-Raqb", "Faydah Al-Misaar", "Al-Dabiyah", "Al-Hulayfa Al-Ulya"]
+    },
+    "algazalah": {
+      "name": "Al-Ghazalah Municipality",
+      "mayor": "Abed Abdullah Al-Raiqi",
+      "address": "Hail Region - Al-Ghazalah City - Al-Ghazalah Municipality",
+      "subMunicipalities": []
+    },
+    "fayd": {
+      "name": "Fayd Municipality",
+      "mayor": "Raed Faheed Shati Al-Shammari",
+      "address": "Hail Region - Fayd City - Fayd Municipality",
+      "subMunicipalities": []
+    },
+    "alajfar": {
+      "name": "Al-Ajfar Municipality",
+      "mayor": "Farhan Saud Malfi Al-Numasi",
+      "address": "Hail Region - Al-Ajfar City - Al-Ajfar Municipality",
+      "subMunicipalities": ["Al-Khuwair"]
+    }
   },
 
   "E_PARTICIPATION": {
@@ -615,5 +786,86 @@
     "COMPLAINTS": "Complaints & Suggestions",
     "LINKS": "Important Links",
     "PLACEHOLDER": "Content will be added soon"
-  }
+  },
+
+  "VISION_MISSION": {
+    "BREADCRUMB": {
+      "HOME": "Home",
+      "CURRENT": "Vision & Mission"
+    },
+    "TITLE": "Vision & Mission",
+    "VISION_TITLE": "Hail Municipality Vision:",
+    "VISION_TEXT": "Hail... The most beautiful. Community well-being, a sustainable environment, and global investment-attractive tourism.",
+    "MISSION_TITLE": "Hail Municipality Mission:",
+    "MISSION_TEXT": "A creative, smart, and automated administration that achieves sustainability and quality of life, and provides leading municipal services.",
+    "VALUES_TITLE": "Values:",
+    "VALUES": [
+      "Excellence, Innovation, and Creativity",
+      "Transparency and Integrity",
+      "Sustainability and Community Participation",
+      "Effective Performance and Beneficiary Satisfaction",
+      "Comprehensive Oversight"
+    ],
+    "PILLARS_TITLE": "Strategic Pillars",
+    "PILLARS": [
+      "Effective Governance",
+      "Institutional Excellence and Maturity",
+      "Empowerment and Sustainability in Resource Utilization",
+      "Serving Partners and Community"
+    ]
+  },
+
+  "MAIN_GOALS": {
+    "BREADCRUMB": {
+      "HOME": "Home",
+      "CURRENT": "Main Goals"
+    },
+    "TITLE": "Main Goals",
+    "GOALS_TITLE": "Strategic Goals:",
+    "GOALS": [
+      "Achieve the highest rates in the Global Cities Prosperity Index.",
+      "Enhance institutional performance and the competencies of employees and service providers.",
+      "Attract local investments and compete globally in the field of logistics services.",
+      "Optimize the use of tourism assets and support them to reach global competitiveness.",
+      "Develop the municipal work system and achieve full automation.",
+      "Support sustainability and achieve maximum efficiency in resource utilization.",
+      "Leverage modern and global technologies and expertise to support municipal projects (infrastructure).",
+      "Achieve comprehensive oversight to enhance the city's visual image and reduce visual distortion."
+    ]
+  },
+
+  "INTERNAL_AUDIT": {
+    "BREADCRUMB": {
+      "HOME": "Home",
+      "CURRENT": "Internal Audit"
+    },
+    "TITLE": "Internal Audit",
+    "INTRO": "This service aims to display and download the guidance and knowledge manuals for internal audit at Hail Municipality.",
+    "GUIDES": [
+      { "TITLE": "Guidance Manual for Financial Audit", "LINK": "#" },
+      { "TITLE": "Guidance Manual for Project Audit", "LINK": "#" },
+      { "TITLE": "Knowledge Guide for Internal Audit Operational Risks", "LINK": "#" },
+      { "TITLE": "Knowledge Guide to International Standards for Internal Audit - Final", "LINK": "#" }
+    ],
+    "DOWNLOAD": "Download"
+  },
+
+  "EXECUTIVE_OFFICE": {
+    "TITLE": "Executive Office",
+    "NAME": "Amal Sabeel Al-Anzi",
+    "PHONE": "Phone",
+    "PHONE_VALUE": "0165335000 / Ext / 202",
+    "DIRECT_PHONE": "Direct Phone",
+    "DIRECT_PHONE_VALUE": "016/5320144",
+    "FAX": "Fax Number",
+    "FAX_VALUE": "0165432174",
+    "POBOX": "P.O. Box",
+    "POBOX_VALUE": "2700",
+    "POSTAL_CODE": "Postal Code",
+    "POSTAL_CODE_VALUE": "81421",
+    "EMAIL": "Email",
+    "EMAIL_VALUE": "ExecutiveOffice.h@amanathail.gov.sa"
+  },
+  "MUNICIPALITY": "Municipality",
+  "DETAILS": "Details"
 }

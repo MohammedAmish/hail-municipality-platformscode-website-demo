@@ -162,15 +162,15 @@ export class HeaderComponent implements OnInit {
          items: [
           {
             label:'HEADER.MENU.STRATEGY_ITEMS.VISION',
-            href: 'https://amanathail.gov.sa/new_portal/Hail/OurVision',
+            routerLink: '/vision-mission',
           },
           {
             label:'HEADER.MENU.STRATEGY_ITEMS.GOALS',
-            href: 'https://amanathail.gov.sa/new_portal/Hail/OurGoals',
+            routerLink: '/main-goals',
           },
           {
             label:'HEADER.MENU.STRATEGY_ITEMS.AUDIT',
-            href: 'https://amanathail.gov.sa/new_portal/Hail/InternalAudit',
+            routerLink: '/internal-audit',
           },
         ],
       },
@@ -178,15 +178,15 @@ export class HeaderComponent implements OnInit {
          items: [
           {
             label:'HEADER.MENU.MAYOR_ITEMS.MAYOR_INFO',
-            href: 'https://amanathail.gov.sa/new_portal/Hail/MayorCV',
+            routerLink: '/mayor-profile',
           },
           {
             label:'HEADER.MENU.MAYOR_ITEMS.MAYOR_CONTACT',
-            href: 'https://amanathail.gov.sa/new_portal/Hail/MayorContact',
+            routerLink: '/mayor-contact',
           },
           {
             label:'HEADER.MENU.MAYOR_ITEMS.MAYOR_ADMIN',
-            href: 'https://amanathail.gov.sa/new_portal/Hail/MayorOfficeAdmin',
+            routerLink: '/executive-office',
           },
         ],
       },

@@ -81,8 +81,42 @@ export const routes: Routes = [
       import('./pages/content/municipalities.component').then((m) => m.MunicipalitiesComponent),
   },
   {
+    path: 'municipalities/:name',
+    loadComponent: () => import('./pages/content/municipality-details.component').then(m => m.MunicipalityDetailsComponent),
+  },
+  {
     path: 'e-participation',
     loadComponent: () =>
       import('./pages/e-participation/e-participation.component').then((m) => m.EParticipationComponent),
+  },
+  {
+    path: 'vision-mission',
+    loadComponent: () =>
+      import('./pages/content/vision-mission.component').then((m) => m.VisionMissionComponent),
+  },
+  {
+    path: 'main-goals',
+    loadComponent: () =>
+      import('./pages/content/main-goals.component').then((m) => m.MainGoalsComponent),
+  },
+  {
+    path: 'internal-audit',
+    loadComponent: () =>
+      import('./pages/content/internal-audit.component').then((m) => m.InternalAuditComponent),
+  },
+  {
+    path: 'mayor-profile',
+    loadComponent: () =>
+      import('./pages/content/mayor-profile.component').then((m) => m.MayorProfileComponent),
+  },
+  {
+    path: 'mayor-contact',
+    loadComponent: () =>
+      import('./pages/content/mayor-contact.component').then((m) => m.MayorContactComponent),
+  },
+  {
+    path: 'executive-office',
+    loadComponent: () =>
+      import('./pages/content/executive-office.component').then((m) => m.ExecutiveOfficeComponent),
   },
 ];
