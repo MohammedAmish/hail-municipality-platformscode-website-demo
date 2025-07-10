@@ -1,0 +1,45 @@
+.bg-white {
+  background: #fff;
+}
+.text-primary-color {
+  color: var(--color-primary-default, #097449);
+}
+.border-primary-color {
+  border-color: var(--color-primary-default, #097449) !important;
+}
+.shadow {
+  box-shadow: 0 2px 8px rgba(0,0,0,0.04);
+}
+.btn-primary {
+  background: var(--color-primary-default, #097449);
+  color: #fff;
+  border: none;
+  border-radius: 6px;
+  padding: 0.5rem 1.5rem;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background 0.2s;
+  text-align: center;
+  display: block;
+}
+.btn-primary:hover {
+  background: #065c37;
+}
+.grid {
+  display: grid;
+  gap: 1.5rem;
+}
+.section-hr {
+  border: 0;
+  border-top: 3px solid var(--color-primary-default, #097449);
+  width: 60px;
+  margin: 0 auto 1rem auto;
+}
+@media (max-width: 768px) {
+  .container {
+    padding: 0 0.5rem;
+  }
+  .grid {
+    grid-template-columns: 1fr;
+  }
+} 

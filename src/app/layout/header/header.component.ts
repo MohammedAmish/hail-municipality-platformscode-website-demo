@@ -154,7 +154,7 @@ export class HeaderComponent implements OnInit {
           },
           {
             label:'HEADER.MENU.MUNICIPALITY_ITEMS.SYSTEMS',
-            href: 'https://amanathail.gov.sa/new_portal/Hail/regulations',
+            routerLink: '/regulations',
           },
         ],
       },

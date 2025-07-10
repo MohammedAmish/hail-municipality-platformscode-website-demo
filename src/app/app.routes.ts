@@ -129,4 +129,8 @@ export const routes: Routes = [
     loadComponent: () =>
       import('./pages/content/data-sharing.component').then((m) => m.DataSharingComponent),
   },
+  {
+    path: 'regulations',
+    loadComponent: () => import('./pages/content/regulations.component').then((m) => m.RegulationsComponent),
+  },
 ];
