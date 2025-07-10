@@ -1,0 +1,28 @@
+<div class="container mx-auto py-5xl lg:px-md">
+  <h1 class="font-bold text-3xl text-text-display mb-8 text-center">
+    {{ 'SEARCH.TITLE' | translate }}
+  </h1>
+  <div class="search-bar flex items-center justify-center mb-8">
+    <input type="text" [(ngModel)]="query" (keyup.enter)="onSearch()" class="search-input" placeholder="{{ 'SEARCH.PLACEHOLDER' | translate }}" />
+    <button class="btn btn-primary ml-2 flex items-center" (click)="onSearch()">
+      <span>{{ 'SEARCH.BUTTON' | translate }}</span>
+      <span class="icon-search ml-1"></span>
+    </button>
+  </div>
+  <div *ngIf="results.length > 0">
+    <h2 class="text-lg font-semibold mb-4">{{ 'SEARCH.RESULTS_TITLE' | translate:{count: results.length} }}</h2>
+    <div *ngFor="let result of results" class="result-box mb-6 p-4 rounded-lg shadow bg-white border border-neutral-primary">
+      <div class="flex justify-between items-center mb-2">
+        <span class="result-type">{{ result.type }}</span>
+      </div>
+      <div class="result-title font-bold mb-1">{{ result.titleText }}</div>
+      <div class="result-desc text-sm mb-2">{{ result.descriptionText }}</div>
+      <a *ngIf="result.link" [href]="result.link" [target]="result.link.startsWith('http') ? '_blank' : null" class="btn btn-primary mt-2">
+        {{ 'SEARCH.VIEW_ORIGINAL' | translate }}
+      </a>
+    </div>
+  </div>
+  <div *ngIf="results.length === 0 && query">
+    <p class="text-center text-gray-500">{{ 'SEARCH.NO_RESULTS' | translate }}</p>
+  </div>
+</div> 

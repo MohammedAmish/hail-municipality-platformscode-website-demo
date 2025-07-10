@@ -1015,5 +1015,13 @@
       "EXECUTIVE_EXPROPRIATION": "اللائحة التنفيذية لقانون الاستملاك والاستبقاء المؤقت على العقارات",
       "MUNICIPAL_PROPERTY_REG": "اللائحة التصرف في العقارات البلدية"
     }
+  },
+  "SEARCH": {
+    "TITLE": "البحث",
+    "BUTTON": "بحث",
+    "PLACEHOLDER": "اكتب كلمة البحث...",
+    "RESULTS_TITLE": "عدد النتائج: {{count}}",
+    "NO_RESULTS": "لا توجد نتائج مطابقة.",
+    "VIEW_ORIGINAL": "عرض الصفحة الأصلية"
   }
 }

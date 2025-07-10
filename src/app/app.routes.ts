@@ -133,4 +133,8 @@ export const routes: Routes = [
     path: 'regulations',
     loadComponent: () => import('./pages/content/regulations.component').then((m) => m.RegulationsComponent),
   },
+  {
+    path: 'search',
+    loadComponent: () => import('./pages/search/search.component').then((m) => m.SearchComponent),
+  },
 ];
