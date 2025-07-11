@@ -139,7 +139,7 @@ export class HeaderComponent implements OnInit {
           },
           {
             label:'HEADER.MENU.MUNICIPALITY_ITEMS.MANAGEMENT',
-            href: 'https://amanathail.gov.sa/new_portal/Departments',
+            routerLink: '/departments',
           },
           {
             label:'HEADER.MENU.MUNICIPALITY_ITEMS.OPEN_DATA',

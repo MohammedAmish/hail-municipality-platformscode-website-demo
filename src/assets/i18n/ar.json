@@ -1023,5 +1023,16 @@
     "RESULTS_TITLE": "عدد النتائج: {{count}}",
     "NO_RESULTS": "لا توجد نتائج مطابقة.",
     "VIEW_ORIGINAL": "عرض الصفحة الأصلية"
+  },
+  "DEPARTMENTS": {
+    "BREADCRUMB": {
+      "HOME": "الرئيسية",
+      "CURRENT": "إدارات الأمانة"
+    },
+    "TITLE": "إدارات أمانة منطقة حائل",
+    "MANAGER": "المسؤول",
+    "CONTACT": "رقم التواصل",
+    "ADDRESS": "العنوان",
+    "VIEW_SITE": "عرض الموقع"
   }
 }
