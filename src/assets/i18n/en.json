@@ -986,5 +986,55 @@
       "ATTACHMENTS": "Attach Supporting Document",
       "SUBMIT": "Submit Request"
     }
+  },
+  "REGULATIONS": {
+    "BREADCRUMB": {
+      "HOME": "Home",
+      "CURRENT": "Systems & Regulations"
+    },
+    "TITLE": "Systems & Regulations",
+    "SYSTEMS_TITLE": "Systems",
+    "REGULATIONS_TITLE": "Regulations",
+    "VIEW_FILE": "View File",
+    "SYSTEMS": {
+      "ROAD_BUILDINGS": "Roads and Buildings System",
+      "MUNICIPAL_COUNCILS": "Municipal Councils System",
+      "MUNICIPALITIES_VILLAGES": "Municipalities and Villages System",
+      "MUNICIPAL_PROPERTY": "Municipal Property Disposal System",
+      "CONTRACTOR_CLASSIFICATION": "New Contractor Classification System (Approved Version)",
+      "EXPROPRIATION": "Expropriation of Real Estate for Public Benefit and Temporary Seizure (Final Version)",
+      "LICENSING_PROCEDURES": "Municipal Licensing Procedures System",
+      "UNIT_OWNERSHIP": "Ownership, Valuation, and Management of Real Estate Units Law",
+      "MUNICIPAL_COUNCILS_LAW": "Municipal Councils Law",
+      "MUNICIPALITIES_RURAL": "Municipalities and Rural Areas Law",
+      "WHITE_LAND_TAX": "White Land Tax Law",
+      "ROAD_BUILDINGS_LAW": "Roads and Buildings Law",
+      "SAUDI_BUILDING_CODE": "Saudi Building Code Implementation System",
+      "LICENSING_LAW": "Municipal Licensing Procedures Law"
+    },
+    "REGULATIONS": {
+      "FINANCIAL_MUNICIPAL_COUNCILS": "Financial Regulation for Municipal Councils",
+      "PENALTIES": "Penalties Regulation for Municipal Violations",
+      "EXECUTIVE_LOCAL_COUNCILS": "Executive Regulation for Local Councils System",
+      "STREET_VENDORS": "Organizational Regulation for Street Vendors",
+      "SERVICE_FEES": "Municipal Service Fees Regulation",
+      "PENALTIES_TABLE": "Penalties Table for Professional and Craft Violations",
+      "OCCUPATION_LICENSE": "Municipal Licensing Regulation for Professions and Crafts",
+      "BIODIVERSITY_PRODUCTS": "Regulation for Providing Biodiversity Products",
+      "EXECUTIVE_WHITE_LAND": "Executive Regulation for White Land Fees System",
+      "INSPECTION_REQUIREMENTS": "General Requirements Regulation for Appointing Inspection Entities for Saudi Building Code",
+      "MOBILE_UNITS": "Organizational Regulation for Mobile Data Units",
+      "PUBLIC_TOILETS_GUIDE": "Guide for Public Mobile Toilets",
+      "EXECUTIVE_EXPROPRIATION": "Executive Regulation for Expropriation and Temporary Retention Law",
+      "MUNICIPAL_PROPERTY_REG": "Regulation for Disposal of Municipal Properties"
+    }
+  },
+  "SEARCH": {
+    "TITLE": "Search",
+    "BUTTON": "Search",
+    "PLACEHOLDER": "Type your search...",
+    "RESULTS_TITLE": "Results found: {{count}}",
+    "NO_RESULTS": "No matching results found.",
+    "VIEW_ORIGINAL": "View Original Page"
   }
 }

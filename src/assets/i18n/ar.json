@@ -991,5 +991,55 @@
       "ATTACHMENTS": "إرفاق مستند داعم",
       "SUBMIT": "تقديم الطلب"
     }
+  },
+  "REGULATIONS": {
+    "BREADCRUMB": {
+      "HOME": "الرئيسية",
+      "CURRENT": "الأنظمة واللوائح"
+    },
+    "TITLE": "الأنظمة واللوائح",
+    "SYSTEMS_TITLE": "الأنظمة",
+    "REGULATIONS_TITLE": "اللوائح",
+    "VIEW_FILE": "عرض الملف",
+    "SYSTEMS": {
+      "ROAD_BUILDINGS": "نظام الطرق والمباني",
+      "MUNICIPAL_COUNCILS": "نظام المجالس البلدية",
+      "MUNICIPALITIES_VILLAGES": "نظام البلديات والقرى",
+      "MUNICIPAL_PROPERTY": "نظام التصرف في العقارات البلدية",
+      "CONTRACTOR_CLASSIFICATION": "نظام تصنيف المقاولين الجديد النسخة المعتمدة",
+      "EXPROPRIATION": "نظام نزع ملكية العقارات للمنفعة العامة ووضع اليد المؤقت على العقار النسخة النهائية",
+      "LICENSING_PROCEDURES": "نظام إجراءات التراخيص البلدية",
+      "UNIT_OWNERSHIP": "قانون ملكية وتثمين وإدارة الوحدات العقارية",
+      "MUNICIPAL_COUNCILS_LAW": "قانون المجالس البلدية",
+      "MUNICIPALITIES_RURAL": "قانون البلديات والمناطق الريفية",
+      "WHITE_LAND_TAX": "قانون ضريبة الأراضي البيضاء",
+      "ROAD_BUILDINGS_LAW": "قانون الطرق والمباني",
+      "SAUDI_BUILDING_CODE": "نظام تنفيذ كود البناء السعودي",
+      "LICENSING_LAW": "قانون إجراءات التراخيص البلدية"
+    },
+    "REGULATIONS": {
+      "FINANCIAL_MUNICIPAL_COUNCILS": "اللائحة المالية للمجالس البلدية",
+      "PENALTIES": "لائحة الجزاءات عن المخالفات البلدية",
+      "EXECUTIVE_LOCAL_COUNCILS": "اللائحة التنفيذية لنظام المجالس المحليين",
+      "STREET_VENDORS": "اللائحة التنظيمية للباعة المتجولين",
+      "SERVICE_FEES": "لائحة رسوم الخدمات البلدية",
+      "PENALTIES_TABLE": "جدول الجزاءات التابع للائحة الجزاءات عن المخالفات المهنية والحرفية",
+      "OCCUPATION_LICENSE": "لائحة الترخيص البلدي لمزاولة المهن والحرف",
+      "BIODIVERSITY_PRODUCTS": "لائحة تقديم منتجات التنوع البيولوجي",
+      "EXECUTIVE_WHITE_LAND": "اللائحة التنفيذية لنظام رسم الأراضي البيضاء",
+      "INSPECTION_REQUIREMENTS": "اللائحة المتطلبات العامة لتعيين جهات التفتيش والمفتشين لأعمال كود البناء السعودي",
+      "MOBILE_UNITS": "اللائحة التنظيمية لوحدات البيانات المتنقلة",
+      "PUBLIC_TOILETS_GUIDE": "دليل دورات المياه العامة المتنقلة",
+      "EXECUTIVE_EXPROPRIATION": "اللائحة التنفيذية لقانون الاستملاك والاستبقاء المؤقت على العقارات",
+      "MUNICIPAL_PROPERTY_REG": "اللائحة التصرف في العقارات البلدية"
+    }
+  },
+  "SEARCH": {
+    "TITLE": "البحث",
+    "BUTTON": "بحث",
+    "PLACEHOLDER": "اكتب كلمة البحث...",
+    "RESULTS_TITLE": "عدد النتائج: {{count}}",
+    "NO_RESULTS": "لا توجد نتائج مطابقة.",
+    "VIEW_ORIGINAL": "عرض الصفحة الأصلية"
   }
 }

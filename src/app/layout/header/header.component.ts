@@ -5,7 +5,7 @@ import { ButtonModule } from 'primeng/button';
 import { MenuItem } from 'primeng/api';
 import { CommonModule, DOCUMENT } from '@angular/common';
 import { BadgeModule } from 'primeng/badge';
-import { RouterModule } from '@angular/router';
+import { RouterModule, Router } from '@angular/router';
 import { TranslateModule, TranslateService } from '@ngx-translate/core';
 import { LocalStorageService } from '../../shared/services/localStorage.service';
 @Component({
@@ -42,7 +42,8 @@ export class HeaderComponent implements OnInit {
   constructor(
     private translate: TranslateService,
     private localStorageService: LocalStorageService,
-    @Inject(DOCUMENT) private document: Document
+    @Inject(DOCUMENT) private document: Document,
+    private router: Router
   ) {
     translate.addLangs(['en', 'ar']);
     const saved = this.localStorageService.getItem('lang') || 'ar';
@@ -154,7 +155,7 @@ export class HeaderComponent implements OnInit {
           },
           {
             label:'HEADER.MENU.MUNICIPALITY_ITEMS.SYSTEMS',
-            href: 'https://amanathail.gov.sa/new_portal/Hail/regulations',
+            routerLink: '/regulations',
           },
         ],
       },
@@ -227,7 +228,9 @@ export class HeaderComponent implements OnInit {
     ];
   }
 
-  onSearchClick(event: Event) {}
+  onSearchClick(event: Event) {
+    this.router.navigate(['/search']);
+  }
 
   increaseFont() {
     if (this.fontSize < this.maxFontSize) {
