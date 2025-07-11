@@ -1036,5 +1036,16 @@
     "RESULTS_TITLE": "Results found: {{count}}",
     "NO_RESULTS": "No matching results found.",
     "VIEW_ORIGINAL": "View Original Page"
+  },
+  "DEPARTMENTS": {
+    "BREADCRUMB": {
+      "HOME": "Home",
+      "CURRENT": "Departments"
+    },
+    "TITLE": "Hail Municipality Departments",
+    "MANAGER": "Manager",
+    "CONTACT": "Contact Number",
+    "ADDRESS": "Address",
+    "VIEW_SITE": "View Site"
   }
 }

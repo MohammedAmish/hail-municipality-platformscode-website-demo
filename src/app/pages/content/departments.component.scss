@@ -1,0 +1,16 @@
+.container {
+  direction: inherit;
+}
+
+.bg-primary-400 {
+  background: var(--color-primary-400);
+}
+
+button[disabled] {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+.min-h-220 {
+  min-height: 220px;
+} 
