@@ -456,6 +456,7 @@
       "viewmore": "View more"
     }
   },
+
   "ABOUTUS": {
     "breadcrumb": {
       "parent": "Home",
@@ -597,6 +598,24 @@
       "statistics": "Website and Services Statistics",
       "social-media": "Social Media"
     }
+  },
+
+  "SOCIALMEDIA": {
+    "breadcrumb": {
+      "parent": "Link",
+      "current": "Link"
+    },
+    "page": {
+      "title": "Social Media",
+      "guidelines": "Social Media Usage Guidelines",
+      "click": "Click here"
+    },
+    "facebook": "Facebook",
+    "youtube": "Youtube",
+    "x": "X Platform",
+    "instagram": "Instagram",
+    "linkedin": "LinkedIn",
+    "snapchat": "Snapchat"
   },
 
   "PRINCES": {

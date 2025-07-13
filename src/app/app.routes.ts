@@ -100,6 +100,11 @@ export const routes: Routes = [
       import('./pages/e-participation/e-participation.component').then((m) => m.EParticipationComponent),
   },
   {
+    path: 'social-media',
+    loadComponent: () =>
+      import('./pages/social-media/social-media.component').then((m) => m.SocialMediaComponent),
+  },
+  {
     path: 'vision-mission',
     loadComponent: () =>
       import('./pages/content/vision-mission.component').then((m) => m.VisionMissionComponent),
