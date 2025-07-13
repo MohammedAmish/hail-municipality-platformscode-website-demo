@@ -1,0 +1,50 @@
+<div class="container mx-auto py-10 lg:px-10">
+  <!-- Breadcrumb -->
+  <nav class="flex text-sm text-secondary-paragraph mb-6">
+    <a routerLink="/" class="text-primary-paragraph hover:underline">
+      {{ 'DEPARTMENTS.BREADCRUMB.HOME' | translate }}
+    </a>
+    <span class="mx-2">›</span>
+    <span class="font-semibold text-text-display">
+      {{ 'DEPARTMENTS.BREADCRUMB.CURRENT' | translate }}
+    </span>
+  </nav>
+
+  <!-- Page Title -->
+  <h1 class="font-bold text-3xl text-text-display mb-4 text-center">
+    {{ 'DEPARTMENTS.TITLE' | translate }}
+  </h1>
+
+  <hr class="border-neutral-primary mb-12" />
+
+  <!-- Departments Cards Grid -->
+  <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8 mt-10">
+    <div *ngFor="let dept of departments" class="bg-primary-400 rounded-xl shadow p-6 flex flex-col justify-between min-h-220">
+      <div>
+        <h2 class="font-bold text-lg text-white mb-2">{{ lang === 'ar' ? dept.nameAr : dept.nameEn }}</h2>
+        <div class="text-white mb-1">
+          <span class="font-semibold">{{ 'DEPARTMENTS.MANAGER' | translate }}:</span>
+          <span>{{ lang === 'ar' ? dept.managerAr : dept.managerEn }}</span>
+        </div>
+        <div class="text-white mb-1">
+          <span class="font-semibold">{{ 'DEPARTMENTS.CONTACT' | translate }}:</span>
+          <span>{{ dept.contact || '-' }}</span>
+        </div>
+        <div class="text-white mb-3">
+          <span class="font-semibold">{{ 'DEPARTMENTS.ADDRESS' | translate }}:</span>
+          <span>{{ lang === 'ar' ? dept.addressAr : dept.addressEn }}</span>
+        </div>
+      </div>
+      <ng-container *ngIf="dept.link; else disabledBtn">
+        <a class="bg-white text-primary-400 font-bold rounded px-4 py-2 mt-2 transition hover:bg-primary-100 text-center block" [href]="dept.link" target="_blank" rel="noopener">
+          {{ 'DEPARTMENTS.VIEW_SITE' | translate }}
+        </a>
+      </ng-container>
+      <ng-template #disabledBtn>
+        <button class="bg-white text-primary-400 font-bold rounded px-4 py-2 mt-2 transition opacity-60 cursor-not-allowed w-full" disabled>
+          {{ 'DEPARTMENTS.VIEW_SITE' | translate }}
+        </button>
+      </ng-template>
+    </div>
+  </div>
+</div> 

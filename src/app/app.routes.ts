@@ -86,6 +86,11 @@ export const routes: Routes = [
       import('./pages/content/municipalities.component').then((m) => m.MunicipalitiesComponent),
   },
   {
+    path: 'open-data',
+    loadComponent: () =>
+      import('./pages/content/open-data.component').then((m) => m.OpenDataComponent),
+  },
+  {
     path: 'municipalities/:name',
     loadComponent: () => import('./pages/content/municipality-details.component').then(m => m.MunicipalityDetailsComponent),
   },
@@ -123,5 +128,22 @@ export const routes: Routes = [
     path: 'executive-office',
     loadComponent: () =>
       import('./pages/content/executive-office.component').then((m) => m.ExecutiveOfficeComponent),
+  },
+  {
+    path: 'data-sharing',
+    loadComponent: () =>
+      import('./pages/content/data-sharing.component').then((m) => m.DataSharingComponent),
+  },
+  {
+    path: 'regulations',
+    loadComponent: () => import('./pages/content/regulations.component').then((m) => m.RegulationsComponent),
+  },
+  {
+    path: 'search',
+    loadComponent: () => import('./pages/search/search.component').then((m) => m.SearchComponent),
+  },
+  {
+    path: 'departments',
+    loadComponent: () => import('./pages/content/departments.component').then(m => m.DepartmentsComponent)
   },
 ];

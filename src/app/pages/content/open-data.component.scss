@@ -1,0 +1,22 @@
+.tabs {
+  .tab {
+    transition: color 0.2s, border-color 0.2s;
+    cursor: pointer;
+    border-bottom-width: 2px;
+    margin-inline-end: 1rem;
+    background: none;
+    outline: none;
+  }
+}
+
+hr {
+  border-color: #16a34a; /* أخضر */
+}
+
+.text-green-700 {
+  color: #15803d;
+}
+
+.border-green-600 {
+  border-color: #16a34a;
+} 
