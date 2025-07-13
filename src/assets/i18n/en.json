@@ -16,6 +16,12 @@
     "response": "Thank you! Your response has been successfully recorded. If you wish to modify or change your answer, you can go back by clicking the Undo button.",
     "undo": "Undo"
   },
+
+  "ERROR": {
+    "wrong": "Something went wrong",
+    "sorry": "Sorry, we can’t find the page you’re looking for.",
+    "home": "Back To Home"
+  },
   
   "PHONE": "Phone",
   "CENTRAL": "Central",
@@ -567,6 +573,29 @@
       "content": "Content",
       "blank": "Page Link",
       "subblank": "Sub Page Link"
+    }
+  },
+
+  "E-PARTICIPATION": {
+    "breadcrumb": {
+      "parent": "Link",
+      "current": "Link"
+    },
+    "page": {
+      "title1": "e-Participation",
+      "description1": "This is an example of a page description for the Unified Design System, where the same consistent style is maintained across all other pages.This is an example of a page description for the Unified Design System, where the same consistent style is maintained across all other pages.",
+      "title2": "Engagement Topics",
+      "description2": "This is an example of a section description in the Design System, where the same consistent style is maintained across all other sections.This is an example of a section description in the Design System, where the same consistent style is maintained across all other sections."
+    },
+    "cards": {
+      "policy": "e-Participation Policy",
+      "consultations": "Consultations",
+      "co-creation": "Co-Creation and Ideas",
+      "open-data": "Open Data",
+      "complaints": "Complaints and Suggestions",
+      "beneficiary": "Beneficiary Voice Reports",
+      "statistics": "Website and Services Statistics",
+      "social-media": "Social Media"
     }
   },
 

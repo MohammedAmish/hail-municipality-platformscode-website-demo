@@ -1,30 +1,74 @@
-<div class="e-participation-container">
-  <h1 class="page-title">{{ 'E_PARTICIPATION.TITLE' | translate }}</h1>
-  <div class="sections-grid">
-    <!-- Communication Section -->
-    <section class="ep-section communication">
-      <h2>{{ 'E_PARTICIPATION.COMMUNICATION' | translate }}</h2>
-      <div class="ep-card">{{ 'E_PARTICIPATION.PLACEHOLDER' | translate }}</div>
-    </section>
-    <!-- Accounts Section -->
-    <section class="ep-section accounts">
-      <h2>{{ 'E_PARTICIPATION.ACCOUNTS' | translate }}</h2>
-      <div class="ep-card">{{ 'E_PARTICIPATION.PLACEHOLDER' | translate }}</div>
-    </section>
-    <!-- Surveys Section -->
-    <section class="ep-section surveys">
-      <h2>{{ 'E_PARTICIPATION.SURVEYS' | translate }}</h2>
-      <div class="ep-card">{{ 'E_PARTICIPATION.PLACEHOLDER' | translate }}</div>
-    </section>
-    <!-- Complaints Section -->
-    <section class="ep-section complaints">
-      <h2>{{ 'E_PARTICIPATION.COMPLAINTS' | translate }}</h2>
-      <div class="ep-card">{{ 'E_PARTICIPATION.PLACEHOLDER' | translate }}</div>
-    </section>
-    <!-- Important Links Section -->
-    <section class="ep-section links">
-      <h2>{{ 'E_PARTICIPATION.LINKS' | translate }}</h2>
-      <div class="ep-card">{{ 'E_PARTICIPATION.PLACEHOLDER' | translate }}</div>
-    </section>
+<div class="container mx-auto py-20 lg:px-20 font-ibm">
+  <!-- Breadcrumb -->
+  <nav class="flex text-sm text-secondary-paragraph mb-6">
+    <a routerLink="/" class="text-primary-paragraph hover:underline">
+      {{ "E-PARTICIPATION.breadcrumb.parent" | translate }}
+    </a>
+    <span class="mx-2">›</span>
+    <span class="font-semibold text-text-display">
+      {{ "E-PARTICIPATION.breadcrumb.current" | translate }}
+    </span>
+  </nav>
+
+  <!-- Title & Description -->
+    <h1 class="font-bold text-3xl text-text-display mb-4 ">
+      {{ "E-PARTICIPATION.page.title1" | translate }}
+    </h1>
+    <p class="text-text-secondary-paragraph mb-8 text-base text-[#333]">
+      {{ "E-PARTICIPATION.page.description1" | translate }}
+    </p>
+    <hr class="border-0 mb-12" />
+
+  <h1 class="font-bold text-3xl text-text-display mb-4">
+    {{ "E-PARTICIPATION.page.title2" | translate }}
+  </h1>
+  <p class="text-text-secondary-paragraph mb-8 text-base text-[#333]">
+    {{ "E-PARTICIPATION.page.description2" | translate }}
+  </p>
+  <hr class="border-0 mb-12" />
+
+  <div class="grid lg:grid-cols-4 gap-4">
+    <div
+      *ngFor="let section of aboutSections"
+      class="border border-gray-200 rounded-xl p-6 flex flex-col justify-between hover:shadow transition"
+    >
+
+      <!-- Text content in the middle -->
+      <div class="flex-grow flex items-center">
+        <p class="font-semibold text-[#1f2a37] text-sm">
+          {{ section.title | translate }}
+        </p>
+      </div>
+
+      <!-- Button at the bottom-right -->
+      <div class="flex justify-end mt-4">
+        <a
+          *ngIf="!section.link.startsWith('http')"
+          [routerLink]="section.link"
+          class="w-8 h-8 rounded bg-gray-100 hover:bg-gray-200 flex items-center justify-center transition"
+        >
+          <img
+            src="assets/images/Right-arrow.svg"
+            alt="Go"
+            class="w-4 h-4"
+            [ngClass]="{ 'rtl': isRtl }"
+          />
+        </a>
+        <a
+          *ngIf="section.link.startsWith('http')"
+          [href]="section.link"
+          target="_blank"
+          rel="noopener"
+          class="w-8 h-8 rounded bg-gray-100 hover:bg-gray-200 flex items-center justify-center transition"
+        >
+          <img
+            src="assets/images/Right-arrow.svg"
+            alt="Go"
+            class="w-4 h-4"
+            [ngClass]="{ 'rtl': isRtl }"
+          />
+        </a>
+      </div>
+    </div>
   </div>
-</div> 
+</div>

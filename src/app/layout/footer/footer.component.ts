@@ -15,7 +15,7 @@ export class FooterComponent {
   overviewLinks: { key: string; routerLink: string }[] = [
     { key: 'ABOUT', routerLink: '/about-us' },
     { key: 'PRIVACY', routerLink: '/content' },
-    { key: 'HOW_TO_USE', routerLink: '/content' },
+    { key: 'HOW_TO_USE', routerLink: '/page-not-found' },
     { key: 'NEWS_EVENTS', routerLink: '/content' },
     { key: 'SLA_STATS', routerLink: '/content' },
   ];
