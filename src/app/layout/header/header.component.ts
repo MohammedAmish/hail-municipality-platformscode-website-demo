@@ -151,7 +151,7 @@ export class HeaderComponent implements OnInit {
           },
           {
             label:'HEADER.MENU.MUNICIPALITY_ITEMS.STRUCTURE',
-            href: 'https://amanathail.gov.sa/new_portal/Hail/organizational',
+            routerLink: '/organizational-structure',
           },
           {
             label:'HEADER.MENU.MUNICIPALITY_ITEMS.SYSTEMS',

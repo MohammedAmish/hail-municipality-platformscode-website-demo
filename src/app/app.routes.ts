@@ -151,4 +151,9 @@ export const routes: Routes = [
     path: 'departments',
     loadComponent: () => import('./pages/content/departments.component').then(m => m.DepartmentsComponent)
   },
+  {
+    path: 'organizational-structure',
+    loadComponent: () =>
+      import('./pages/content/organizational-structure.component').then((m) => m.OrganizationalStructureComponent),
+  },
 ];
