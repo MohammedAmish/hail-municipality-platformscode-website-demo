@@ -56,7 +56,7 @@ export class EParticipationComponent {
     },
     {
       title: 'E-PARTICIPATION.cards.social-media',
-      link: '/',
+      link: '/social-media',
     },
   ];
 } 
