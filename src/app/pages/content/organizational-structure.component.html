@@ -1,0 +1,41 @@
+<div class="container mx-auto py-10 lg:px-10">
+  <h1 class="font-bold text-3xl text-text-display mb-8 text-center">
+    {{ 'ORGANIZATIONAL_STRUCTURE.TITLE' | translate }}
+  </h1>
+  <div class="flex flex-col items-center mb-12">
+    <!-- Main Mayor Card -->
+    <div class="org-main-card mb-8 flex flex-col items-center">
+      <img [src]="mayor.image" alt="{{ mayor.nameKey | translate }}" class="w-40 h-40 object-cover rounded-full mb-4 border-4 border-green-700" />
+      <h2 class="font-bold text-xl mb-2">{{ mayor.nameKey | translate }}</h2>
+      <h3 class="text-green-700 font-semibold">{{ mayor.positionKey | translate }}</h3>
+    </div>
+    <div class="flex flex-row w-full justify-center gap-8">
+      <!-- Left Members -->
+      <div class="flex flex-col gap-6">
+        <div *ngFor="let member of leftMembers" class="org-card flex flex-col items-center">
+          <img [src]="member.image" alt="{{ member.nameKey | translate }}" class="w-28 h-28 object-cover rounded-full mb-2 border-2 border-green-700" />
+          <h4 class="font-semibold text-base mb-1">{{ member.nameKey | translate }}</h4>
+          <h6 class="text-green-700 text-sm">{{ member.positionKey | translate }}</h6>
+        </div>
+      </div>
+      <!-- Logo in the middle -->
+      <div class="hidden md:flex flex-col items-center justify-center">
+        <img src="https://amanathail.gov.sa/new_portal/assets/images/logo1.png" alt="logo" class="w-32 h-32 object-contain" />
+      </div>
+      <!-- Right Members -->
+      <div class="flex flex-col gap-6">
+        <div *ngFor="let member of rightMembers" class="org-card flex flex-col items-center">
+          <img [src]="member.image" alt="{{ member.nameKey | translate }}" class="w-28 h-28 object-cover rounded-full mb-2 border-2 border-green-700" />
+          <h4 class="font-semibold text-base mb-1">{{ member.nameKey | translate }}</h4>
+          <h6 class="text-green-700 text-sm">{{ member.positionKey | translate }}</h6>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="text-center mt-12">
+    <h5 class="font-semibold mb-4">{{ 'ORGANIZATIONAL_STRUCTURE.DOWNLOAD_TITLE' | translate }}</h5>
+    <a class="btn btn-primary" href="https://amanathail.gov.sa/new_portal/assets/organizational/Full.pdf" download>
+      {{ 'ORGANIZATIONAL_STRUCTURE.DOWNLOAD_BUTTON' | translate }}
+    </a>
+  </div>
+</div> 

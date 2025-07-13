@@ -52,7 +52,8 @@
         "OPEN_DATA": "Open Data",
         "DATA_SHARING": "Open Source",
         "STRUCTURE": "Organizational Structure",
-        "SYSTEMS": "Regulations"
+        "SYSTEMS": "Regulations",
+        "ORGANIZATIONAL_STRUCTURE": "Organizational Structure"
       },
       "STRATEGY": "Municipality Strategy",
       "STRATEGY_ITEMS": {
@@ -1107,5 +1108,44 @@
     "CONTACT": "Contact Number",
     "ADDRESS": "Address",
     "VIEW_SITE": "View Site"
+  },
+  "ORGANIZATIONAL_STRUCTURE": {
+    "TITLE": "Organizational Structure of Hail Municipality",
+    "DOWNLOAD_TITLE": "To view the operational organizational chart of Hail Municipality, you can download the file below",
+    "DOWNLOAD_BUTTON": "Download Organizational Chart PDF",
+    "MAYOR": "Mayor",
+    "POSITIONS": {
+      "PROJECTS": "Deputy Mayor for Projects",
+      "URBAN": "Deputy Mayor for Urban Planning and Licensing",
+      "MUNICIPALITIES": "Deputy Mayor for Regional Municipalities Affairs",
+      "INVESTMENT": "General Supervisor of Investment Development Agency",
+      "MEDIA": "Assistant Mayor for Media and Institutional Communication",
+      "HR": "General Supervisor of Human Resources Department",
+      "EXECUTIVE": "Executive Office Manager",
+      "SERVICES": "Deputy Mayor for Services",
+      "STRATEGY": "Deputy Mayor for Strategic Planning and Performance",
+      "HOUSING": "Deputy Mayor for Housing Affairs",
+      "GOVERNANCE": "Assistant Mayor for Institutional Excellence and Governance",
+      "FINANCE": "Director General of Financial Affairs and Budget",
+      "IT": "General Supervisor of IT Department",
+      "MAYOR_OFFICE": "Mayor's Office Manager"
+    },
+    "NAMES": {
+      "MAYOR": "Eng. Sultan bin Hamed Al-Zaidi",
+      "PROJECTS": "Eng. Mohsen Nasser bin Labda",
+      "URBAN": "Abdullah Ayadah Al-Obaika",
+      "MUNICIPALITIES": "Dr. Nawaf Khalaf Al-Suhaiman",
+      "INVESTMENT": "Eng. Turki Fathi Al-Zoghbi",
+      "MEDIA": "Eng. Saud Fahad Al-Ali",
+      "HR": "Ameesh Ghazi Al-Shammari",
+      "EXECUTIVE": "Amal Al-Subail Al-Enezi",
+      "SERVICES": "Eng. Ahmed Abdulaziz Al-Murshidi",
+      "STRATEGY": "Ibrahim Fahad Al-Harbi",
+      "HOUSING": "Eng. Fawzan Abdulaziz Al-Fawzan",
+      "GOVERNANCE": "Atallah Aziz Al-Shammari",
+      "FINANCE": "Eng. Hussein Ali Al-Jarami",
+      "IT": "Eng. Abdullah Mohammed Al-Bateh",
+      "MAYOR_OFFICE": "Saud Mohammed Al-Fuwais"
+    }
   }
 }
