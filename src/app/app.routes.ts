@@ -56,6 +56,11 @@ export const routes: Routes = [
       ),
   },
   {
+    path: 'page-not-found',
+    loadComponent: () =>
+      import('./pages/page-not-found/page-not-found.component').then((m) => m.PageNotFoundComponent),
+  },
+  {
     path: 'princes',
     loadComponent: () =>
       import('./pages/content/princes.component').then((m) => m.PrincesComponent),
@@ -93,6 +98,11 @@ export const routes: Routes = [
     path: 'e-participation',
     loadComponent: () =>
       import('./pages/e-participation/e-participation.component').then((m) => m.EParticipationComponent),
+  },
+  {
+    path: 'social-media',
+    loadComponent: () =>
+      import('./pages/social-media/social-media.component').then((m) => m.SocialMediaComponent),
   },
   {
     path: 'vision-mission',
