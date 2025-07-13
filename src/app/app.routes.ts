@@ -104,6 +104,11 @@ export const routes: Routes = [
     loadComponent: () =>
       import('./pages/social-media/social-media.component').then((m) => m.SocialMediaComponent),
   },
+   {
+    path: 'co-creation',
+    loadComponent: () =>
+      import('./pages/co-creation/co-creation.component').then((m) => m.CoCreationComponent),
+  },
   {
     path: 'vision-mission',
     loadComponent: () =>

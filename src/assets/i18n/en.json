@@ -618,6 +618,18 @@
     "snapchat": "Snapchat"
   },
 
+  "COCREATION": {
+    "breadcrumb": {
+      "parent": "Link",
+      "current": "Link"
+    },
+    "page": {
+      "title": "Co-Creation and Ideas",
+      "description": "A description explaining co-development and ideas, highlighting their importance, along with a link directing the user to the 'Tafaul' platform.",
+      "tafaul": "Tafaul Platform"
+    }
+  },
+
   "PRINCES": {
     "TITLE": "Region's Princes",
     "INTRO": "Princes have been appointed to Hail region through the following sequence:",

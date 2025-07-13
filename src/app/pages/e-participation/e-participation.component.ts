@@ -36,7 +36,7 @@ export class EParticipationComponent {
     },
     {
       title: 'E-PARTICIPATION.cards.co-creation',
-      link: 'https://amanathail.gov.sa/new_portal/Hail/OurVision',
+      link: '/co-creation',
     },
     {
       title: 'E-PARTICIPATION.cards.open-data',
