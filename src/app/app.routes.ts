@@ -42,6 +42,51 @@ export const routes: Routes = [
       ),
   },
   {
+    path: 'e-participation',
+    loadComponent: () =>
+      import('./pages/e-participation/e-participation.component').then((m) => m.EParticipationComponent),
+  },
+  {
+    path: 'participation-policy',
+    loadComponent: () =>
+      import('./pages/participation-policy/participation-policy.component').then((m) => m.ParticipationPolicyComponent),
+  },
+  {
+    path: 'consultations',
+    loadComponent: () =>
+      import('./pages/consultations/consultations.component').then((m) => m.ConsultationsComponent),
+  },
+  {
+    path: 'co-creation',
+    loadComponent: () =>
+      import('./pages/co-creation/co-creation.component').then((m) => m.CoCreationComponent),
+  },
+  {
+    path: 'open-data',
+    loadComponent: () =>
+      import('./pages/content/open-data.component').then((m) => m.OpenDataComponent),
+  },
+  {
+    path: 'complaints-suggestions',
+    loadComponent: () =>
+      import('./pages/complaints-suggestions/complaints-suggestions.component').then((m) => m.ComplaintsSuggestionsComponent),
+  },
+  {
+    path: 'beneficiary',
+    loadComponent: () =>
+      import('./pages/beneficiary/beneficiary.component').then((m) => m.BeneficiaryComponent),
+  },
+  {
+    path: 'statistics',
+    loadComponent: () =>
+      import('./pages/statistics/statistics.component').then((m) => m.StatisticsComponent),
+  },
+  {
+    path: 'social-media',
+    loadComponent: () =>
+      import('./pages/social-media/social-media.component').then((m) => m.SocialMediaComponent),
+  },
+  {
     path: 'service',
     loadComponent: () =>
       import('./pages/service/service.component').then(
@@ -86,28 +131,8 @@ export const routes: Routes = [
       import('./pages/content/municipalities.component').then((m) => m.MunicipalitiesComponent),
   },
   {
-    path: 'open-data',
-    loadComponent: () =>
-      import('./pages/content/open-data.component').then((m) => m.OpenDataComponent),
-  },
-  {
     path: 'municipalities/:name',
     loadComponent: () => import('./pages/content/municipality-details.component').then(m => m.MunicipalityDetailsComponent),
-  },
-  {
-    path: 'e-participation',
-    loadComponent: () =>
-      import('./pages/e-participation/e-participation.component').then((m) => m.EParticipationComponent),
-  },
-  {
-    path: 'social-media',
-    loadComponent: () =>
-      import('./pages/social-media/social-media.component').then((m) => m.SocialMediaComponent),
-  },
-   {
-    path: 'co-creation',
-    loadComponent: () =>
-      import('./pages/co-creation/co-creation.component').then((m) => m.CoCreationComponent),
   },
   {
     path: 'vision-mission',

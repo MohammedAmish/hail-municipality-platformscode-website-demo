@@ -28,11 +28,11 @@ export class EParticipationComponent {
   aboutSections = [
     {
       title: 'E-PARTICIPATION.cards.policy',
-      link: 'https://amanathail.gov.sa/new_portal/Hail/HailHistory',
+      link: '/participation-policy',
     },
     {
       title: 'E-PARTICIPATION.cards.consultations',
-      link: 'https://amanathail.gov.sa/new_portal/Hail/organizational',
+      link: '/consultations',
     },
     {
       title: 'E-PARTICIPATION.cards.co-creation',
@@ -44,15 +44,15 @@ export class EParticipationComponent {
     },
     {
       title: 'E-PARTICIPATION.cards.complaints',
-      link: '/',
+      link: '/complaints-suggestions',
     },
     {
       title: 'E-PARTICIPATION.cards.beneficiary',
-      link: '/',
+      link: '/beneficiary',
     },
     {
       title: 'E-PARTICIPATION.cards.statistics',
-      link: '/',
+      link: '/statistics',
     },
     {
       title: 'E-PARTICIPATION.cards.social-media',
