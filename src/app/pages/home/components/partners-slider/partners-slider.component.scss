@@ -4,7 +4,21 @@
     .p-carousel-next-button {
       .p-button {
         background: var(--color-neutral-default);
+        border-radius: 50%;
+        width: 2.5rem;
+        height: 2.5rem;
+        padding: 0.5rem;
       }
     }
+
+    .p-carousel-item {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
   }
+}
+
+.partner-card {
+  transition: box-shadow 0.3s ease;
 }

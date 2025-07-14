@@ -1,9 +1,7 @@
 <footer class="bg-sa-flag text-oncolor-primary">
   <div class="container mx-auto pt-5xl pb-3xl px-lg lg:px-md">
     <!-- Top links grid -->
-    <div
-      class="pt-xl pb-5xl grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-3xl mb-6xl"
-    >
+    <div class="pt-xl pb-5xl grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-3xl mb-6xl">
       <!-- Overview -->
       <div>
         <h3 class="mb-lg border-b border-oncolor-transparent-30 pb-sm">
@@ -86,6 +84,7 @@
             pButton
             class="p-button-link border-oncolor-transparent-30"
             [attr.aria-label]="tool.label | translate"
+            (click)="onToolClick(tool.label)"
           >
             <img
               [src]="tool.icon"
@@ -98,37 +97,35 @@
     </div>
 
     <!-- Bottom strip -->
-    <div
-      class="py-xl flex flex-col md:flex-row items-start md:items-center justify-between gap-3xl"
-    >
+    <div class="py-xl flex flex-col md:flex-row items-start md:items-center justify-between gap-3xl">
       <!-- Left: links + texts -->
       <div class="flex flex-col">
         <div class="flex gap-xl mb-5xl">
-          <a routerLink="/sitemap" class="underline">{{
-            "FOOTER.BOTTOM.SITEMAP" | translate
-          }}</a>
-          <a href="#" class="underline">{{
-            "FOOTER.BOTTOM.RSS" | translate
-          }}</a>
-          <a href="#" class="underline">{{
-            "FOOTER.BOTTOM.MOBILE_APP" | translate
-          }}</a>
+          <a routerLink="/sitemap" class="underline">
+            {{ "FOOTER.BOTTOM.SITEMAP" | translate }}
+          </a>
+          <a href="#" class="underline">
+            {{ "FOOTER.BOTTOM.RSS" | translate }}
+          </a>
+          <a href="#" class="underline">
+            {{ "FOOTER.BOTTOM.MOBILE_APP" | translate }}
+          </a>
         </div>
         <p class="font-bold">{{ "FOOTER.BOTTOM.ALL_RIGHTS" | translate }}</p>
         <p class="mb-xl">
           {{ "FOOTER.BOTTOM.DEVELOPED_BY" | translate }}
-          <a href="https://design.dga.gov.sa/" target="_blank" class="underline"
-            >design.dga.gov.sa</a
-          >
+          <a href="https://design.dga.gov.sa/" target="_blank" class="underline">
+            design.dga.gov.sa
+          </a>
         </p>
         <p>{{ "FOOTER.BOTTOM.LAST_MODIFIED" | translate }}</p>
       </div>
 
       <!-- Right: logos -->
       <div class="flex items-center space-x-5xl mt-4 md:mt-0">
-        <img src="assets/images/logo.png" alt="Platform Logo" class="w-40 h-auto"/>
-        <img src="assets/images/dga-logo.svg" alt="Authority Logo" class="w-40 h-auto"/>
-        <img src="assets/images/2030Vision.png" alt="Vision 2030 Logo" class="w-40 h-auto"/>
+        <img src="assets/images/logo.png" alt="Platform Logo" class="w-40 h-auto" />
+        <img src="assets/images/dga-logo.svg" alt="Authority Logo" class="w-40 h-auto" />
+        <img src="assets/images/2030Vision.png" alt="Vision 2030 Logo" class="w-40 h-auto" />
       </div>
     </div>
   </div>

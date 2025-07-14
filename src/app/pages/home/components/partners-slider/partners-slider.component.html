@@ -4,20 +4,32 @@
       {{ "PARTNERS.TITLE" | translate }}
     </h2>
   </div>
+
   <div class="partners-content mt-4">
     <p-carousel
       [value]="partners"
-      [numVisible]="9"
+      [numVisible]="5"
       [numScroll]="1"
       [responsiveOptions]="responsivePartnersOptions"
       ngClass="partners-carousel"
     >
       <ng-template let-item #item>
-        <div class="border border-neutral-primary rounded-lg m-2 p-2">
-          <div class="size-fit mx-auto">
-            <img class="p-3" [src]="item.logo" alt="{{ item.name }}" />
+        <a
+          [href]="item.link"
+          target="_blank"
+          rel="noopener noreferrer"
+          class="block no-underline"
+        >
+          <div
+            class="partner-card bg-white border border-neutral-primary rounded-xl w-44 h-44 flex items-center justify-center m-2 transition-shadow hover:shadow-lg"
+          >
+            <img
+              [src]="item.logo"
+              [alt]="item.name"
+              class="max-w-[80%] max-h-[80%] object-contain"
+            />
           </div>
-        </div>
+        </a>
       </ng-template>
     </p-carousel>
   </div>
