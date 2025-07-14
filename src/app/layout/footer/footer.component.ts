@@ -3,15 +3,18 @@ import { Component } from '@angular/core';
 import { RouterModule } from '@angular/router';
 import { TranslateModule } from '@ngx-translate/core';
 import { ButtonModule } from 'primeng/button';
+import { AccessibilityService } from '../../shared/services/accessibility.service';
 
 @Component({
   selector: 'app-footer',
   standalone: true,
-  imports: [CommonModule, ButtonModule, RouterModule, TranslateModule],
+  imports: [CommonModule, ButtonModule, RouterModule, TranslateModule,],
   templateUrl: './footer.component.html',
   styleUrls: ['./footer.component.scss'],
 })
 export class FooterComponent {
+  constructor(public accessibility: AccessibilityService) {}
+  
   overviewLinks: { key: string; routerLink: string }[] = [
     { key: 'ABOUT', routerLink: '/about-us' },
     { key: 'PRIVACY', routerLink: '/content' },
@@ -54,8 +57,26 @@ export class FooterComponent {
   ];
 
   accessibilityTools: { label: string; icon: string }[] = [
-    { label: 'Sign Language', icon: 'assets/images/icon-view.svg' },
-    { label: 'Search Add', icon: 'assets/images/icon-search-add.svg' },
-    { label: 'View Mode', icon: 'assets/images/icon-sign-language-c.svg' },
+    { label: 'Toggle high contrast', icon: 'assets/images/icon-view.svg' },
+    { label: 'Increase text size', icon: 'assets/images/icon-increase.svg' },
+    { label: 'Decrease text size', icon: 'assets/images/icon-decrease.svg' },
+    { label: 'Reset text size', icon: 'assets/images/Reset-font.png' },
   ];
+
+  onToolClick(label: string) {
+    switch (label) {
+      case 'Increase text size':
+        this.accessibility.increaseFont();
+        break;
+      case 'Decrease text size':
+        this.accessibility.decreaseFont();
+        break;
+      case 'Reset text size':
+        this.accessibility.resetFont();
+        break;
+      case 'Toggle high contrast':
+        this.accessibility.toggleContrast();
+        break;
+    }
+  }
 }

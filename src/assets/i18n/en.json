@@ -206,7 +206,7 @@
   },
 
   "PARTNERS": {
-    "TITLE": "Our Partners"
+    "TITLE": "Important Links"
   },
 
   "RATING": {
@@ -601,6 +601,152 @@
     }
   },
 
+  "PARTPOLICY": {
+    "breadcrumb": {
+      "parent": "Link",
+      "current": "Link"
+    },
+    "page": {
+      "title": "E-Participation Policy",
+      "para1": "A clear, concise, and general description of the e-participation policy, with the option to include goals or importance.",
+      "para2": "Conditions and Controls for Community Participation:",
+      "para3": "An example of one of the terms and conditions for community participation.",
+      "para4": "A text that clearly explains the roles and responsibilities related to e-participation within the context of developing regulations and legislation.",
+      "para5": "A brief description of the e-participation regulations, with a link directing the user to the regulations page.",
+      "regulations": "Digital Government Authority"
+    }
+  },
+
+  "CONSULTATIONS": {
+    "breadcrumb": {
+      "parent": "Link",
+      "current": "Link"
+    },
+    "page": {
+      "title": "Consultations",
+      "desc1": "A textual description that includes a button or link directing the user to the Unified Electronic Platform \"The Unified Online Platform - Poll\".",
+      "desc2": "A textual description that includes a button or link directing the user to the \"Tafaul\" platform.",
+      "onlineplatform": "The Unified Online Platform - Poll"
+    }
+  },
+
+   "COCREATION": {
+    "breadcrumb": {
+      "parent": "Link",
+      "current": "Link"
+    },
+    "page": {
+      "title": "Co-Creation and Ideas",
+      "description": "A description explaining co-development and ideas, highlighting their importance, along with a link directing the user to the \"Tafaul\" platform.",
+      "tafaul": "Tafaul Platform"
+    }
+  },
+
+  "OPEN_DATA": {
+    "BREADCRUMB": {
+      "HOME": "Home",
+      "CURRENT": "Open Data"
+    },
+    "TITLE": "Open Data",
+    "TABS": {
+      "OPEN_DATA": "Open Data",
+      "POLICY": "Open Data Policy",
+      "LIBRARY": "Open Data Library",
+      "STATISTICS": "Open Data Statistics"
+    },
+    "OPEN_DATA": {
+      "WHAT_TITLE": "What is Open Data?",
+      "WHAT_TEXT": "Open data refers to digital data that is published and made available to the public free of charge, without technical or legal restrictions, so that any individual or entity can view, use, republish, or analyze it. This data includes information about services, projects, statistics, or assets that can benefit citizens, researchers, and developers in various fields.",
+      "GOALS_TITLE": "Open Data Goals",
+      "GOALS": {
+        "0": "Enhancing transparency: Enabling citizens and stakeholders to view the works and projects of the Amanah and contribute to community oversight.",
+        "1": "Supporting innovation: Providing data that developers and entrepreneurs can use to build applications or innovative solutions that serve the community.",
+        "2": "Stimulating the digital economy: Enabling the public and private sectors to make decisions based on accurate data that contribute to the development of the national economy."
+      },
+      "REQUEST_TITLE": "Open Data Request",
+      "REQUEST_TEXT": "If certain data is not available on the portal, any user can submit a request to obtain open data through the designated form on the Saudi Open Data Portal.",
+      "REQUEST_LINK": "Open Data Request Link ",
+      "BROWSE_TITLE": "Browse Open Data",
+      "BROWSE_TEXT": "The Saudi Open Data Portal allows browsing and downloading multiple datasets from government entities, including Hail Municipality. Users can search by sector or data type.",
+      "BROWSE_LINK": "Saudi Open Data Portal Link",
+      "VISION_TITLE": "Hail Municipality's Vision for Open Data",
+      "VISION_TEXT": "Maximizing the economic impact of open data in the Kingdom",
+      "MISSION_TITLE": "Amanah's Mission in Open Data",
+      "MISSION_TEXT": "Providing high-value, reusable open data to increase transparency and foster innovation through collaboration, and enabling a data-driven economy"
+    },
+    "POLICY": {
+      "TITLE": "Open Data Policy",
+      "INTRO": "Hail Municipality is committed to making its data available to all beneficiaries in an open, usable, and reusable format, without any financial or legal restrictions, in accordance with the regulations and laws in force in the Kingdom of Saudi Arabia.",
+      "SCOPE_TITLE": "Policy Scope",
+      "SCOPE_TEXT": "This policy applies to all data produced by Hail Municipality that is not classified as private, confidential, or protected under governance or national security regulations.",
+      "RIGHTS_TITLE": "User Rights",
+      "RIGHTS": {
+        "0": "All individuals and entities have the right to access the open data published on the website.",
+        "1": "Data may be reused, whether for personal or commercial purposes, without prior approval from the Amanah.",
+        "2": "When reusing the data, the source (Hail Municipality) must be cited."
+      },
+      "USER_RESPONSIBILITY_TITLE": "User Responsibility",
+      "USER_RESPONSIBILITY": {
+        "0": "The user is responsible for reusing the data in a way that does not distort or misuse its content or use it in misleading contexts.",
+        "1": "The Amanah disclaims any direct or indirect damages resulting from the use of the data."
+      },
+      "AMANAH_RESPONSIBILITY_TITLE": "Amanah Responsibility",
+      "AMANAH_RESPONSIBILITY": {
+        "0": "The Amanah is committed to publishing accurate and up-to-date data as much as possible.",
+        "1": "The Amanah does not guarantee the continuous availability of all data or that it is 100% error-free.",
+        "2": "The Amanah reserves the right to modify or delete data without prior notice."
+      }
+    },
+    "LIBRARY": {
+      "TITLE": "Open Data Library",
+      "INTRO": "The Open Data Library of Hail Municipality provides access to a variety of datasets, including municipal services, projects, locations, statistics, and more. Users can browse and download data in CSV and XLSX formats, and benefit from them in studies or applications.",
+      "BROWSE_TITLE": "Browse the library:",
+      "BROWSE_LINK": "Open Data Platform – Hail Municipality"
+    },
+    "STATISTICS": {
+      "TITLE": "Open Data Statistics",
+      "INTRO": "So far, Hail Municipality has published 98 datasets, shared through more than 150 updated files.",
+      "ITEMS": {
+        "0": "Most popular data: average salaries",
+        "1": "Number of employees",
+        "2": "Housing requests"
+      },
+      "UPDATE_NOTE": "All files have been updated 100% in the last two weeks, with the municipality's commitment to transparency and continuous improvement."
+    }
+  },
+
+  "COMPLAINTS": {
+    "breadcrumb": {
+      "parent": "Link",
+      "current": "Link"
+    },
+    "page": {
+      "title": "Complaints and Suggestions",
+      "complaints": "Complaints",
+      "filingreport": "Filing a Report",
+      "requests": "Requests",
+      "inquiries": "Inquiries",
+      "escalations": "Escalation on the Platform"
+    }
+  },
+
+  "BENEFICIARY": {
+    "breadcrumb": {
+      "parent": "Link",
+      "current": "Link"
+    },
+    "page": {
+      "title": "Beneficiary Voice Reports",
+      "2024": "Beneficiary Voice Report 2024",
+      "2023": "Beneficiary Voice Report 2023",
+      "2022": "Beneficiary Voice Report 2022",
+      "2021": "Beneficiary Voice Report 2021",
+      "2020": "Beneficiary Voice Report 2020",
+      "2019": "Beneficiary Voice Report 2019",
+      "download": "Download File"
+    }
+  },
+
   "SOCIALMEDIA": {
     "breadcrumb": {
       "parent": "Link",
@@ -845,16 +991,6 @@
     }
   },
 
-  "E_PARTICIPATION": {
-    "TITLE": "E-Participation Portal",
-    "COMMUNICATION": "Contact Us",
-    "ACCOUNTS": "Official Accounts",
-    "SURVEYS": "Surveys",
-    "COMPLAINTS": "Complaints & Suggestions",
-    "LINKS": "Important Links",
-    "PLACEHOLDER": "Content will be added soon"
-  },
-
   "VISION_MISSION": {
     "BREADCRUMB": {
       "HOME": "Home",
@@ -935,78 +1071,6 @@
   },
   "MUNICIPALITY": "Municipality",
   "DETAILS": "Details",
-  "OPEN_DATA": {
-    "BREADCRUMB": {
-      "HOME": "Home",
-      "CURRENT": "Open Data"
-    },
-    "TITLE": "Open Data",
-    "TABS": {
-      "OPEN_DATA": "Open Data",
-      "POLICY": "Open Data Policy",
-      "LIBRARY": "Open Data Library",
-      "STATISTICS": "Open Data Statistics"
-    },
-    "OPEN_DATA": {
-      "WHAT_TITLE": "What is Open Data?",
-      "WHAT_TEXT": "Open data refers to digital data that is published and made available to the public free of charge, without technical or legal restrictions, so that any individual or entity can view, use, republish, or analyze it. This data includes information about services, projects, statistics, or assets that can benefit citizens, researchers, and developers in various fields.",
-      "GOALS_TITLE": "Open Data Goals",
-      "GOALS": {
-        "0": "Enhancing transparency: Enabling citizens and stakeholders to view the works and projects of the Amanah and contribute to community oversight.",
-        "1": "Supporting innovation: Providing data that developers and entrepreneurs can use to build applications or innovative solutions that serve the community.",
-        "2": "Stimulating the digital economy: Enabling the public and private sectors to make decisions based on accurate data that contribute to the development of the national economy."
-      },
-      "REQUEST_TITLE": "Open Data Request",
-      "REQUEST_TEXT": "If certain data is not available on the portal, any user can submit a request to obtain open data through the designated form on the Saudi Open Data Portal.",
-      "REQUEST_LINK": "Open Data Request Link ",
-      "BROWSE_TITLE": "Browse Open Data",
-      "BROWSE_TEXT": "The Saudi Open Data Portal allows browsing and downloading multiple datasets from government entities, including Hail Municipality. Users can search by sector or data type.",
-      "BROWSE_LINK": "Saudi Open Data Portal Link",
-      "VISION_TITLE": "Hail Municipality's Vision for Open Data",
-      "VISION_TEXT": "Maximizing the economic impact of open data in the Kingdom",
-      "MISSION_TITLE": "Amanah's Mission in Open Data",
-      "MISSION_TEXT": "Providing high-value, reusable open data to increase transparency and foster innovation through collaboration, and enabling a data-driven economy"
-    },
-    "POLICY": {
-      "TITLE": "Open Data Policy",
-      "INTRO": "Hail Municipality is committed to making its data available to all beneficiaries in an open, usable, and reusable format, without any financial or legal restrictions, in accordance with the regulations and laws in force in the Kingdom of Saudi Arabia.",
-      "SCOPE_TITLE": "Policy Scope",
-      "SCOPE_TEXT": "This policy applies to all data produced by Hail Municipality that is not classified as private, confidential, or protected under governance or national security regulations.",
-      "RIGHTS_TITLE": "User Rights",
-      "RIGHTS": {
-        "0": "All individuals and entities have the right to access the open data published on the website.",
-        "1": "Data may be reused, whether for personal or commercial purposes, without prior approval from the Amanah.",
-        "2": "When reusing the data, the source (Hail Municipality) must be cited."
-      },
-      "USER_RESPONSIBILITY_TITLE": "User Responsibility",
-      "USER_RESPONSIBILITY": {
-        "0": "The user is responsible for reusing the data in a way that does not distort or misuse its content or use it in misleading contexts.",
-        "1": "The Amanah disclaims any direct or indirect damages resulting from the use of the data."
-      },
-      "AMANAH_RESPONSIBILITY_TITLE": "Amanah Responsibility",
-      "AMANAH_RESPONSIBILITY": {
-        "0": "The Amanah is committed to publishing accurate and up-to-date data as much as possible.",
-        "1": "The Amanah does not guarantee the continuous availability of all data or that it is 100% error-free.",
-        "2": "The Amanah reserves the right to modify or delete data without prior notice."
-      }
-    },
-    "LIBRARY": {
-      "TITLE": "Open Data Library",
-      "INTRO": "The Open Data Library of Hail Municipality provides access to a variety of datasets, including municipal services, projects, locations, statistics, and more. Users can browse and download data in CSV and XLSX formats, and benefit from them in studies or applications.",
-      "BROWSE_TITLE": "Browse the library:",
-      "BROWSE_LINK": "Open Data Platform – Hail Municipality"
-    },
-    "STATISTICS": {
-      "TITLE": "Open Data Statistics",
-      "INTRO": "So far, Hail Municipality has published 98 datasets, shared through more than 150 updated files.",
-      "ITEMS": {
-        "0": "Most popular data: average salaries",
-        "1": "Number of employees",
-        "2": "Housing requests"
-      },
-      "UPDATE_NOTE": "All files have been updated 100% in the last two weeks, with the municipality's commitment to transparency and continuous improvement."
-    }
-  },
   "DATA_SHARING": {
     "BREADCRUMB": {
       "HOME": "Home",
