@@ -63,10 +63,24 @@ export class SitemapComponent {
       ]
     },
     {
-      title: 'SITEMAP.page.blank',
-      link: '/',
+      title: 'SITEMAP.page.eparticipation',
+      link: '/e-participation',
       children: [
-        { title: 'SITEMAP.page.subblank', link: '/' },
+        { title: 'SITEMAP.page.epart-sub1', link: '/participation-policy' },
+        { title: 'SITEMAP.page.epart-sub2', link: '/consultations' },
+        { title: 'SITEMAP.page.epart-sub3', link: '/co-creation' },
+        { title: 'SITEMAP.page.epart-sub4', link: '/open-data' },
+        { title: 'SITEMAP.page.epart-sub5', link: '/complaints-suggestions' },
+        { title: 'SITEMAP.page.epart-sub6', link: '/beneficiary' },
+        { title: 'SITEMAP.page.epart-sub7', link: '/statistics' },
+        { title: 'SITEMAP.page.epart-sub8', link: '/social-media' },
+      ]
+    },
+    {
+      title: 'SITEMAP.page.blank',
+      link: '/page-not-found',
+      children: [
+        { title: 'SITEMAP.page.subblank', link: '/page-not-found' },
       ]
     },
   ];
