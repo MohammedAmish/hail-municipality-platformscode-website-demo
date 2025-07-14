@@ -715,6 +715,38 @@
     }
   },
 
+  "COMPLAINTS": {
+    "breadcrumb": {
+      "parent": "Link",
+      "current": "Link"
+    },
+    "page": {
+      "title": "Complaints and Suggestions",
+      "complaints": "Complaints",
+      "filingreport": "Filing a Report",
+      "requests": "Requests",
+      "inquiries": "Inquiries",
+      "escalations": "Escalation on the Platform"
+    }
+  },
+
+  "BENEFICIARY": {
+    "breadcrumb": {
+      "parent": "Link",
+      "current": "Link"
+    },
+    "page": {
+      "title": "Beneficiary Voice Reports",
+      "2024": "Beneficiary Voice Report 2024",
+      "2023": "Beneficiary Voice Report 2023",
+      "2022": "Beneficiary Voice Report 2022",
+      "2021": "Beneficiary Voice Report 2021",
+      "2020": "Beneficiary Voice Report 2020",
+      "2019": "Beneficiary Voice Report 2019",
+      "download": "Download File"
+    }
+  },
+
   "SOCIALMEDIA": {
     "breadcrumb": {
       "parent": "Link",
