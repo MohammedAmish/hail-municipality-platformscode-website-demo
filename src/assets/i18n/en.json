@@ -17,6 +17,22 @@
     "undo": "Undo"
   },
 
+  "CHATBOT": {
+    "online": "Online",
+    "hello": "Hello, I’m your support agent and here to get you the answers you need.",
+    "how": "How can I help you today?",
+    "exploring": "I’m exploring the services",
+    "trending": "I want to know what’s trending",
+    "browsing": "I’m just browsing",
+    "message": "Message",
+    "help": "I’m here to help!",
+    "reply-services": "We offer various services including license renewal, form submissions, and status tracking.",
+    "reply-trending": "Currently trending: Smart City initiative and digital service upgrades.",
+    "reply-browsing": "Take your time! Let me know if you need any help.",
+    "reply-municipalities": "Check this page for municipalities https://amanathailapp.web.app/municipalities"
+    
+  },
+
   "ERROR": {
     "wrong": "Something went wrong",
     "sorry": "Sorry, we can’t find the page you’re looking for.",

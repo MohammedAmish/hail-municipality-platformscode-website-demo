@@ -1,0 +1,122 @@
+<div class="fixed bottom-6 ltr:right-6 rtl:left-6 z-50 font-ibm">
+  <!-- Chat Window -->
+  <div *ngIf="chatOpen" class="w-80 max-w-full bg-white rounded-lg shadow-lg mb-2">
+    <!-- Header -->
+    <div class="bg-[#1B8354] text-white p-3 rounded-t-lg flex justify-between items-center">
+      <div class="flex items-center">
+        <!-- Circular button with image -->
+        <button
+          class="w-10 h-10 rounded-full bg-[#F3F4F6] flex items-center justify-center flex-shrink-0 ltr:mr-3 rtl:ml-3"
+          aria-label="Support Icon"
+        >
+          <img src="../../../assets/images/Icon-headphones.png" alt="Support" class="w-6 h-6" />
+        </button>
+
+        <!-- Texts -->
+        <div class="flex flex-col">
+          <div class="font-bold">{{ 'HELPSUPPORT.page.title' | translate }}</div>
+          <div class="inline-block gap-2 bg-[#F3F4F6] text-[#1B8354] text-xs rounded-full px-2 py-0.5 mt-1 w-max">
+            {{ 'CHATBOT.online' | translate }}
+          </div>
+        </div>
+      </div>
+
+      <button (click)="toggleChat()" aria-label="Close Chat">
+        <img src="../../../assets/images/Icon-close-w.png" alt="Close" />
+      </button>
+    </div>
+    <div class="text-center text-xs text-gray-500 py-1">
+        {{ currentDate }}
+    </div>
+    <!-- Messages -->
+    <div class="p-3 h-80 overflow-y-auto text-sm space-y-2 w-full" id="chatMessages">
+      <!-- Initial hardcoded bot messages -->
+      <div class="space-y-1">
+        <p
+          class="inline-block p-2 rounded bg-gray-100 ltr:text-left rtl:text-right max-w-[85%] break-words whitespace-pre-wrap"
+        >
+        {{ 'CHATBOT.hello' | translate }}
+        </p>
+        <p
+          class="inline-block p-2 rounded bg-gray-100 ltr:text-left rtl:text-right max-w-[85%] break-words whitespace-pre-wrap"
+        >
+        {{ 'CHATBOT.how' | translate }}
+        </p>
+      </div>
+
+      <!-- User & bot messages -->
+      <div
+        *ngFor="let message of messages"
+        class="flex"
+        [ngClass]="{
+          'justify-end': message.from === 'user',
+          'justify-start': message.from === 'bot'
+        }"
+      >
+        <p
+          class="inline-block p-2 rounded max-w-[85%] text-sm break-words whitespace-pre-wrap chat-bubble"
+          [ngClass]="{
+            'bg-[#1B8354] text-white': message.from === 'user',
+            'bg-[#E5E7EB]': message.from === 'bot'
+          }"
+        >
+          {{ message.text }}
+        </p>
+      </div>
+
+      <!-- Suggested Replies -->
+      <ng-container *ngIf="showSuggestions">
+        <div class="flex flex-col space-y-2 mt-2 w-full">
+          <button
+            class="inline-block bg-[#1B8354] text-white text-sm px-4 py-2 rounded max-w-[85%] ltr:ml-auto rtl:mr-auto ltr:text-right rtl:text-left break-words whitespace-pre-wrap"
+            (click)="sendTranslatedSuggestion('CHATBOT.exploring')"
+          >
+           {{ 'CHATBOT.exploring' | translate }}
+          </button>
+          <button
+            class="inline-block bg-[#1B8354] text-white text-sm px-4 py-2 rounded max-w-[85%] ltr:ml-auto rtl:mr-auto ltr:text-right rtl:text-left break-words whitespace-pre-wrap"
+            (click)="sendTranslatedSuggestion('CHATBOT.trending')"
+          >
+           {{ 'CHATBOT.trending' | translate }}
+          </button>
+          <button
+            class="inline-block bg-[#1B8354] text-white text-sm px-4 py-2 rounded max-w-[85%] ltr:ml-auto rtl:mr-auto ltr:text-right rtl:text-left break-words whitespace-pre-wrap"
+            (click)="sendTranslatedSuggestion('CHATBOT.browsing')"
+          >
+           {{ 'CHATBOT.browsing' | translate }}
+          </button>
+        </div>
+      </ng-container>
+    </div>
+
+    <!-- Input Area -->
+    <div class="flex items-center p-3 border border-transparent bg-white">
+      <input
+        [(ngModel)]="userInput"
+        (keyup.enter)="sendMessage()"
+        class="flex-1 bg-[#F3F4F6] border border-transparent rounded p-2 text-sm placeholder-[#6C737F] text-black focus:outline-none focus:ring-0"
+        placeholder="{{ 'CHATBOT.message' | translate}}"
+      />
+      <button
+        class="ltr:ml-2 rtl:mr-2 bg-[#1B8354] rounded-md w-10 h-10 flex items-center justify-center"
+        (click)="sendMessage()"
+        aria-label="Send"
+      >
+        <img
+          src="../../../assets/images/Icon-rightarrow-w.png"
+          alt="Send"
+          class="w-5 h-5 rtl:scale-x-[-1]"
+        />
+      </button>
+    </div>
+  </div>
+
+  <!-- Toggle Button (only shown when closed) -->
+  <button
+    *ngIf="!chatOpen"
+    class="bg-[#1B8354] text-white p-3 rounded-full shadow-lg focus:outline-none w-12 h-12 flex items-center justify-center"
+    (click)="toggleChat()"
+  >
+    <img src="../../../assets/images/Icon-chatbot.png" alt="" />
+  </button>
+</div>

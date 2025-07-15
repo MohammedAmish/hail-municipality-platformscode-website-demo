@@ -2,13 +2,13 @@ import { Component } from '@angular/core';
 import { Router, NavigationEnd } from '@angular/router';
 import { RouterOutlet } from '@angular/router';
 import { filter } from 'rxjs/operators';
-
 import { ButtonModule } from 'primeng/button';
 import { FooterComponent } from './layout/footer/footer.component';
 import { HeaderComponent } from './layout/header/header.component';
 import { RatingComponent } from './layout/rating/rating.component';
 import { FeedbackComponent } from './layout/feedback/feedback.component';
 import { CookiesBannerComponent } from './layout/cookies-banner/cookies-banner.component';
+import { ChatbotComponent } from './layout/chatbot/chatbot.component';
 
 @Component({
   selector: 'app-root',
@@ -20,7 +20,8 @@ import { CookiesBannerComponent } from './layout/cookies-banner/cookies-banner.c
     HeaderComponent,
     RatingComponent,
     FeedbackComponent,
-    CookiesBannerComponent
+    CookiesBannerComponent,
+    ChatbotComponent
   ],
   templateUrl: './app.component.html',
   styleUrl: './app.component.scss',
