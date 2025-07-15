@@ -186,4 +186,8 @@ export const routes: Routes = [
     loadComponent: () =>
       import('./pages/content/organizational-structure.component').then((m) => m.OrganizationalStructureComponent),
   },
+  {
+  path: '**',
+  redirectTo: 'page-not-found',
+  },
 ];
