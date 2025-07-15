@@ -2,6 +2,7 @@
   <div class="container mx-auto pt-5xl pb-3xl px-lg lg:px-md">
     <!-- Top links grid -->
     <div class="pt-xl pb-5xl grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-3xl mb-6xl">
+      
       <!-- Overview -->
       <div>
         <h3 class="mb-lg border-b border-oncolor-transparent-30 pb-sm">
@@ -9,46 +10,82 @@
         </h3>
         <ul class="space-y-sm mt-sm">
           <li *ngFor="let link of overviewLinks">
-            <a
-              [routerLink]="link.routerLink"
-              class="block text-link-oncolor text-sm-medium-font-size"
-            >
-              {{ "FOOTER.OVERVIEW_LINKS." + link.key | translate }}
-            </a>
+            <ng-container *ngIf="isExternalLink(link.url); else internalOverviewLink">
+              <a
+                [href]="link.url"
+                target="_blank"
+                rel="noopener"
+                class="block text-link-oncolor text-sm-medium-font-size"
+              >
+                {{ "FOOTER.OVERVIEW_LINKS." + link.key | translate }}
+              </a>
+            </ng-container>
+            <ng-template #internalOverviewLink>
+              <a
+                [routerLink]="link.url"
+                class="block text-link-oncolor text-sm-medium-font-size"
+              >
+                {{ "FOOTER.OVERVIEW_LINKS." + link.key | translate }}
+              </a>
+            </ng-template>
           </li>
         </ul>
       </div>
 
-      <!-- Important links -->
+      <!-- Important Links -->
       <div>
         <h3 class="mb-lg border-b border-oncolor-transparent-30 pb-sm">
           {{ "FOOTER.IMPORTANT_LINKS" | translate }}
         </h3>
         <ul class="space-y-sm mt-sm">
           <li *ngFor="let link of importantLinks">
-            <a
-              [routerLink]="link.routerLink"
-              class="block text-link-oncolor text-sm-medium-font-size"
-            >
-              {{ "FOOTER.IMPORTANT_LINKS_LIST." + link.key | translate }}
-            </a>
+            <ng-container *ngIf="isExternalLink(link.url); else internalImportantLink">
+              <a
+                [href]="link.url"
+                target="_blank"
+                rel="noopener"
+                class="block text-link-oncolor text-sm-medium-font-size"
+              >
+                {{ "FOOTER.IMPORTANT_LINKS_LIST." + link.key | translate }}
+              </a>
+            </ng-container>
+            <ng-template #internalImportantLink>
+              <a
+                [routerLink]="link.url"
+                class="block text-link-oncolor text-sm-medium-font-size"
+              >
+                {{ "FOOTER.IMPORTANT_LINKS_LIST." + link.key | translate }}
+              </a>
+            </ng-template>
           </li>
         </ul>
       </div>
 
-      <!-- Contact & support -->
+      <!-- Contact & Support -->
       <div>
         <h3 class="mb-lg border-b border-oncolor-transparent-30 pb-sm">
           {{ "FOOTER.CONTACT_SUPPORT" | translate }}
         </h3>
         <ul class="space-y-sm mt-sm">
           <li *ngFor="let link of contactLinks">
-            <a
-              [routerLink]="link.routerLink"
-              class="block text-link-oncolor text-sm-medium-font-size"
-            >
-              {{ "FOOTER.CONTACT_LINKS_LIST." + link.key | translate }}
-            </a>
+            <ng-container *ngIf="isExternalLink(link.url); else internalContactLink">
+              <a
+                [href]="link.url"
+                target="_blank"
+                rel="noopener"
+                class="block text-link-oncolor text-sm-medium-font-size"
+              >
+                {{ "FOOTER.CONTACT_LINKS_LIST." + link.key | translate }}
+              </a>
+            </ng-container>
+            <ng-template #internalContactLink>
+              <a
+                [routerLink]="link.url"
+                class="block text-link-oncolor text-sm-medium-font-size"
+              >
+                {{ "FOOTER.CONTACT_LINKS_LIST." + link.key | translate }}
+              </a>
+            </ng-template>
           </li>
         </ul>
       </div>
@@ -98,7 +135,6 @@
 
     <!-- Bottom strip -->
     <div class="py-xl flex flex-col md:flex-row items-start md:items-center justify-between gap-3xl">
-      <!-- Left: links + texts -->
       <div class="flex flex-col">
         <div class="flex gap-xl mb-5xl">
           <a routerLink="/sitemap" class="underline">
@@ -114,14 +150,18 @@
         <p class="font-bold">{{ "FOOTER.BOTTOM.ALL_RIGHTS" | translate }}</p>
         <p class="mb-xl">
           {{ "FOOTER.BOTTOM.DEVELOPED_BY" | translate }}
-          <a href="https://github.com/MohammedAmish/hail-municipality-platformscode-website-demo" target="_blank" class="underline">
+          <a
+            href="https://github.com/MohammedAmish/hail-municipality-platformscode-website-demo"
+            target="_blank"
+            class="underline"
+          >
             Abdulaziz Mohammed Rabah, Abdullah Mohammed, and Mohammed Amish.
           </a>
         </p>
         <p>{{ "FOOTER.BOTTOM.LAST_MODIFIED" | translate }}</p>
       </div>
 
-      <!-- Right: logos -->
+      <!-- Logos -->
       <div class="flex flex-wrap justify-center items-center gap-5xl mt-4 md:mt-0">
         <img src="assets/images/logo.png" alt="Platform Logo" class="w-32 sm:w-40 h-auto" />
         <img src="assets/images/dga-logo.svg" alt="Authority Logo" class="w-32 sm:w-40 h-auto" />
