@@ -43,6 +43,7 @@ export class ChatbotComponent {
   sendMessage() {
     if (!this.userInput.trim()) return;
     this.addMessage(this.userInput, 'user');
+    this.showSuggestions = false;
     this.botReply(this.userInput);
     this.userInput = '';
   }
@@ -57,34 +58,36 @@ export class ChatbotComponent {
 
   botReply(userText: string) {
     const lowerText = userText.toLowerCase();
-    const isArabic = /[\u0600-\u06FF]/.test(userText);
     let replyKey = 'CHATBOT.help';
 
-    // English intent
-    if (!isArabic) {
-      if (lowerText.includes('services')) {
-        replyKey = 'CHATBOT.reply-services';
-      } else if (lowerText.includes('trending')) {
-        replyKey = 'CHATBOT.reply-trending';
-      } else if (lowerText.includes('browsing')) {
-        replyKey = 'CHATBOT.reply-browsing';
-      } else if (lowerText.includes('municipality') || lowerText.includes('municipalities')) {
-        replyKey = 'CHATBOT.reply-municipalities';
-      }
-    }
+    if (
+    lowerText.includes('services') ||
+    userText.includes('خدمات')
+  ) {
+    replyKey = 'CHATBOT.reply-services';
 
-    // Arabic intent
-    if (isArabic) {
-      if (userText.includes('خدمات')) {
-        replyKey = 'CHATBOT.reply-services';
-      } else if (userText.includes('الشائع') || userText.includes('الرائج')) {
-        replyKey = 'CHATBOT.reply-trending';
-      } else if (userText.includes('تصفح') || userText.includes('استعراض')) {
-        replyKey = 'CHATBOT.reply-browsing';
-      } else if (userText.includes('بلدية') || userText.includes('بلديات')) {
-        replyKey = 'CHATBOT.reply-municipalities';
-      }
-    }
+  } else if (
+    lowerText.includes('trending') ||
+    userText.includes('الشائع') ||
+    userText.includes('الرائج')
+  ) {
+    replyKey = 'CHATBOT.reply-trending';
+
+  } else if (
+    lowerText.includes('browsing') ||
+    userText.includes('تصفح') ||
+    userText.includes('استعراض')
+  ) {
+    replyKey = 'CHATBOT.reply-browsing';
+
+  } else if (
+    lowerText.includes('municipality') ||
+    lowerText.includes('municipalities') ||
+    userText.includes('بلدية') ||
+    userText.includes('بلديات')
+  ) {
+    replyKey = 'CHATBOT.reply-municipalities';
+  }
 
     const reply = this.translate.instant(replyKey);
     setTimeout(() => this.addMessage(reply, 'bot'), 500);
