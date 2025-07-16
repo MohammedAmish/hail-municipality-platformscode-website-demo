@@ -1,0 +1,32 @@
+.bg-white {
+  background: #fff;
+}
+.border-gray-200 {
+  border-color: #e5e7eb;
+}
+.rounded-xl {
+  border-radius: 18px;
+}
+.shadow {
+  box-shadow: 0 2px 8px rgba(0,0,0,0.04);
+}
+.hover-shadow:hover {
+  box-shadow: 0 4px 16px rgba(0,0,0,0.08);
+}
+.text-green-700 {
+  color: #1B8354;
+}
+.text-dark {
+  color: #1f2a37;
+}
+.bg-green-50 {
+  background: #eafaf1;
+}
+@media (max-width: 768px) {
+  .grid-cols-4 {
+    grid-template-columns: 1fr !important;
+  }
+  .p-8 {
+    padding: 1.5rem !important;
+  }
+}

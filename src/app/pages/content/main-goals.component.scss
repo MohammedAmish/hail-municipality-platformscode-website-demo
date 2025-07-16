@@ -44,4 +44,63 @@ td, th {
     font-size: 0.9rem;
     padding: 0.5rem 0.5rem;
   }
+}
+.main-goals-header {
+  background: #f7fafc;
+  padding: 32px 0 16px 0;
+  border-radius: 0 0 32px 32px;
+  margin-bottom: 0.5rem;
+  text-align: right;
+}
+.main-goals-breadcrumb {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  gap: 6px;
+  margin-bottom: 10px;
+  font-size: 1rem;
+  color: #6c757d;
+}
+.main-goals-bc-link {
+  color: #097449;
+  text-decoration: none;
+  font-weight: 500;
+}
+.main-goals-bc-link:hover {
+  text-decoration: underline;
+}
+.main-goals-bc-sep {
+  color: #b0b0b0;
+  font-size: 1.2rem;
+}
+.main-goals-bc-icon {
+  font-size: 1.1rem;
+}
+.main-goals-bc-current {
+  font-weight: bold;
+  color: #22223b;
+}
+.main-goals-title {
+  font-size: 2.5rem;
+  font-weight: bold;
+  color: #22223b;
+  margin: 0;
+  display: inline-block;
+  padding-bottom: 6px;
+  text-align: right;
+}
+.main-goals-title-hr {
+  width: 120px;
+  height: 5px;
+  background: linear-gradient(90deg, #3a86ff 0%, #097449 100%);
+  border-radius: 8px;
+  margin: 0.5rem 0 2rem auto;
+}
+.fade-in {
+  opacity: 0;
+  animation: fadeInTitle 1.2s ease-in-out 0.2s forwards;
+}
+@keyframes fadeInTitle {
+  from { opacity: 0; transform: translateY(-24px); }
+  to { opacity: 1; transform: translateY(0); }
 } 

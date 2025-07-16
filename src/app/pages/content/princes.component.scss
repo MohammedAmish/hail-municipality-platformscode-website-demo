@@ -1,3 +1,70 @@
+.princes-header {
+  background: #f7fafc;
+  padding: 32px 0 16px 0;
+  border-radius: 0 0 32px 32px;
+  margin-bottom: 0.5rem;
+  text-align: right;
+}
+.princes-breadcrumb {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  gap: 8px;
+  margin-bottom: 10px;
+}
+.princes-bc-pill {
+  background: #e3e9f3;
+  color: #097449;
+  border-radius: 16px;
+  padding: 4px 16px;
+  font-size: 1rem;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  font-weight: 500;
+}
+.princes-bc-current {
+  background: #3a86ff;
+  color: #fff;
+}
+.princes-bc-icon {
+  font-size: 1.1rem;
+}
+.princes-bc-sep {
+  color: #b0b0b0;
+  font-size: 1.2rem;
+}
+.princes-title-row {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  gap: 12px;
+  margin-top: 8px;
+}
+.princes-title-bar {
+  width: 6px;
+  height: 40px;
+  background: linear-gradient(180deg, #3a86ff 0%, #097449 100%);
+  border-radius: 8px;
+  margin-left: 8px;
+}
+.princes-title-icon {
+  font-size: 2.2rem;
+  color: #3a86ff;
+  background: #fff;
+  border-radius: 50%;
+  box-shadow: 0 2px 8px #e3e9f3;
+  padding: 8px;
+  margin-bottom: 4px;
+}
+.princes-title {
+  font-size: 2.2rem;
+  font-weight: bold;
+  color: #22223b;
+  margin: 0;
+  padding-bottom: 4px;
+  display: inline-block;
+}
 .princes-content {
     max-width: 800px;
     margin: 2rem auto;
