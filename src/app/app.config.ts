@@ -12,7 +12,7 @@ import { TranslateModule, TranslateLoader } from '@ngx-translate/core';
 import { provideCharts, withDefaultRegisterables } from 'ng2-charts';
 
 import { HttpLoaderFactory } from './shared/services/translate.loader';
-import { HttpClient, provideHttpClient } from '@angular/common/http';
+import { HttpClient, provideHttpClient, withFetch } from '@angular/common/http';
 
 export const appConfig: ApplicationConfig = {
   providers: [
@@ -40,7 +40,7 @@ export const appConfig: ApplicationConfig = {
     provideCharts(withDefaultRegisterables()),
     provideZoneChangeDetection({ eventCoalescing: true }),
     provideRouter(routes),
-    provideHttpClient(),
+    provideHttpClient(withFetch()),
     importProvidersFrom(
       TranslateModule.forRoot({
         loader: {

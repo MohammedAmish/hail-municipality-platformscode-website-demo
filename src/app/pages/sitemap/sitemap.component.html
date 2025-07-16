@@ -16,7 +16,7 @@
   </h1>
 
   <!-- Sitemap Tree with Bullets -->
-  <ul class="space-y-4 list-disc list-inside text-green-600">
+  <ul class="space-y-4 list-disc list-inside text-[#1B8354]">
     <li *ngFor="let page of sitemap">
       <a [routerLink]="page.link" class="font-semibold hover:underline">
         {{ page.title | translate }}
@@ -24,7 +24,7 @@
 
       <!-- Subpages -->
       <ul *ngIf="page.children"
-          class="mt-2 ltr:ml-6 rtl:mr-6 list-disc list-inside space-y-1 text-green-600 text-sm">
+          class="mt-2 ltr:ml-6 rtl:mr-6 list-disc list-inside space-y-1 text-[#1B8354] text-sm">
         <li *ngFor="let sub of page.children">
           <a [routerLink]="sub.link" class="hover:underline">
             {{ sub.title | translate }}

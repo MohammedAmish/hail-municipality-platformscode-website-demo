@@ -19,7 +19,7 @@
 
   <!-- Departments Cards Grid -->
   <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8 mt-10">
-    <div *ngFor="let dept of departments" class="bg-primary-400 rounded-xl shadow p-6 flex flex-col justify-between min-h-220">
+    <div *ngFor="let dept of departments" class="bg-[#1B8354] rounded-xl shadow p-6 flex flex-col justify-between min-h-220">
       <div>
         <h2 class="font-bold text-lg text-white mb-2">{{ lang === 'ar' ? dept.nameAr : dept.nameEn }}</h2>
         <div class="text-white mb-1">
@@ -36,7 +36,7 @@
         </div>
       </div>
       <ng-container *ngIf="dept.link; else disabledBtn">
-        <a class="bg-white text-primary-400 font-bold rounded px-4 py-2 mt-2 transition hover:bg-primary-100 text-center block" [href]="dept.link" target="_blank" rel="noopener">
+        <a class="bg-white text-[#1B8354] font-bold rounded px-4 py-2 mt-2 transition hover:bg-primary-100 text-center block" [href]="dept.link" target="_blank" rel="noopener">
           {{ 'DEPARTMENTS.VIEW_SITE' | translate }}
         </a>
       </ng-container>

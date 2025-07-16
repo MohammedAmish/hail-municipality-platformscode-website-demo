@@ -17,6 +17,22 @@
     "undo": "Undo"
   },
 
+  "CHATBOT": {
+    "online": "Online",
+    "hello": "Hello, I’m your support agent and here to get you the answers you need.",
+    "how": "How can I help you today?",
+    "exploring": "I’m exploring the services",
+    "trending": "I want to know what’s trending",
+    "browsing": "I’m just browsing",
+    "message": "Message",
+    "help": "I’m here to help!",
+    "reply-services": "We offer various services including license renewal, form submissions, and status tracking.",
+    "reply-trending": "Currently trending: Smart City initiative and digital service upgrades.",
+    "reply-browsing": "Take your time! Let me know if you need any help.",
+    "reply-municipalities": "Check this page for municipalities https://amanathailapp.web.app/municipalities"
+    
+  },
+
   "ERROR": {
     "wrong": "Something went wrong",
     "sorry": "Sorry, we can’t find the page you’re looking for.",
@@ -206,7 +222,7 @@
   },
 
   "PARTNERS": {
-    "TITLE": "Our Partners"
+    "TITLE": "Important Links"
   },
 
   "RATING": {
@@ -572,6 +588,15 @@
       "contactus": "Contact Us",
       "faq": "Frequently Asked Questions",
       "help": "Help & Support",
+      "eparticipation": "E-Participation",
+      "epart-sub1": "E-Participation Policy",
+      "epart-sub2": "Consultations",
+      "epart-sub3": "Co-Creation and Ideas",
+      "epart-sub4": "Open Data",
+      "epart-sub5": "Complaints and Suggestions",
+      "epart-sub6": "Beneficiary Voice Reports",
+      "epart-sub7": "Website and Services Statistics",
+      "epart-sub8": "Social Media",
       "content": "Content",
       "blank": "Page Link",
       "subblank": "Sub Page Link"

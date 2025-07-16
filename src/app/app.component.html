@@ -1,9 +1,13 @@
 <div class="overflow-x-hidden">
-    <app-header></app-header>
-    <router-outlet></router-outlet>
-    <app-rating></app-rating>
-    <app-feedback></app-feedback>
-    <app-footer></app-footer>
+  <!-- Show header and other layout components only if showLayout is true -->
+  <app-header *ngIf="showLayout"></app-header>
 
-    <app-cookies-banner></app-cookies-banner>
+  <router-outlet></router-outlet>
+
+  <app-rating *ngIf="showLayout"></app-rating>
+  <app-feedback *ngIf="showLayout"></app-feedback>
+  <app-footer *ngIf="showLayout"></app-footer>
+
+  <app-cookies-banner></app-cookies-banner>
+  <app-chatbot></app-chatbot>
 </div>
