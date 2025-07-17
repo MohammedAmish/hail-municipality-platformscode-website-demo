@@ -1,7 +1,7 @@
 import { Component } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { TranslateService, TranslateModule } from '@ngx-translate/core';
-import { BaseChartDirective } from 'ng2-charts';
+import { NgChartsModule } from 'ng2-charts';
 import { ChartConfiguration } from 'chart.js';
 
 interface StatisticCard {
@@ -13,7 +13,7 @@ interface StatisticCard {
 @Component({
   selector: 'app-statistics',
   standalone: true,
-  imports: [CommonModule, TranslateModule, BaseChartDirective],
+  imports: [CommonModule, TranslateModule, NgChartsModule],
   templateUrl: './statistics.component.html',
   styleUrl: './statistics.component.scss',
 })
