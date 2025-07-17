@@ -1,26 +1,31 @@
-<div class="container mx-auto py-20 lg:px-20 font-ibm">
-  <!-- Breadcrumb -->
-  <nav class="flex text-sm text-secondary-paragraph mb-6">
-    <a routerLink="/" class="text-primary-paragraph hover:underline">
-      {{ "SOCIALMEDIA.breadcrumb.parent" | translate }}
-    </a>
-    <span class="mx-2">›</span>
-    <span class="font-semibold text-text-display">
-      {{ "SOCIALMEDIA.breadcrumb.current" | translate }}
-    </span>
-  </nav>
+<!-- Top Highlight Section with background -->
+<div class="w-full bg-[#F3FCF6] py-10">
+  <div class="container mx-auto px-6 lg:px-20 font-ibm">
+    <!-- Breadcrumb -->
+    <nav class="flex text-sm text-secondary-paragraph mb-6">
+      <a routerLink="/" class="text-primary-paragraph hover:underline">
+        {{ "SOCIALMEDIA.breadcrumb.parent" | translate }}
+      </a>
+      <span class="mx-2">›</span>
+      <span class="font-semibold text-text-display">
+        {{ "SOCIALMEDIA.breadcrumb.current" | translate }}
+      </span>
+    </nav>
 
-  <!-- Title & Description -->
-  <h1 class="font-bold text-3xl text-text-display mb-4">
-    {{ "SOCIALMEDIA.page.title" | translate }}
-  </h1>
-  <hr class="border-0 mb-12" />
+    <!-- Title & Description -->
+    <h1 class="font-bold text-3xl text-text-display mb-4">
+      {{ "SOCIALMEDIA.page.title" | translate }}
+    </h1>
+  </div>
+</div>
 
+<!-- Main Page Content -->
+<div class="container mx-auto py-14 lg:px-20 font-ibm">
   <!-- Cards Grid -->
   <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
     <div
       *ngFor="let section of aboutSections"
-      class="border border-gray-200 rounded-xl p-6 flex flex-col justify-between h-56 hover:shadow transition"
+      class="border border-gray-200 rounded-xl p-6 flex flex-col justify-between h-56 shadow-sm hover:shadow-lg transition"
     >
       <!-- Icon at the top -->
       <div class="self-start mb-2">
@@ -67,8 +72,11 @@
       </div>
     </div>
   </div>
-  <p class="text-sm text-semibold text-center ltr:text-left rtl:text-right">
-        {{ 'SOCIALMEDIA.page.guidelines' | translate}}
-        <a routerLink="/page-not-found" class="text-[#1B8354] hover:underline">{{ 'SOCIALMEDIA.page.click' | translate}}</a>
-    </p>
+
+  <p class="text-sm font-semibold text-center ltr:text-left rtl:text-right mt-8">
+    {{ 'SOCIALMEDIA.page.guidelines' | translate }}
+    <a routerLink="/page-not-found" class="text-[#1B8354] hover:underline">
+      {{ 'SOCIALMEDIA.page.click' | translate }}
+    </a>
+  </p>
 </div>

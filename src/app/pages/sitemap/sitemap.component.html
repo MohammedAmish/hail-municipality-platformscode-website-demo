@@ -1,20 +1,26 @@
-<div class="container mx-auto py-20 lg:px-20 font-ibm">
-  <!-- Breadcrumb -->
-  <nav class="flex text-sm text-secondary-paragraph mb-6">
-    <a routerLink="/" class="text-primary-paragraph hover:underline">
-      {{ "SITEMAP.breadcrumb.parent" | translate }}
-    </a>
-    <span class="mx-2">›</span>
-    <span class="font-semibold text-text-display">
-      {{ "SITEMAP.breadcrumb.current" | translate }}
-    </span>
-  </nav>
+<!-- Breadcrumb & Title Container -->
+<div class="bg-[#F3FCF6] py-3 lg:px-20 px-4 mb-10">
+  <div class="container mx-auto font-ibm">
+    <!-- Breadcrumb -->
+    <nav class="flex text-sm text-secondary-paragraph mb-4">
+      <a routerLink="/" class="text-primary-paragraph hover:underline">
+        {{ "SITEMAP.breadcrumb.parent" | translate }}
+      </a>
+      <span class="mx-2">›</span>
+      <span class="font-semibold text-text-display">
+        {{ "SITEMAP.breadcrumb.current" | translate }}
+      </span>
+    </nav>
 
-  <!-- Title -->
-  <h1 class="font-bold text-3xl text-text-display mb-8">
-    {{ "SITEMAP.page.title" | translate }}
-  </h1>
+    <!-- Title -->
+    <h1 class="font-bold text-3xl text-text-display">
+      {{ "SITEMAP.page.title" | translate }}
+    </h1>
+  </div>
+</div>
 
+<!-- Main Content Container -->
+<div class="container mx-auto py-4 lg:px-20 font-ibm">
   <!-- Sitemap Tree with Bullets -->
   <ul class="space-y-4 list-disc list-inside text-[#1B8354]">
     <li *ngFor="let page of sitemap">

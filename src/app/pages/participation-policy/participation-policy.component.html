@@ -1,43 +1,56 @@
-<div class="container mx-auto py-20 lg:px-20 font-ibm">
-  <!-- Breadcrumb -->
-  <nav class="flex text-sm text-secondary-paragraph mb-6">
-    <a routerLink="/" class="text-primary-paragraph hover:underline">
-      {{ "PARTPOLICY.breadcrumb.parent" | translate }}
-    </a>
-    <span class="mx-2">›</span>
-    <span class="font-semibold text-text-display">
-      {{ "PARTPOLICY.breadcrumb.current" | translate }}
-    </span>
-  </nav>
+<!-- Top Highlight Section: Only Breadcrumb + Title -->
+<div class="w-full bg-[#F3FCF6] py-10">
+  <div class="container mx-auto px-6 lg:px-20 font-ibm">
+    <!-- Breadcrumb -->
+    <nav class="flex text-sm text-secondary-paragraph mb-4">
+      <a routerLink="/" class="text-primary-paragraph hover:underline">
+        {{ "PARTPOLICY.breadcrumb.parent" | translate }}
+      </a>
+      <span class="mx-2">›</span>
+      <span class="font-semibold text-text-display">
+        {{ "PARTPOLICY.breadcrumb.current" | translate }}
+      </span>
+    </nav>
 
-  <!-- Title & Description -->
-    <h1 class="font-bold text-3xl text-text-display mb-4">
+    <!-- Title -->
+    <h1 class="font-bold text-3xl text-text-display">
       {{ "PARTPOLICY.page.title" | translate }}
     </h1>
-    <hr class="border-0 mb-12" />
-    <p class="text-text-secondary-paragraph mb-8 text-base text-[#333]">
-      {{ "PARTPOLICY.page.para1" | translate }}
-    </p>
-    <p class="text-text-secondary-paragraph mb-8 text-bold">
-      {{ "PARTPOLICY.page.para2" | translate }}
-    </p>
-    <p class="text-text-secondary-paragraph mb-8 text-base text-[#333]">
-      - {{ "PARTPOLICY.page.para3" | translate }}
-    </p>
-    <p class="text-text-secondary-paragraph mb-8 text-base text-[#333]">
-      - {{ "PARTPOLICY.page.para3" | translate }}
-    </p>
-    <p class="text-text-secondary-paragraph mb-8 text-base text-[#333]">
-      - {{ "PARTPOLICY.page.para3" | translate }}
-    </p>
-    <p class="text-text-secondary-paragraph mb-8 text-base text-[#333]">
-      - {{ "PARTPOLICY.page.para3" | translate }}
-    </p>
-    <p class="text-text-secondary-paragraph mb-8 text-base text-[#333]">
-      {{ "PARTPOLICY.page.para4" | translate }}
-    </p>
-    <p class="text-text-secondary-paragraph mb-8 text-base text-[#333]">
-        {{ 'PARTPOLICY.page.para5' | translate}}
-        <a href="/page-not-found" class="text-[#1B8354] hover:underline">{{ 'PARTPOLICY.page.regulations' | translate}}</a>
-    </p>
+  </div>
+</div>
+
+<!-- Main Page Content -->
+<div class="container mx-auto py-14 lg:px-20 font-ibm">
+
+  <p class="text-text-secondary-paragraph mb-8 font-semibold text-[#333]">
+    {{ "PARTPOLICY.page.para1" | translate }}
+  </p>
+
+  <p class="text-text-secondary-paragraph mb-8 font-bold">
+    {{ "PARTPOLICY.page.para2" | translate }}
+  </p>
+
+  <p class="text-text-secondary-paragraph mb-8 font-semibold text-[#333]">
+    - {{ "PARTPOLICY.page.para3" | translate }}
+  </p>
+  <p class="text-text-secondary-paragraph mb-8 font-semibold text-[#333]">
+    - {{ "PARTPOLICY.page.para3" | translate }}
+  </p>
+  <p class="text-text-secondary-paragraph mb-8 font-semibold text-[#333]">
+    - {{ "PARTPOLICY.page.para3" | translate }}
+  </p>
+  <p class="text-text-secondary-paragraph mb-8 font-semibold text-[#333]">
+    - {{ "PARTPOLICY.page.para3" | translate }}
+  </p>
+
+  <p class="text-text-secondary-paragraph mb-8 font-semibold text-[#333]">
+    {{ "PARTPOLICY.page.para4" | translate }}
+  </p>
+
+  <p class="text-text-secondary-paragraph mb-8 font-semibold text-[#333]">
+    {{ 'PARTPOLICY.page.para5' | translate }}
+    <a href="/page-not-found" class="text-[#1B8354] hover:underline">
+      {{ 'PARTPOLICY.page.regulations' | translate }}
+    </a>
+  </p>
 </div>
