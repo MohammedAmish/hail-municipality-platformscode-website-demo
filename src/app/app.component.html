@@ -8,6 +8,6 @@
   <app-feedback *ngIf="showLayout"></app-feedback>
   <app-footer *ngIf="showLayout"></app-footer>
 
-  <app-cookies-banner></app-cookies-banner>
-  <app-chatbot></app-chatbot>
+  <app-cookies-banner *ngIf="showLayout"></app-cookies-banner>
+  <app-chatbot *ngIf="showLayout"></app-chatbot>
 </div>
