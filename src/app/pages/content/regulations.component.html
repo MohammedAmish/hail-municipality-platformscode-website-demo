@@ -1,29 +1,33 @@
-<div class="container mx-auto py-5xl lg:px-md">
-  <!-- Breadcrumb -->
-  <nav class="flex text-sm text-secondary-paragraph mb-6">
-    <a routerLink="/" class="text-primary-paragraph hover:underline">
-      {{ 'REGULATIONS.BREADCRUMB.HOME' | translate }}
-    </a>
-    <span class="mx-2">›</span>
-    <span class="font-semibold text-text-display">
-      {{ 'REGULATIONS.BREADCRUMB.CURRENT' | translate }}
-    </span>
-  </nav>
+<!-- Container with breadcrumb + title section background -->
+<div class="bg-[#F3FCF6]">
+  <div class="container mx-auto py-5xl lg:px-md">
+    <!-- Breadcrumb -->
+    <nav class="flex text-sm text-secondary-paragraph mb-6">
+      <a routerLink="/" class="text-primary-paragraph hover:underline">
+        {{ 'REGULATIONS.BREADCRUMB.HOME' | translate }}
+      </a>
+      <span class="mx-2">›</span>
+      <span class="font-semibold text-text-display">
+        {{ 'REGULATIONS.BREADCRUMB.CURRENT' | translate }}
+      </span>
+    </nav>
 
-  <!-- Page title -->
-  <h1 class="font-bold text-3xl text-text-display mb-4 text-center">
-    {{ 'REGULATIONS.TITLE' | translate }}
-  </h1>
+    <!-- Page title -->
+    <h1 class="font-bold text-3xl text-text-display mb-4">
+      {{ 'REGULATIONS.TITLE' | translate }}
+    </h1>
+  </div>
+</div>
 
-  <hr class="border-neutral-primary mb-12" />
-
-  <!-- الأنظمة -->
+<!-- الأنظمة -->
+<div class="container mx-auto lg:px-md">
   <div class="title mb-6">
     <h4 class="font-bold text-xl mb-2">{{ 'REGULATIONS.SYSTEMS_TITLE' | translate }}</h4>
     <hr class="section-hr mb-3" />
   </div>
   <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mb-12">
-    <div *ngFor="let item of systems" class="bg-white rounded-lg shadow p-6 border border-neutral-primary flex flex-col items-center">
+    <div *ngFor="let item of systems"
+      class="bg-white rounded-lg shadow-sm hover:shadow-lg transition-shadow duration-300 p-6 border border-neutral-primary flex flex-col items-center">
       <div class="font-bold text-center mb-2 text-lg">
         {{ item.titleKey | translate }}
       </div>
@@ -39,7 +43,8 @@
     <hr class="section-hr mb-3" />
   </div>
   <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-    <div *ngFor="let item of regulations" class="bg-white rounded-lg shadow p-6 border border-neutral-primary flex flex-col items-center">
+    <div *ngFor="let item of regulations"
+      class="bg-white rounded-lg shadow-sm hover:shadow-lg transition-shadow duration-300 p-6 border border-neutral-primary flex flex-col items-center">
       <div class="font-bold text-center mb-2 text-lg">
         {{ item.titleKey | translate }}
       </div>
@@ -48,4 +53,4 @@
       </a>
     </div>
   </div>
-</div> 
+</div>

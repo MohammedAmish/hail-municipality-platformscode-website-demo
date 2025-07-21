@@ -1,47 +1,27 @@
+<div class="container mx-auto lg:px-md bg-[#F3FCF6] py-10 font-ibm">
+  <nav class="flex text-sm text-secondary-paragraph mb-6">
+    <a routerLink="/" class="text-primary-paragraph hover:underline hover:cursor-pointer">
+      {{ 'ABOUTUS.breadcrumb.parent' | translate }}
+    </a>
+    <span class="mx-2">›</span>
+    <span class="font-semibold text-text-display">
+      {{ 'PRINCES.TITLE' | translate }}
+    </span>
+  </nav>
+
+  <h1 class="font-bold text-3xl text-text-display mb-4">
+    {{ 'PRINCES.TITLE' | translate }}
+  </h1>
+  <p class="font-semibold text-sm text-text-display mt-2">
+    {{ 'PRINCES.INTRO' | translate }}
+  </p>
+</div>
+
 <div class="princes-content">
-    <h1>{{ 'PRINCES.TITLE' | translate }}</h1>
-    <p class="intro">{{ 'PRINCES.INTRO' | translate }}</p>
-    
-    <div class="princes-list">
-      <div class="prince-item">
-        <div class="circle"></div>
-        <div class="prince-text">{{ 'PRINCES.PRINCE_1' | translate }}</div>
-      </div>
-      
-      <div class="prince-item">
-        <div class="circle"></div>
-        <div class="prince-text">{{ 'PRINCES.PRINCE_2' | translate }}</div>
-      </div>
-      
-      <div class="prince-item">
-        <div class="circle"></div>
-        <div class="prince-text">{{ 'PRINCES.PRINCE_3' | translate }}</div>
-      </div>
-      
-      <div class="prince-item">
-        <div class="circle"></div>
-        <div class="prince-text">{{ 'PRINCES.PRINCE_4' | translate }}</div>
-      </div>
-      
-      <div class="prince-item">
-        <div class="circle"></div>
-        <div class="prince-text">{{ 'PRINCES.PRINCE_5' | translate }}</div>
-      </div>
-      
-      <div class="prince-item">
-        <div class="circle"></div>
-        <div class="prince-text">{{ 'PRINCES.PRINCE_6' | translate }}</div>
-      </div>
-      
-      <div class="prince-item">
-        <div class="circle"></div>
-        <div class="prince-text">{{ 'PRINCES.PRINCE_7' | translate }}</div>
-      </div>
-      
-      <div class="prince-item">
-        <div class="circle"></div>
-        <div class="prince-text">{{ 'PRINCES.PRINCE_8' | translate }}</div>
-      </div>
+  <div class="princes-list">
+    <div *ngFor="let princeKey of princes" class="prince-item">
+      <div class="circle"></div>
+      <div class="prince-text">{{ princeKey | translate }}</div>
     </div>
   </div>
-  
+</div>

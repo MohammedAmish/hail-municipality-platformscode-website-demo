@@ -1,10 +1,25 @@
-<div class="container mx-auto py-12 lg:px-4 font-ibm">
-  <h1 class="font-bold text-3xl text-text-display mb-4 text-center">
-    {{ 'EXECUTIVE_OFFICE.TITLE' | translate }}
-  </h1>
-  <hr class="border-neutral-primary mb-8" />
+<!-- Section: Title and Separator with Light Green Background -->
+<div class="bg-[#F3FCF6] w-full">
+  <div class="container mx-auto py-8 lg:px-4 font-ibm">
+    <nav class="flex text-sm text-secondary-paragraph mb-4">
+      <a routerLink="#" class="text-primary-paragraph hover:underline hover:cursor-pointer">
+        {{ "ABOUTUS.breadcrumb.parent" | translate }}
+      </a>
+      <span class="mx-2">›</span>
+      <span class="font-semibold text-text-display">
+        {{ "EXECUTIVE_OFFICE.TITLE" | translate }}
+      </span>
+    </nav>
+    <h1 class="font-bold text-3xl text-text-display mb-4">
+      {{ 'EXECUTIVE_OFFICE.TITLE' | translate }}
+    </h1>
+  </div>
+</div>
+
+<!-- Section: Contact Card in Default Background -->
+<div class="container mx-auto py-8 lg:px-4 font-ibm">
   <div class="flex justify-center">
-    <div class="border border-gray-200 rounded-xl p-6 shadow-sm w-full max-w-2xl bg-white mx-auto flex flex-col items-center">
+    <div class="border border-gray-200 rounded-xl p-6 shadow-sm hover:shadow-lg w-full max-w-2xl bg-white mx-auto flex flex-col items-center">
       <div class="font-bold text-lg text-center mb-4">
         {{ 'EXECUTIVE_OFFICE.NAME' | translate }}
       </div>
@@ -56,4 +71,4 @@
       </div>
     </div>
   </div>
-</div> 
+</div>

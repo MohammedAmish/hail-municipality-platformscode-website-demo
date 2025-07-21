@@ -1,51 +1,24 @@
+
+  <div class="container mx-auto lg:px-md bg-[#F3FCF6] py-10 font-ibm">
+    <nav class="flex text-sm text-secondary-paragraph mb-6">
+      <a routerLink="/" class="text-primary-paragraph hover:underline hover:cursor-pointer">
+        {{ "ABOUTUS.breadcrumb.parent" | translate }}
+      </a>
+      <span class="mx-2">›</span>
+      <span class="font-semibold text-text-display">
+        {{ 'MAYORS.TITLE' | translate }}
+      </span>
+    </nav>
+
+    <h1 class="font-bold text-3xl text-text-display mb-4">{{ 'MAYORS.TITLE' | translate }}</h1>
+    <p class="font-semibold text-sm text-text-display mt-2">{{ 'MAYORS.INTRO' | translate }}</p>
+  </div>
+
 <div class="mayors-content">
-  <h1>{{ 'MAYORS.TITLE' | translate }}</h1>
-  <p class="intro">{{ 'MAYORS.INTRO' | translate }}</p>
-  
   <div class="mayors-list">
-    <div class="mayor-item">
+    <div *ngFor="let mayorKey of mayors" class="mayor-item">
       <div class="circle"></div>
-      <div class="mayor-text">{{ 'MAYORS.MAYOR_1' | translate }}</div>
-    </div>
-    
-    <div class="mayor-item">
-      <div class="circle"></div>
-      <div class="mayor-text">{{ 'MAYORS.MAYOR_2' | translate }}</div>
-    </div>
-    
-    <div class="mayor-item">
-      <div class="circle"></div>
-      <div class="mayor-text">{{ 'MAYORS.MAYOR_3' | translate }}</div>
-    </div>
-    
-    <div class="mayor-item">
-      <div class="circle"></div>
-      <div class="mayor-text">{{ 'MAYORS.MAYOR_4' | translate }}</div>
-    </div>
-    
-    <div class="mayor-item">
-      <div class="circle"></div>
-      <div class="mayor-text">{{ 'MAYORS.MAYOR_5' | translate }}</div>
-    </div>
-    
-    <div class="mayor-item">
-      <div class="circle"></div>
-      <div class="mayor-text">{{ 'MAYORS.MAYOR_6' | translate }}</div>
-    </div>
-    
-    <div class="mayor-item">
-      <div class="circle"></div>
-      <div class="mayor-text">{{ 'MAYORS.MAYOR_7' | translate }}</div>
-    </div>
-    
-    <div class="mayor-item">
-      <div class="circle"></div>
-      <div class="mayor-text">{{ 'MAYORS.MAYOR_8' | translate }}</div>
-    </div>
-    
-    <div class="mayor-item">
-      <div class="circle"></div>
-      <div class="mayor-text">{{ 'MAYORS.MAYOR_9' | translate }}</div>
+      <div class="mayor-text">{{ mayorKey | translate }}</div>
     </div>
   </div>
-</div> 
+</div>

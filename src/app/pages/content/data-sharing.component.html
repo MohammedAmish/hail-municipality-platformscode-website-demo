@@ -1,105 +1,106 @@
-<div class="container mx-auto py-5xl lg:px-md">
   <!-- Breadcrumb -->
-  <nav class="flex text-sm text-secondary-paragraph mb-6">
-    <a routerLink="/" class="text-primary-paragraph hover:underline">
-      {{ 'DATA_SHARING.BREADCRUMB.HOME' | translate }}
-    </a>
-    <span class="mx-2">›</span>
-    <span class="font-semibold text-text-display">
-      {{ 'DATA_SHARING.BREADCRUMB.CURRENT' | translate }}
-    </span>
-  </nav>
+  <div class="bg-[#F3FCF6] py-10 px-4 mb-10 lg:px-20">
+    <nav class="flex text-sm text-secondary-paragraph mb-6">
+      <a routerLink="/" class="text-primary-paragraph hover:underline">
+        {{ 'DATA_SHARING.BREADCRUMB.HOME' | translate }}
+      </a>
+      <span class="mx-2">›</span>
+      <span class="font-semibold text-text-display">
+        {{ 'DATA_SHARING.BREADCRUMB.CURRENT' | translate }}
+      </span>
+    </nav>
+  
+    <!-- Page title -->
+    <h1 class="font-bold text-3xl text-text-display mb-4">
+      {{ 'DATA_SHARING.TITLE' | translate }}
+    </h1>
+    <p class="text-lg mb-8">{{ 'DATA_SHARING.INTRO' | translate }}</p>
+  
+  </div>
 
-  <!-- Page title -->
-  <h1 class="font-bold text-3xl text-text-display mb-4 text-center">
-    {{ 'DATA_SHARING.TITLE' | translate }}
-  </h1>
-  <p class="text-lg text-center mb-8">{{ 'DATA_SHARING.INTRO' | translate }}</p>
-
-  <hr class="border-green-600 mb-8" />
-
-  <form [formGroup]="form" (ngSubmit)="onSubmit()" class="bg-white rounded-lg shadow p-6 border border-neutral-primary max-w-2xl mx-auto">
-    <div *ngIf="success" class="bg-green-100 border border-green-600 text-green-700 px-4 py-3 rounded mb-6 text-center">
-      {{ 'DATA_SHARING.SUCCESS' | translate }}
-    </div>
-    <div class="mb-6">
-      <h2 class="font-bold text-xl text-green-700 mb-4">{{ 'DATA_SHARING.FORM.APPLICANT_TITLE' | translate }}</h2>
-      <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
-        <div>
-          <label class="block mb-1 font-semibold">{{ 'DATA_SHARING.FORM.FULL_NAME' | translate }}</label>
-          <input type="text" formControlName="fullName" class="form-input w-full" />
-        </div>
-        <div>
-          <label class="block mb-1 font-semibold">{{ 'DATA_SHARING.FORM.NATIONAL_ID' | translate }}</label>
-          <input type="text" formControlName="nationalId" class="form-input w-full" />
-        </div>
-        <div>
-          <label class="block mb-1 font-semibold">{{ 'DATA_SHARING.FORM.MOBILE' | translate }}</label>
-          <input type="text" formControlName="mobile" class="form-input w-full" />
-        </div>
-        <div>
-          <label class="block mb-1 font-semibold">{{ 'DATA_SHARING.FORM.EMAIL' | translate }}</label>
-          <input type="email" formControlName="email" class="form-input w-full" />
-        </div>
+  <div>
+    <form [formGroup]="form" (ngSubmit)="onSubmit()" class="bg-white rounded-lg shadow p-6 border border-neutral-primary max-w-2xl mx-auto">
+      <div *ngIf="success" class="bg-green-100 border border-green-600 text-green-700 px-4 py-3 rounded mb-6 text-center">
+        {{ 'DATA_SHARING.SUCCESS' | translate }}
       </div>
-    </div>
-    <hr class="border-green-600 mb-6" />
-    <div class="mb-6">
-      <h2 class="font-bold text-xl text-green-700 mb-4">{{ 'DATA_SHARING.FORM.PERIOD_TITLE' | translate }}</h2>
-      <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
-        <div>
-          <label class="block mb-1 font-semibold">{{ 'DATA_SHARING.FORM.DATE_FROM' | translate }}</label>
-          <input type="date" formControlName="dateFrom" class="form-input w-full" />
-        </div>
-        <div>
-          <label class="block mb-1 font-semibold">{{ 'DATA_SHARING.FORM.DATE_TO' | translate }}</label>
-          <input type="date" formControlName="dateTo" class="form-input w-full" />
-        </div>
-      </div>
-    </div>
-    <hr class="border-green-600 mb-6" />
-    <div class="mb-6">
-      <h2 class="font-bold text-xl text-green-700 mb-4">{{ 'DATA_SHARING.FORM.DATA_TYPE_TITLE' | translate }}</h2>
-      <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
-        <div>
-          <label class="block mb-1 font-semibold">{{ 'DATA_SHARING.FORM.DATA_TYPE' | translate }}</label>
-          <input type="text" formControlName="dataType" class="form-input w-full" />
-        </div>
-        <div>
-          <label class="block mb-1 font-semibold">{{ 'DATA_SHARING.FORM.DATA_DESCRIPTION' | translate }}</label>
-          <textarea formControlName="dataDescription" class="form-input w-full"></textarea>
-        </div>
-        <div class="md:col-span-2">
-          <label class="block mb-1 font-semibold">{{ 'DATA_SHARING.FORM.DATA_PURPOSE' | translate }}</label>
-          <textarea formControlName="dataPurpose" class="form-input w-full"></textarea>
-        </div>
-        <div class="md:col-span-2">
-          <label class="block mb-1 font-semibold">{{ 'DATA_SHARING.FORM.SHARE_RESULTS' | translate }}</label>
-          <div class="flex gap-4 mt-1">
-            <label class="inline-flex items-center">
-              <input type="radio" formControlName="shareResults" value="yes" class="form-radio" />
-              <span class="ml-2">{{ 'DATA_SHARING.FORM.YES' | translate }}</span>
-            </label>
-            <label class="inline-flex items-center">
-              <input type="radio" formControlName="shareResults" value="no" class="form-radio" />
-              <span class="ml-2">{{ 'DATA_SHARING.FORM.NO' | translate }}</span>
-            </label>
+      <div class="mb-6">
+        <h2 class="font-bold text-xl text-green-700 mb-4">{{ 'DATA_SHARING.FORM.APPLICANT_TITLE' | translate }}</h2>
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+          <div>
+            <label class="block mb-1 font-semibold">{{ 'DATA_SHARING.FORM.FULL_NAME' | translate }}</label>
+            <input type="text" formControlName="fullName" class="form-input w-full" />
+          </div>
+          <div>
+            <label class="block mb-1 font-semibold">{{ 'DATA_SHARING.FORM.NATIONAL_ID' | translate }}</label>
+            <input type="text" formControlName="nationalId" class="form-input w-full" />
+          </div>
+          <div>
+            <label class="block mb-1 font-semibold">{{ 'DATA_SHARING.FORM.MOBILE' | translate }}</label>
+            <input type="text" formControlName="mobile" class="form-input w-full" />
+          </div>
+          <div>
+            <label class="block mb-1 font-semibold">{{ 'DATA_SHARING.FORM.EMAIL' | translate }}</label>
+            <input type="email" formControlName="email" class="form-input w-full" />
           </div>
         </div>
       </div>
-    </div>
-    <hr class="border-green-600 mb-6" />
-    <div class="mb-6">
-      <h2 class="font-bold text-xl text-green-700 mb-4">{{ 'DATA_SHARING.FORM.ATTACHMENTS_TITLE' | translate }}</h2>
-      <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
-        <div>
-          <label class="block mb-1 font-semibold">{{ 'DATA_SHARING.FORM.ATTACHMENTS' | translate }}</label>
-          <input type="file" (change)="onFileChange($event)" class="form-input w-full" />
+      <hr class="border-green-600 mb-6" />
+      <div class="mb-6">
+        <h2 class="font-bold text-xl text-green-700 mb-4">{{ 'DATA_SHARING.FORM.PERIOD_TITLE' | translate }}</h2>
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+          <div>
+            <label class="block mb-1 font-semibold">{{ 'DATA_SHARING.FORM.DATE_FROM' | translate }}</label>
+            <input type="date" formControlName="dateFrom" class="form-input w-full" />
+          </div>
+          <div>
+            <label class="block mb-1 font-semibold">{{ 'DATA_SHARING.FORM.DATE_TO' | translate }}</label>
+            <input type="date" formControlName="dateTo" class="form-input w-full" />
+          </div>
         </div>
       </div>
-    </div>
-    <button type="submit" class="bg-green-700 text-white px-6 py-2 rounded font-bold w-full mt-4" [disabled]="form.invalid">
-      {{ 'DATA_SHARING.FORM.SUBMIT' | translate }}
-    </button>
-  </form>
-</div> 
+      <hr class="border-green-600 mb-6" />
+      <div class="mb-6">
+        <h2 class="font-bold text-xl text-green-700 mb-4">{{ 'DATA_SHARING.FORM.DATA_TYPE_TITLE' | translate }}</h2>
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+          <div>
+            <label class="block mb-1 font-semibold">{{ 'DATA_SHARING.FORM.DATA_TYPE' | translate }}</label>
+            <input type="text" formControlName="dataType" class="form-input w-full" />
+          </div>
+          <div>
+            <label class="block mb-1 font-semibold">{{ 'DATA_SHARING.FORM.DATA_DESCRIPTION' | translate }}</label>
+            <textarea formControlName="dataDescription" class="form-input w-full"></textarea>
+          </div>
+          <div class="md:col-span-2">
+            <label class="block mb-1 font-semibold">{{ 'DATA_SHARING.FORM.DATA_PURPOSE' | translate }}</label>
+            <textarea formControlName="dataPurpose" class="form-input w-full"></textarea>
+          </div>
+          <div class="md:col-span-2">
+            <label class="block mb-1 font-semibold">{{ 'DATA_SHARING.FORM.SHARE_RESULTS' | translate }}</label>
+            <div class="flex gap-4 mt-1">
+              <label class="inline-flex items-center">
+                <input type="radio" formControlName="shareResults" value="yes" class="form-radio" />
+                <span class="ml-2">{{ 'DATA_SHARING.FORM.YES' | translate }}</span>
+              </label>
+              <label class="inline-flex items-center">
+                <input type="radio" formControlName="shareResults" value="no" class="form-radio" />
+                <span class="ml-2">{{ 'DATA_SHARING.FORM.NO' | translate }}</span>
+              </label>
+            </div>
+          </div>
+        </div>
+      </div>
+      <hr class="border-green-600 mb-6" />
+      <div class="mb-6">
+        <h2 class="font-bold text-xl text-green-700 mb-4">{{ 'DATA_SHARING.FORM.ATTACHMENTS_TITLE' | translate }}</h2>
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+          <div>
+            <label class="block mb-1 font-semibold">{{ 'DATA_SHARING.FORM.ATTACHMENTS' | translate }}</label>
+            <input type="file" (change)="onFileChange($event)" class="form-input w-full" />
+          </div>
+        </div>
+      </div>
+      <button type="submit" class="bg-green-700 text-white px-6 py-2 rounded font-bold w-full mt-4" [disabled]="form.invalid">
+        {{ 'DATA_SHARING.FORM.SUBMIT' | translate }}
+      </button>
+    </form>
+  </div>

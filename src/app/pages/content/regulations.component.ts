@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { TranslateModule } from '@ngx-translate/core';
+import { RouterModule } from '@angular/router';
 
 interface RegulationItem {
   titleKey: string;
@@ -10,7 +11,7 @@ interface RegulationItem {
 @Component({
   selector: 'app-regulations',
   standalone: true,
-  imports: [CommonModule, TranslateModule],
+  imports: [CommonModule, TranslateModule, RouterModule],
   templateUrl: './regulations.component.html',
   styleUrls: ['./regulations.component.scss']
 })
