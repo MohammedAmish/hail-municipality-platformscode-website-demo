@@ -57,7 +57,7 @@ export class FooterComponent {
   ];
 
   accessibilityTools: { label: string; icon: string }[] = [
-    { label: 'Toggle high contrast', icon: 'assets/images/icon-view.svg' },
+    { label: 'Toggle high contrast', icon: 'assets/images/icon-eye.svg' },
     { label: 'Increase text size', icon: 'assets/images/icon-increase.svg' },
     { label: 'Decrease text size', icon: 'assets/images/icon-decrease.svg' },
     { label: 'Reset text size', icon: 'assets/images/Reset-font.png' },

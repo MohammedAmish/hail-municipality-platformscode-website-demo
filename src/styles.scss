@@ -4,6 +4,7 @@
 
 :root {
   --p-button-primary-background: var(--color-primary-default);
+  --accessibility-green: #00cc66; // Your green for contrast mode if needed
 }
 
 .p-carousel-indicator-button {
@@ -20,18 +21,83 @@
   padding: 0 var(--spacing-xl);
 }
 
-/* High contrast mode */
+/* High Contrast Mode Styling */
 .high-contrast {
   background-color: #1e1e1e !important;
   color: #f1f1f1 !important;
 
-  * {
+  /* Text containers excluding buttons and links */
+  p, span, div, h1, h2, h3, h4, h5, h6, label, strong, em {
     background-color: inherit !important;
     color: inherit !important;
     border-color: #f1f1f1 !important;
   }
 
-  button, a {
+  /* Links and buttons retain their style but ensure readability */
+  a,
+  button,
+  .p-button,
+  .p-button-link {
+    color: inherit;
+    background: unset;
+    border: unset;
+    box-shadow: none;
+  }
+
+  .p-button {
+    background-color: var(--p-button-primary-background) !important;
+    color: #fff !important;
+  }
+
+  /* ===== Header ===== */
+  header {
+    background-color: #074d31 !important;
+    color: #fff !important;
+  }
+
+  /* Specifically: Services header and subtitle with dark background instead of light green */
+  .services-header {
+    background-color: transparent !important; /* Override light green */
+    color: #fff !important;
+  }
+  .services-header h2 {
+    color: #fff !important;
+  }
+  .services-header p {
+    color: #d1f0d9 !important; /* Slightly lighter text for subtitle */
+  }
+
+  /* ===== Services Section ===== */
+  .services-section {
+    background-color: #1e1e1e !important;
     color: #f1f1f1 !important;
+  }
+
+  /* Carousel cards */
+  .services-content .bg-white {
+    background-color: #1e1e1e !important;
+    color: #f1f1f1 !important;
+  }
+
+  /* Icon inversion */
+  .icon-wrap img {
+    filter: brightness(0) invert(1);
+  }
+
+  img.invert-in-contrast {
+    background: transparent !important;
+    border: none !important;
+    padding: 0 !important;
+    box-shadow: none !important;
+    filter: brightness(0) invert(1);
+    transition: filter 0.3s ease-in-out;
+  }
+
+  svg.invert-in-contrast [fill="#000"],
+  svg.invert-in-contrast [fill="black"],
+  svg.invert-in-contrast [stroke="#000"],
+  svg.invert-in-contrast [stroke="black"] {
+    fill: #fff !important;
+    stroke: #fff !important;
   }
 }

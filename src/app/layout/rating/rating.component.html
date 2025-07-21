@@ -1,4 +1,4 @@
-<div class="bg-white w-full p-4 shadow-md container mx-auto lg:px-20 font-ibm">
+<div class="bg-white w-full p-4 hover:shadow-lg container mx-auto lg:px-20 font-ibm">
   <!-- Initial Rating Bar View -->
   <div *ngIf="!isRatingMode" class="flex flex-col sm:flex-row justify-between items-center gap-4">
     <!-- Left Group: Text + Stars + Reviews -->
@@ -122,7 +122,7 @@
         <textarea
           [(ngModel)]="comment"
           rows="5"
-          class="w-full p-2 border border-gray-300 rounded resize-none"
+          class="w-full p-2 border border-gray-300 resize-none"
           placeholder="{{ 'RATING.writefeedback' | translate}}"
         ></textarea>
       </div>

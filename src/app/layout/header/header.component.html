@@ -2,36 +2,36 @@
 <p-menubar [model]="topbarItems" class="topbar hidden lg:block">
   <ng-template #item let-item let-root="root">
     <a pRipple class="flex items-center p-menubar-item-link">
-      <img [src]="item.iconImage" class="h-[18px]" />
+      <img [src]="item.iconImage" class="h-[18px] invert-in-contrast" />
       <span>{{ item.label | translate }}</span>
     </a>
   </ng-template>
   <ng-template #end>
     <button pButton type="button" class="p-button-link ml-2">
-      <img src="assets/images/icon-mic.svg" title="{{'ICONS.MIC' | translate}}" class="h-[18px]" />
+      <img src="assets/images/icon-mic.svg" title="{{'ICONS.MIC' | translate}}" class="h-[18px] invert-in-contrast" />
     </button>
     <button pButton type="button" class="p-button-link ml-2" (click)="decreaseFont()">
       <img
         src="assets/images/icon-decrease.svg"
         title="{{'ICONS.DECREASE' | translate}}"
-        class="h-[18px]"
+        class="h-[18px] invert-in-contrast"
       />
     </button>
     <button pButton type="button" class="p-button-link ml-2" (click)="increaseFont()">
       <img
         src="assets/images/icon-increase.svg"
         title="{{'ICONS.INCREASE' | translate}}"
-        class="h-[18px]"
+        class="h-[18px] invert-in-contrast"
       />
     </button>
     <button pButton type="button" class="p-button-link ml-2" (click)="resetFont()">
       <img 
         src="assets/images/Reset-font.png"
         title="{{'ICONS.RESET' | translate}}"
-        class="h-[18px]" />
+        class="h-[18px] invert-in-contrast" />
     </button>
     <button pButton type="button" class="p-button-link ml-2" (click)="toggleContrast()">
-      <img src="assets/images/icon-eye.svg" title="{{'ICONS.VIEW' | translate}}" class="h-[18px]" />
+      <img src="assets/images/icon-eye.svg" title="{{'ICONS.VIEW' | translate}}" class="h-[18px] invert-in-contrast" />
     </button>
   </ng-template>
 </p-menubar>
@@ -42,7 +42,7 @@
     <img
       src="assets/images/logo.png"
       alt="logo"
-      class="h-[50px] hidden lg:block"
+      class="h-[50px] hidden lg:block invert-in-contrast"
     />
     <img
       src="assets/images/logo-mobile.png"
@@ -98,7 +98,7 @@
       <img
         src="assets/images/icon-search.svg"
         alt="{{ 'HEADER.BUTTONS.SEARCH' | translate }}"
-        class="h-[18px]"
+        class="h-[18px] invert-in-contrast"
       />
       <span class="ml-1 text-black hidden lg:block">
         {{ "HEADER.BUTTON.SEARCH" | translate }}
@@ -118,7 +118,7 @@
             ? ('HEADER.BUTTONS.ENGLISH' | translate)
             : ('HEADER.BUTTONS.ARABIC' | translate)
         }}"
-        class="h-[18px]"
+        class="h-[18px] invert-in-contrast"
       />
       <span class="ml-1 text-black hidden lg:block">
         {{
