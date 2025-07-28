@@ -1,7 +1,9 @@
-import { Component } from '@angular/core';
+import { Component, OnInit, OnDestroy } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms';
 import { TranslateModule } from '@ngx-translate/core';
+import { FirestoreService, RatingEntry } from '../../shared/services/firestore.service';
+import { Subscription } from 'rxjs';
 
 @Component({
   standalone: true,
@@ -10,16 +12,42 @@ import { TranslateModule } from '@ngx-translate/core';
   templateUrl: './rating.component.html',
   styleUrls: ['./rating.component.scss']
 })
-export class RatingComponent {
+export class RatingComponent implements OnInit, OnDestroy {
   averageRating = 3.9;
   userRating: number | null = null;
   comment: string = '';
   isRatingMode = false;
   submitted = false;
   stars = [1, 2, 3, 4, 5];
-  
+  totalRatings = 0;
+
+  private ratingsSub: Subscription | null = null;
+
+  constructor(private firestoreService: FirestoreService) {}
+
+  ngOnInit() {
+    // Check localStorage flag to show submitted view immediately
+    this.submitted = localStorage.getItem('ratingSubmitted') === 'true';
+
+    this.ratingsSub = this.firestoreService.getAllRatings().subscribe(ratings => {
+      this.totalRatings = ratings.length;
+      if (ratings.length > 0) {
+        const sum = ratings.reduce((acc, curr) => acc + curr.rating, 0);
+        this.averageRating = sum / ratings.length;
+      } else {
+        this.averageRating = 0;
+      }
+    });
+  }
+
+  ngOnDestroy() {
+    this.ratingsSub?.unsubscribe();
+  }
+
   startRating() {
-    this.isRatingMode = true;
+    if (!this.submitted) {
+      this.isRatingMode = true;
+    }
   }
 
   selectRating(event: MouseEvent, index: number) {
@@ -31,10 +59,19 @@ export class RatingComponent {
 
   submitRating() {
     if (this.userRating) {
-      console.log('Submitted:', this.userRating, this.comment);
-      this.isRatingMode = false;
-      this.submitted = true;
-      this.comment = '';
+      this.firestoreService.submitRating({
+        rating: this.userRating,
+        comment: this.comment,
+        submittedAt: new Date()
+      }).then(() => {
+        localStorage.setItem('ratingSubmitted', 'true');
+        this.isRatingMode = false;
+        this.submitted = true;
+        this.comment = '';
+      }).catch(err => {
+        console.error('Error submitting rating:', err);
+        alert('Failed to submit rating. Please try again.');
+      });
     }
   }
 

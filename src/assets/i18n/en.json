@@ -227,7 +227,7 @@
 
   "RATING": {
     "serviceis": "This service is rated with an average of",
-    "reviews": "1544 reviews",
+    "reviews": "reviews",
     "ratebutton": "Rate this service",
     "think": "Tell us what you think of this service",
     "dont": "Please don't include personal or financial information. Your review will be submitted and recorded to improve services.",
@@ -241,7 +241,6 @@
     "writefeedback": "Entered text",
     "submitbutton": "Submit",
     "close": "Close",
-    "ratedthis": "You rated this service as",
     "feedbacksubmit": "Your feedback is submitted!"
   },
 
@@ -256,6 +255,9 @@
     "relevant": "Content is relevant",
     "wellwritten": "It was well written",
     "layout": "The layout made it easy to read",
+    "notrelevant": "Content is not relevant",
+    "notaccurate": "Content is not accurate",
+    "toolong": "Content is too long",    
     "other": "Something else",
     "i": "I'm",
     "m": "Male",

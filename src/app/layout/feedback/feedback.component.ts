@@ -1,8 +1,8 @@
-import { Component, OnDestroy } from '@angular/core';
+import { Component, OnDestroy, OnInit } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms';
-import { TranslateModule } from '@ngx-translate/core';
-import { FirestoreService, FeedbackEntry } from '../../shared/services/firestore.service';
+import { TranslateModule, TranslateService } from '@ngx-translate/core';
+import { FirestoreService } from '../../shared/services/firestore.service';
 import { Subscription } from 'rxjs';
 
 @Component({
@@ -12,7 +12,7 @@ import { Subscription } from 'rxjs';
   templateUrl: './feedback.component.html',
   styleUrls: ['./feedback.component.scss']
 })
-export class FeedbackComponent implements OnDestroy {
+export class FeedbackComponent implements OnInit, OnDestroy {
   feedbackState: 'initial' | 'form' | 'submitted' = 'initial';
 
   reasons: string[] = [];
@@ -21,17 +21,35 @@ export class FeedbackComponent implements OnDestroy {
   wasUseful: boolean | null = null;
   dir: 'ltr' | 'rtl' = 'ltr';
 
-  // Feedback stats
   totalFeedback = 0;
   totalYes = 0;
   totalNo = 0;
 
   private feedbackSub: Subscription | null = null;
 
-  constructor(private firestoreService: FirestoreService) {}
+  readonly reasonEnglishMap: Record<string, string> = {
+    'FEEDBACK.relevant': 'Content is relevant',
+    'FEEDBACK.wellwritten': 'It was well written',
+    'FEEDBACK.layout': 'The layout made it easy to read',
+    'FEEDBACK.notrelevant': 'Content is not relevant',
+    'FEEDBACK.notaccurate': 'Content is not accurate',
+    'FEEDBACK.toolong': 'Content is too long',
+    'FEEDBACK.other': 'Something else',
+  };
+
+  constructor(
+    private firestoreService: FirestoreService,
+    public translate: TranslateService
+  ) {}
 
   ngOnInit() {
     this.dir = document.documentElement.dir === 'rtl' ? 'rtl' : 'ltr';
+
+    // Check localStorage if feedback was already submitted
+    const feedbackSubmitted = localStorage.getItem('feedbackSubmitted');
+    if (feedbackSubmitted === 'true') {
+      this.feedbackState = 'submitted';
+    }
 
     this.feedbackSub = this.firestoreService.getAllFeedback().subscribe(feedbacks => {
       this.totalFeedback = feedbacks.length;
@@ -45,35 +63,55 @@ export class FeedbackComponent implements OnDestroy {
   }
 
   get yesPercentage(): number {
-  if (this.totalFeedback === 0) return 0;
-  return Math.round((this.totalYes / this.totalFeedback) * 100);
+    if (this.totalFeedback === 0) return 0;
+    return Math.round((this.totalYes / this.totalFeedback) * 100);
   }
 
+  get feedbackReasonKeys(): string[] {
+    if (this.wasUseful === true) {
+      return ['FEEDBACK.relevant', 'FEEDBACK.wellwritten', 'FEEDBACK.layout', 'FEEDBACK.other'];
+    } else {
+      return ['FEEDBACK.notrelevant', 'FEEDBACK.notaccurate', 'FEEDBACK.toolong', 'FEEDBACK.other'];
+    }
+  }
+
+  get reasonsForSubmission(): string[] {
+    return this.reasons.map(key => this.reasonEnglishMap[key]);
+  }
 
   handleInitialVote(useful: boolean) {
+    if (this.feedbackState === 'submitted') {
+      // Prevent opening form if already submitted
+      return;
+    }
     this.wasUseful = useful;
     this.feedbackState = 'form';
+    this.reasons = [];
   }
 
-  toggleReason(reason: string) {
-    const index = this.reasons.indexOf(reason);
+  toggleReason(reasonKey: string) {
+    if (this.feedbackState === 'submitted') return;  // prevent changes after submit
+    const index = this.reasons.indexOf(reasonKey);
     if (index > -1) {
       this.reasons.splice(index, 1);
     } else {
-      this.reasons.push(reason);
+      this.reasons.push(reasonKey);
     }
   }
 
   submitFeedback() {
+    if (this.feedbackState === 'submitted') return;  // prevent multiple submits
+
     const feedbackData = {
       useful: this.wasUseful,
-      reasons: this.reasons,
+      reasons: this.reasonsForSubmission,
       gender: this.gender,
       feedbackText: this.feedbackText
     };
 
     this.firestoreService.submitFeedback(feedbackData)
       .then(() => {
+        localStorage.setItem('feedbackSubmitted', 'true');  // Set flag on success
         this.feedbackState = 'submitted';
       })
       .catch((error) => {
@@ -83,6 +121,7 @@ export class FeedbackComponent implements OnDestroy {
   }
 
   closeForm() {
+    if (this.feedbackState === 'submitted') return; // prevent closing after submit
     this.feedbackState = 'initial';
     this.feedbackText = '';
     this.gender = null;

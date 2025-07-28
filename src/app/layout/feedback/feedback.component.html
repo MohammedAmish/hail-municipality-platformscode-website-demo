@@ -2,18 +2,16 @@
 
   <!-- Initial Feedback Bar -->
   <div *ngIf="feedbackState === 'initial'" class="flex flex-col sm:flex-row justify-between items-center gap-4">
-    <!-- Left Side: Text + Buttons -->
     <div class="flex items-center space-x-3">
-      <span class="text-sm font-medium text-gray-800">{{ 'FEEDBACK.useful' | translate}}</span>
+      <span class="text-sm font-medium text-gray-800">{{ 'FEEDBACK.useful' | translate }}</span>
       <button (click)="handleInitialVote(true)" class="text-white px-4 py-1 rounded" [ngStyle]="{ backgroundColor: '#1B8354' }">
-        {{ 'FEEDBACK.y' | translate}}
+        {{ 'FEEDBACK.y' | translate }}
       </button>
       <button (click)="handleInitialVote(false)" class="text-white px-4 py-1 rounded" [ngStyle]="{ backgroundColor: '#1B8354' }">
-        {{ 'FEEDBACK.n' | translate}}
+        {{ 'FEEDBACK.n' | translate }}
       </button>
     </div>
 
-    <!-- Right Side: Stats -->
     <div class="text-sm text-center sm:text-right">
       {{ yesPercentage }}% {{ 'FEEDBACK.users' | translate }} {{ totalFeedback }} {{ 'FEEDBACK.feedbacks' | translate }}
     </div>
@@ -22,60 +20,74 @@
   <!-- Feedback Form -->
   <div *ngIf="feedbackState === 'form'" class="relative mt-4">
     <button (click)="closeForm()" class="absolute top-0 rtl:left-0 ltr:right-0 text-sm text-gray-700 hover:text-black flex items-center">
-      {{ 'RATING.close' | translate}}
+      {{ 'RATING.close' | translate }}
       <img src="../../../assets/images/Icon-close.png" alt="Close" class="w-4 h-4 ml-1" />
     </button>
 
     <div class="grid lg:grid-cols-2 gap-6">
       <!-- Reasons and Gender -->
       <div>
-        <p class="font-semibold mb-2">{{ 'FEEDBACK.tellus' | translate}}<span class="text-xs text-gray-500"></span>{{ 'FEEDBACK.multipleoptions' | translate}}</p>
+        <p class="font-semibold mb-2">
+          {{ 'FEEDBACK.tellus' | translate }}<span class="text-xs text-gray-500"></span>{{ 'FEEDBACK.multipleoptions' | translate }}
+        </p>
         <div class="space-y-2">
-          <label class="block"><input type="checkbox" (change)="toggleReason('Content is relevant')" [checked]="reasons.includes('Content is relevant')" /> {{ 'FEEDBACK.relevant' | translate}}</label>
-          <label class="block"><input type="checkbox" (change)="toggleReason('It was well written')" [checked]="reasons.includes('It was well written')" />{{ 'FEEDBACK.wellwritten' | translate}}</label>
-          <label class="block"><input type="checkbox" (change)="toggleReason('The layout made it easy to read')" [checked]="reasons.includes('The layout made it easy to read')" />{{ 'FEEDBACK.layout' | translate}}</label>
-          <label class="block"><input type="checkbox" (change)="toggleReason('Something else')" [checked]="reasons.includes('Something else')" />{{ 'FEEDBACK.other' | translate}}</label>
+          <label class="block" *ngFor="let reasonKey of feedbackReasonKeys">
+            <input
+              type="checkbox"
+              (change)="toggleReason(reasonKey)"
+              [checked]="reasons.includes(reasonKey)"
+            />
+            {{ reasonKey | translate }}
+          </label>
         </div>
 
         <div class="mt-4">
-          <span class="font-medium">{{ 'FEEDBACK.i' | translate}}</span>
-          <label class="ml-2"><input type="radio" name="gender" value="male" [(ngModel)]="gender" /> {{ 'FEEDBACK.m' | translate}}</label>
-          <label class="ml-4"><input type="radio" name="gender" value="female" [(ngModel)]="gender" /> {{ 'FEEDBACK.f' | translate}}</label>
+          <span class="font-medium">{{ 'FEEDBACK.i' | translate }}</span>
+          <label class="ml-2">
+            <input type="radio" name="gender" value="male" [(ngModel)]="gender" /> {{ 'FEEDBACK.m' | translate }}
+          </label>
+          <label class="ml-4">
+            <input type="radio" name="gender" value="female" [(ngModel)]="gender" /> {{ 'FEEDBACK.f' | translate }}
+          </label>
         </div>
 
         <p class="text-xs mt-4">
-          {{ 'RATING.info1' | translate}}
-          <a href="#" class="text-green-700 underline"> {{ 'RATING.info2' | translate}}</a> {{ 'RATING.info3' | translate}}
-          <a href="#" class="text-green-700 underline"> {{ 'RATING.info4' | translate}}</a>.
+          {{ 'RATING.info1' | translate }}
+          <a href="#" class="text-green-700 underline">{{ 'RATING.info2' | translate }}</a>
+          {{ 'RATING.info3' | translate }}
+          <a href="#" class="text-green-700 underline">{{ 'RATING.info4' | translate }}</a>.
         </p>
       </div>
 
       <!-- Comment Textarea -->
       <div>
-        <label class="block font-medium mb-2">{{ 'RATING.feedback' | translate}}</label>
-        <textarea [(ngModel)]="feedbackText" rows="6" class="w-full p-2 border border-gray-300 rounded resize-none" placeholder="{{ 'RATING.writefeedback' | translate}}"></textarea>
+        <label class="block font-medium mb-2">{{ 'RATING.feedback' | translate }}</label>
+        <textarea
+          [(ngModel)]="feedbackText"
+          rows="6"
+          class="w-full p-2 border border-gray-300 rounded resize-none"
+          placeholder="{{ 'RATING.writefeedback' | translate }}"
+        ></textarea>
       </div>
     </div>
 
     <!-- Submit Button -->
     <div class="mt-6 flex justify-end">
       <button (click)="submitFeedback()" class="bg-[#1B8354] text-white px-4 py-2 rounded">
-        {{ 'RATING.submitbutton' | translate}}
+        {{ 'RATING.submitbutton' | translate }}
       </button>
     </div>
   </div>
 
   <!-- Submission Confirmation -->
   <div *ngIf="feedbackState === 'submitted'" class="flex flex-col sm:flex-row justify-between items-center gap-4 mt-2 text-sm text-gray-700">
-    <!-- Left side: Icon + Message -->
     <div class="flex items-center gap-2 font-medium">
       <img src="../../../assets/images/Icon-green-checkmark.png" alt="Checkmark" class="w-5 h-5" />
-      <span>{{ 'RATING.feedbacksubmit' | translate}}</span>
+      <span>{{ 'RATING.feedbacksubmit' | translate }}</span>
     </div>
 
-    <!-- Right side: Stats -->
     <div class="text-sm text-center sm:text-right">
-      {{ 'FEEDBACK.users' | translate}}
+      {{ yesPercentage }}% {{ 'FEEDBACK.users' | translate }} {{ totalFeedback }} {{ 'FEEDBACK.feedbacks' | translate }}
     </div>
   </div>
 </div>

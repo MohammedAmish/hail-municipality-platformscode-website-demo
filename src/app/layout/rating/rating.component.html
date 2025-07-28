@@ -7,7 +7,7 @@
         {{ 'RATING.serviceis' | translate}} {{ averageRating | number: '1.1-1' }}
       </span>
       <span *ngIf="submitted">
-        {{ 'RATING.ratedthis' | translate}} ({{ userRating }})
+        {{ 'RATING.serviceis' | translate }} {{ averageRating | number: '1.1-1' }}
       </span>
 
       <div class="flex items-center space-x-1" dir="ltr">
@@ -35,7 +35,7 @@
         </ng-container>
       </div>
 
-      <span *ngIf="!submitted" class="text-xs text-gray-500">{{ 'RATING.reviews' | translate}}</span>
+      <span *ngIf="!submitted" class="text-xs text-gray-500">{{ totalRatings }} {{ 'RATING.reviews' | translate }}</span>
     </div>
 
     <!-- Right Side -->
