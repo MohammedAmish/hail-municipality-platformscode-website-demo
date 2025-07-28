@@ -3,12 +3,16 @@
   <div class="container mx-auto px-6 lg:px-20 font-ibm">
     <!-- Breadcrumb -->
     <nav class="flex text-sm text-secondary-paragraph mb-4">
-      <a routerLink="/" class="text-primary-paragraph hover:underline hover:cursor-pointer">
-        {{ "PARTPOLICY.breadcrumb.parent" | translate }}
+      <a routerLink="/" class="text-primary-paragraph hover:underline">
+        {{ "ABOUTUS.breadcrumb.parent" | translate }}
       </a>
       <span class="mx-2">›</span>
-      <span class="font-semibold text-text-display">
-        {{ "PARTPOLICY.breadcrumb.current" | translate }}
+      <a routerLink="/e-participation" class="text-primary-paragraph hover:underline">
+        {{ "E-PARTICIPATION.page.title1" | translate }}
+      </a>
+      <span class="mx-2">›</span>
+       <span class="font-semibold text-text-display">
+        {{ "PARTPOLICY.page.title" | translate }}
       </span>
     </nav>
 

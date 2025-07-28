@@ -249,7 +249,8 @@
     "useful": "Was this page useful?",
     "y": "Yes",
     "n": "No",
-    "users": "60% of users said Yes from 2843 Feedbacks",
+    "users": "of users said Yes from",
+    "feedbacks": "Feedbacks",
     "tellus": "Please tell us why",
     "multipleoptions": "(you can select multiple options)",
     "relevant": "Content is relevant",
@@ -609,7 +610,7 @@
       "current": "Link"
     },
     "page": {
-      "title1": "e-Participation",
+      "title1": "E-Participation",
       "description1": "This is an example of a page description for the Unified Design System, where the same consistent style is maintained across all other pages.This is an example of a page description for the Unified Design System, where the same consistent style is maintained across all other pages.",
       "title2": "Engagement Topics",
       "description2": "This is an example of a section description in the Design System, where the same consistent style is maintained across all other sections.This is an example of a section description in the Design System, where the same consistent style is maintained across all other sections."
@@ -769,6 +770,31 @@
       "2020": "Beneficiary Voice Report 2020",
       "2019": "Beneficiary Voice Report 2019",
       "download": "Download File"
+    }
+  },
+
+  "STATISTICS": {
+    "title": "Portal and Service Performance Statistics",
+    "description": "Portal Performance Statistics (100% | 100,000)",
+    "cards": {
+      "users": "Users",
+      "visits": "Visits",
+      "pageviews": "Page Views Count"
+    },
+    "pie": {
+      "device": "Device Type",
+      "smallTitle0": "Mobile Devices",
+      "smallTitle1": "Browser Type",
+      "smallTitle2": "Most Used Search Terms (up to 10 search terms)"
+    },
+    "donut": {
+      "title0": "Highest Rated Content (up to 5 pages)",
+      "title1": "Lowest Rated Content (up to 5 pages)",
+      "title2": "Was the page useful (yes) (59.26% | 24,313)",
+      "title3": "Was the page useful (no) (59.26% | 24,313)"
+    },
+    "line": {
+      "title": "Most Visited Pages (up to 10 pages)"
     }
   },
 
