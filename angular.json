@@ -5,11 +5,6 @@
   "projects": {
     "hail-municipality-website": {
       "projectType": "application",
-      "schematics": {
-        "@schematics/angular:component": {
-          "style": "scss"
-        }
-      },
       "root": "",
       "sourceRoot": "src",
       "prefix": "app",
@@ -17,55 +12,74 @@
         "build": {
           "builder": "@angular-devkit/build-angular:application",
           "options": {
-            "outputPath": "dist/hail-municipality-website",
+            "outputPath": "dist/hail-municipality-website/browser",
             "index": "src/index.html",
             "browser": "src/main.ts",
-            "polyfills": [
-              "zone.js"
-            ],
+            "server": "src/main.server.ts",
             "tsConfig": "tsconfig.app.json",
+            "polyfills": ["zone.js"],
             "inlineStyleLanguage": "scss",
             "assets": [
               "src/favicon.ico",
               "src/assets"
             ],
-            "styles": [
-              "src/styles.scss"
-            ],
+            "styles": ["src/styles.scss"],
             "scripts": [],
-            "server": "src/main.server.ts",
-            "prerender": true,
-            "ssr": {
-              "entry": "server.ts"
-            },
             "allowedCommonJsDependencies": [
               "@grpc/grpc-js",
               "@grpc/proto-loader"
-            ]
+            ],
+            "ssr": {
+              "entry": "server.ts"
+            }
           },
           "configurations": {
             "production": {
+              "outputHashing": "all",
+              "optimization": true,
+              "sourceMap": false,
+              "namedChunks": false,
+              "extractLicenses": true,
               "budgets": [
                 {
                   "type": "initial",
                   "maximumWarning": "5mb",
-                  "maximumError": "5mb"
+                  "maximumError": "6mb"
                 },
                 {
                   "type": "anyComponentStyle",
                   "maximumWarning": "5kb",
-                  "maximumError": "5kb"
+                  "maximumError": "10kb"
                 }
-              ],
-              "outputHashing": "all"
+              ]
             },
             "development": {
               "optimization": false,
-              "extractLicenses": false,
-              "sourceMap": true
+              "sourceMap": true,
+              "namedChunks": true,
+              "extractLicenses": false
             }
           },
           "defaultConfiguration": "production"
+        },
+        "server": {
+          "builder": "@angular-devkit/build-angular:server",
+          "options": {
+            "outputPath": "dist/hail-municipality-website/server",
+            "main": "server.ts",
+            "tsConfig": "tsconfig.server.json"
+          },
+          "configurations": {
+            "production": {
+              "outputHashing": "media",
+              "sourceMap": false,
+              "optimization": true
+            },
+            "development": {
+              "sourceMap": true,
+              "optimization": false
+            }
+          }
         },
         "serve": {
           "builder": "@angular-devkit/build-angular:dev-server",
@@ -78,6 +92,51 @@
             }
           },
           "defaultConfiguration": "development"
+        },
+        "prerender": {
+          "builder": "@angular-devkit/build-angular:prerender",
+          "options": {
+            "browserTarget": "hail-municipality-website:build:production",
+            "serverTarget": "hail-municipality-website:server:production",
+            "routes": [
+              "/",
+              "/about-us",
+              "/contact-us",
+              "/faqs",
+              "/help-support",
+              "/e-participation",
+              "/participation-policy",
+              "/consultations",
+              "/co-creation",
+              "/open-data",
+              "/complaints-suggestions",
+              "/beneficiary",
+              "/statistics",
+              "/social-media",
+              "/service",
+              "/sitemap",
+              "/page-not-found",
+              "/princes",
+              "/mayors",
+              "/hail-area",
+              "/geography",
+              "/municipalities",
+              "/vision-mission",
+              "/main-goals",
+              "/internal-audit",
+              "/mayor-profile",
+              "/mayor-contact",
+              "/executive-office",
+              "/data-sharing",
+              "/regulations",
+              "/search",
+              "/departments",
+              "/organizational-structure",
+              "/content"
+            ],
+            "guessRoutes": false,
+            "timeout": 60000
+          }
         },
         "extract-i18n": {
           "builder": "@angular-devkit/build-angular:extract-i18n",
@@ -108,6 +167,6 @@
     }
   },
   "cli": {
-    "analytics": "336d40fd-8a85-49bd-b499-4e1170cdc8a0"
+    "analytics": false
   }
 }
