@@ -7,28 +7,14 @@
     </a>
   </ng-template>
   <ng-template #end>
-    <button pButton type="button" class="p-button-link ml-2">
-      <img src="assets/images/icon-mic.svg" title="{{'ICONS.MIC' | translate}}" class="h-[18px] invert-in-contrast" />
-    </button>
     <button pButton type="button" class="p-button-link ml-2" (click)="decreaseFont()">
-      <img
-        src="assets/images/icon-decrease.svg"
-        title="{{'ICONS.DECREASE' | translate}}"
-        class="h-[18px] invert-in-contrast"
-      />
+      <img src="assets/images/icon-decrease.svg" title="{{'ICONS.DECREASE' | translate}}" class="h-[18px] invert-in-contrast" />
     </button>
     <button pButton type="button" class="p-button-link ml-2" (click)="increaseFont()">
-      <img
-        src="assets/images/icon-increase.svg"
-        title="{{'ICONS.INCREASE' | translate}}"
-        class="h-[18px] invert-in-contrast"
-      />
+      <img src="assets/images/icon-increase.svg" title="{{'ICONS.INCREASE' | translate}}" class="h-[18px] invert-in-contrast" />
     </button>
     <button pButton type="button" class="p-button-link ml-2" (click)="resetFont()">
-      <img 
-        src="assets/images/Reset-font.png"
-        title="{{'ICONS.RESET' | translate}}"
-        class="h-[18px] invert-in-contrast" />
+      <img src="assets/images/Reset-font.png" title="{{'ICONS.RESET' | translate}}" class="h-[18px] invert-in-contrast" />
     </button>
     <button pButton type="button" class="p-button-link ml-2" (click)="toggleContrast()">
       <img src="assets/images/icon-eye.svg" title="{{'ICONS.VIEW' | translate}}" class="h-[18px] invert-in-contrast" />
@@ -39,105 +25,94 @@
 <!-- Main menu -->
 <p-menubar [model]="mainItems" class="main-navbar">
   <ng-template #start>
-    <img
-      src="assets/images/logo.png"
-      alt="logo"
-      class="h-[50px] hidden lg:block invert-in-contrast"
-    />
-    <img
-      src="assets/images/logo-mobile.png"
-      alt="logo mobile"
-      class="h-[50px] block lg:hidden"
-    />
+    <img src="assets/images/logo.png" alt="logo" class="h-[50px] hidden lg:block invert-in-contrast" />
+    <img src="assets/images/logo-mobile.png" alt="logo mobile" class="h-[50px] block lg:hidden" />
   </ng-template>
+
   <ng-template #item let-item let-root="root">
-    <a
-      pRipple
-      class="flex items-center p-menubar-item-link"
-      [href]="item.href"
-      *ngIf="item.href"
-      [target]="item.href.startsWith('http') ? '_blank' : null"
-    >
+    <a pRipple class="flex items-center p-menubar-item-link" [href]="item.href" *ngIf="item.href" [target]="item.href.startsWith('http') ? '_blank' : null">
       <span>{{ item.label | translate }}</span>
-      <p-badge
-        *ngIf="item.badge"
-        [ngClass]="{ 'ml-auto': !root, 'ml-2': root }"
-        [value]="item.badge"
-      />
-      <i
-        *ngIf="item.items"
-        [ngClass]="['ml-auto pi', root ? 'pi-angle-down' : 'pi-angle-right']"
-      ></i>
+      <p-badge *ngIf="item.badge" [ngClass]="{ 'ml-auto': !root, 'ml-2': root }" [value]="item.badge" />
+      <i *ngIf="item.items" [ngClass]="['ml-auto pi', root ? 'pi-angle-down' : 'pi-angle-right']"></i>
     </a>
-    <a
-      pRipple
-      class="flex items-center p-menubar-item-link"
-      [routerLink]="item.routerLink"
-      *ngIf="!item.href"
-    >
+    <a pRipple class="flex items-center p-menubar-item-link" [routerLink]="item.routerLink" *ngIf="!item.href">
       <span>{{ item.label | translate }}</span>
-      <p-badge
-        *ngIf="item.badge"
-        [ngClass]="{ 'ml-auto': !root, 'ml-2': root }"
-        [value]="item.badge"
-      />
-      <i
-        *ngIf="item.items"
-        [ngClass]="['ml-auto pi', root ? 'pi-angle-down' : 'pi-angle-right']"
-      ></i>
+      <p-badge *ngIf="item.badge" [ngClass]="{ 'ml-auto': !root, 'ml-2': root }" [value]="item.badge" />
+      <i *ngIf="item.items" [ngClass]="['ml-auto pi', root ? 'pi-angle-down' : 'pi-angle-right']"></i>
     </a>
   </ng-template>
+
   <ng-template #end>
     <!-- Search -->
-    <button
-      pButton
-      type="button"
-      class="p-button-link ml-2"
-      (click)="onSearchClick($event)"
-    >
-      <img
-        src="assets/images/icon-search.svg"
-        alt="{{ 'HEADER.BUTTONS.SEARCH' | translate }}"
-        class="h-[18px] invert-in-contrast"
-      />
+    <button pButton type="button" class="p-button-link ml-2" (click)="onSearchClick($event)">
+      <img src="assets/images/icon-search.svg" alt="{{ 'HEADER.BUTTONS.SEARCH' | translate }}" class="h-[18px] invert-in-contrast" />
       <span class="ml-1 text-black hidden lg:block">
         {{ "HEADER.BUTTON.SEARCH" | translate }}
       </span>
     </button>
+
     <!-- Language toggle -->
-    <button
-      pButton
-      type="button"
-      class="p-button-link ml-2"
-      (click)="switchLang(dir === 'rtl' ? 'en' : 'ar')"
-    >
-      <img
-        src="assets/images/icon-translate.svg"
-        alt="{{
-          dir === 'rtl'
-            ? ('HEADER.BUTTONS.ENGLISH' | translate)
-            : ('HEADER.BUTTONS.ARABIC' | translate)
-        }}"
-        class="h-[18px] invert-in-contrast"
-      />
+    <button pButton type="button" class="p-button-link ml-2" (click)="switchLang(dir === 'rtl' ? 'en' : 'ar')">
+      <img src="assets/images/icon-translate.svg" alt="{{ dir === 'rtl' ? ('HEADER.BUTTONS.ENGLISH' | translate) : ('HEADER.BUTTONS.ARABIC' | translate) }}" class="h-[18px] invert-in-contrast" />
       <span class="ml-1 text-black hidden lg:block">
-        {{
-          dir === "rtl"
-            ? ("HEADER.BUTTON.LANG_EN" | translate)
-            : ("HEADER.BUTTON.LANG_AR" | translate)
-        }}
+        {{ dir === 'rtl' ? ('HEADER.BUTTON.LANG_EN' | translate) : ('HEADER.BUTTON.LANG_AR' | translate) }}
       </span>
     </button>
-    <button pButton type="button" class="p-button-link ml-2 hidden">
-      <img
-        src="assets/images/icon-user.svg"
-        alt="{{ 'HEADER.BUTTON.LOGOUT' | translate }}"
-        class="h-[18px]"
-      />
+
+    <!-- Login/Logout -->
+    <button pButton type="button" class="p-button-link ml-2" (click)="authAction()">
+      <img src="assets/images/icon-user.svg" alt="{{ isLoggedIn ? ('HEADER.BUTTON.LOGOUT' | translate) : ('HEADER.BUTTON.LOGIN' | translate) }}" class="h-[18px]" />
       <span class="ml-1 text-black hidden lg:block">
-        {{ "HEADER.BUTTON.LOGOUT" | translate }}
+        {{ isLoggedIn ? ('HEADER.BUTTON.LOGOUT' | translate) : ('HEADER.BUTTON.LOGIN' | translate) }}
       </span>
     </button>
   </ng-template>
 </p-menubar>
+
 <hr class="border-neutral-primary" />
+
+<!-- Login form popup -->
+<div *ngIf="showLoginForm" class="login-form-overlay">
+  <div class="login-form">
+    <h3>{{ 'HEADER.LOGIN.TITLE' | translate }}</h3>
+
+    <input
+      type="email"
+      [(ngModel)]="email"
+      placeholder="{{ 'HEADER.LOGIN.EMAIL_PLACEHOLDER' | translate }}"
+      autocomplete="username"
+    />
+    <input
+      type="password"
+      [(ngModel)]="password"
+      placeholder="{{ 'HEADER.LOGIN.PASSWORD_PLACEHOLDER' | translate }}"
+      autocomplete="current-password"
+      (keydown.enter)="loginWithEmail()"
+    />
+
+    <div *ngIf="loginError" class="error-message">{{ loginError }}</div>
+
+    <button pButton type="button" class="bg-[#1B8354] text-white p-button-secondary ml-2" (click)="loginWithEmail()" [disabled]="loading">
+      {{ loading ? ('HEADER.LOGIN.LOADING' | translate) : ('HEADER.BUTTON.LOGIN' | translate) }}
+    </button>
+    <button pButton type="button" class="p-button-secondary ml-2" (click)="toggleLoginForm()" [disabled]="loading">
+      {{ 'HEADER.BUTTON.CANCEL' | translate }}
+    </button>
+  </div>
+</div>
+
+<!-- Logout Confirmation Popup -->
+<div *ngIf="confirmingLogout" class="logout-confirmation-overlay">
+  <div class="logout-confirmation-box">
+    <h3>{{ 'HEADER.LOGOUT.CONFIRM_TITLE' | translate }}</h3>
+    <p>{{ 'HEADER.LOGOUT.CONFIRM_MESSAGE' | translate }}</p>
+    <div class="actions">
+      <button pButton type="button" class="bg-[#1B8354] text-white p-button-secondary ml-2 w-20" (click)="confirmLogout(true)">
+        {{ 'FEEDBACK.y' | translate }}
+      </button>
+      <button pButton type="button" class="p-button-secondary ml-2 w-20" (click)="confirmLogout(false)">
+        {{ 'FEEDBACK.n' | translate }}
+      </button>
+    </div>
+  </div>
+</div>

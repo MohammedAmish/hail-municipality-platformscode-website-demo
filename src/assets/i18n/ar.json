@@ -100,7 +100,18 @@
       "LANG_AR": "عربي",
       "LANG_EN": "English",
       "LOGIN": "تسجيل الدخول",
-      "LOGOUT": "تسجيل الخروج"
+      "LOGOUT": "تسجيل الخروج",
+      "CANCEL": "تراجع"
+    },
+    "LOGIN": {
+    "TITLE": "تسجيل الدخول إلى أمانة حال",
+    "EMAIL_PLACEHOLDER": "أدخل البريد الإلكتروني هنا",
+    "PASSWORD_PLACEHOLDER": "أدخل الرمز السري هنا",
+    "LOADING": "الرجاء الإنتظار"
+    },
+    "LOGOUT": {
+      "CONFIRM_TITLE": "أنت على وشك تسجيل الخروج",
+      "CONFIRM_MESSAGE": "هل تريد تسجيل الخروج"
     }
   },
   "ICONS": {

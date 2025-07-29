@@ -101,7 +101,18 @@
       "LANG_AR": "عربي",
       "LANG_EN": "English",
       "LOGIN": "Login",
-      "LOGOUT": "Logout"
+      "LOGOUT": "Logout",
+      "CANCEL": "Cancel"
+    },
+    "LOGIN": {
+    "TITLE": "Sign in to Hail Municipality",
+    "EMAIL_PLACEHOLDER": "Enter your email here",
+    "PASSWORD_PLACEHOLDER": "Enter your password here",
+    "LOADING": "Please wait"
+    },
+    "LOGOUT": {
+      "CONFIRM_TITLE": "You are about to logout",
+      "CONFIRM_MESSAGE": "Are you sure you want you logout?"
     }
   },
   "ICONS": {
