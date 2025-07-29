@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms';
 import { TranslateModule } from '@ngx-translate/core';
+import { PlatformService } from '../../shared/services/platform.service';
 
 @Component({
   selector: 'app-cookies-banner',
@@ -18,8 +19,12 @@ export class CookiesBannerComponent implements OnInit {
   functional = true;
   targeting = true;
 
+  constructor(private platform: PlatformService) {}
+
   ngOnInit() {
-    this.consentGiven = localStorage.getItem('cookieConsent') === 'true';
+    if (this.platform.isBrowser) {
+      this.consentGiven = localStorage.getItem('cookieConsent') === 'true';
+    }
     this.isLoading = false;
   }
 
@@ -40,7 +45,9 @@ export class CookiesBannerComponent implements OnInit {
   }
 
   undo() {
-    localStorage.removeItem('cookieConsent');
+    if (this.platform.isBrowser) {
+      localStorage.removeItem('cookieConsent');
+    }
     this.step = 'initial';
     this.consentGiven = false;
   }
@@ -50,8 +57,10 @@ export class CookiesBannerComponent implements OnInit {
   }
 
   private setConsent(prefs: { performance: boolean; functional: boolean; targeting: boolean }) {
-    localStorage.setItem('cookieConsent', 'true');
-    localStorage.setItem('cookiePrefs', JSON.stringify(prefs));
+    if (this.platform.isBrowser) {
+      localStorage.setItem('cookieConsent', 'true');
+      localStorage.setItem('cookiePrefs', JSON.stringify(prefs));
+    }
     this.step = 'confirmation';
     this.consentGiven = false;
   }

@@ -1,9 +1,10 @@
-import { Component, OnDestroy, OnInit } from '@angular/core';
+import { Component, OnDestroy, OnInit, inject, EnvironmentInjector, runInInjectionContext } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms';
 import { TranslateModule, TranslateService } from '@ngx-translate/core';
 import { FirestoreService } from '../../shared/services/firestore.service';
 import { Subscription } from 'rxjs';
+import { PlatformService } from '../../shared/services/platform.service';
 
 @Component({
   selector: 'app-feedback',
@@ -39,22 +40,27 @@ export class FeedbackComponent implements OnInit, OnDestroy {
 
   constructor(
     private firestoreService: FirestoreService,
-    public translate: TranslateService
+    public translate: TranslateService,
+    private platform: PlatformService,
+    private injector: EnvironmentInjector
   ) {}
 
   ngOnInit() {
-    this.dir = document.documentElement.dir === 'rtl' ? 'rtl' : 'ltr';
+    if (this.platform.isBrowser) {
+      this.dir = document.documentElement.dir === 'rtl' ? 'rtl' : 'ltr';
 
-    // Check localStorage if feedback was already submitted
-    const feedbackSubmitted = localStorage.getItem('feedbackSubmitted');
-    if (feedbackSubmitted === 'true') {
-      this.feedbackState = 'submitted';
+      const feedbackSubmitted = localStorage.getItem('feedbackSubmitted');
+      if (feedbackSubmitted === 'true') {
+        this.feedbackState = 'submitted';
+      }
     }
 
-    this.feedbackSub = this.firestoreService.getAllFeedback().subscribe(feedbacks => {
-      this.totalFeedback = feedbacks.length;
-      this.totalYes = feedbacks.filter(f => f.useful === true).length;
-      this.totalNo = feedbacks.filter(f => f.useful === false).length;
+    runInInjectionContext(this.injector, () => {
+      this.feedbackSub = this.firestoreService.getAllFeedback().subscribe(feedbacks => {
+        this.totalFeedback = feedbacks.length;
+        this.totalYes = feedbacks.filter(f => f.useful === true).length;
+        this.totalNo = feedbacks.filter(f => f.useful === false).length;
+      });
     });
   }
 
@@ -81,7 +87,6 @@ export class FeedbackComponent implements OnInit, OnDestroy {
 
   handleInitialVote(useful: boolean) {
     if (this.feedbackState === 'submitted') {
-      // Prevent opening form if already submitted
       return;
     }
     this.wasUseful = useful;
@@ -90,7 +95,7 @@ export class FeedbackComponent implements OnInit, OnDestroy {
   }
 
   toggleReason(reasonKey: string) {
-    if (this.feedbackState === 'submitted') return;  // prevent changes after submit
+    if (this.feedbackState === 'submitted') return;
     const index = this.reasons.indexOf(reasonKey);
     if (index > -1) {
       this.reasons.splice(index, 1);
@@ -100,7 +105,7 @@ export class FeedbackComponent implements OnInit, OnDestroy {
   }
 
   submitFeedback() {
-    if (this.feedbackState === 'submitted') return;  // prevent multiple submits
+    if (this.feedbackState === 'submitted') return;
 
     const feedbackData = {
       useful: this.wasUseful,
@@ -109,19 +114,21 @@ export class FeedbackComponent implements OnInit, OnDestroy {
       feedbackText: this.feedbackText
     };
 
-    this.firestoreService.submitFeedback(feedbackData)
-      .then(() => {
-        localStorage.setItem('feedbackSubmitted', 'true');  // Set flag on success
-        this.feedbackState = 'submitted';
-      })
-      .catch((error) => {
-        console.error('Error submitting feedback:', error);
-        alert('Something went wrong. Please try again.');
-      });
+    if (this.platform.isBrowser) {
+      this.firestoreService.submitFeedback(feedbackData)
+        .then(() => {
+          localStorage.setItem('feedbackSubmitted', 'true');
+          this.feedbackState = 'submitted';
+        })
+        .catch((error) => {
+          console.error('Error submitting feedback:', error);
+          alert('Something went wrong. Please try again.');
+        });
+    }
   }
 
   closeForm() {
-    if (this.feedbackState === 'submitted') return; // prevent closing after submit
+    if (this.feedbackState === 'submitted') return;
     this.feedbackState = 'initial';
     this.feedbackText = '';
     this.gender = null;

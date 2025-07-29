@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, Inject } from '@angular/core';
 import { Router, NavigationEnd, RouterOutlet } from '@angular/router';
 import { filter } from 'rxjs/operators';
 import { ButtonModule } from 'primeng/button';
@@ -10,6 +10,8 @@ import { RatingComponent } from './layout/rating/rating.component';
 import { FeedbackComponent } from './layout/feedback/feedback.component';
 import { CookiesBannerComponent } from './layout/cookies-banner/cookies-banner.component';
 import { ChatbotComponent } from './layout/chatbot/chatbot.component';
+import { PLATFORM_ID } from '@angular/core';
+import { isPlatformBrowser } from '@angular/common';
 
 @Component({
   selector: 'app-root',
@@ -32,16 +34,18 @@ import { ChatbotComponent } from './layout/chatbot/chatbot.component';
 export class AppComponent {
   title = 'Hail-Municipality';
   showLayout = true;
+  private isBrowser: boolean;
 
-  constructor(private router: Router) {
-    this.router.events
-      .pipe(filter(event => event instanceof NavigationEnd))
-      .subscribe((event: NavigationEnd) => {
-        // Scroll to top on route change
-        window.scrollTo({ top: 0, behavior: 'smooth' });
+  constructor(private router: Router, @Inject(PLATFORM_ID) platformId: Object) {
+    this.isBrowser = isPlatformBrowser(platformId);
 
-        // Hide layout on 404 page only
-        this.showLayout = !event.urlAfterRedirects.includes('page-not-found');
-      });
+    if (this.isBrowser) {
+      this.router.events
+        .pipe(filter(event => event instanceof NavigationEnd))
+        .subscribe((event: NavigationEnd) => {
+          window.scrollTo({ top: 0, behavior: 'smooth' });
+          this.showLayout = !event.urlAfterRedirects.includes('page-not-found');
+        });
+    }
   }
 }

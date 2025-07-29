@@ -2,8 +2,9 @@ import { Component, OnInit, OnDestroy } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms';
 import { TranslateModule } from '@ngx-translate/core';
-import { FirestoreService, RatingEntry } from '../../shared/services/firestore.service';
+import { FirestoreService, RatingEntry } from '../../shared/services/firestore.service'; // <-- Updated import
 import { Subscription } from 'rxjs';
+import { PlatformService } from '../../shared/services/platform.service';
 
 @Component({
   standalone: true,
@@ -23,11 +24,15 @@ export class RatingComponent implements OnInit, OnDestroy {
 
   private ratingsSub: Subscription | null = null;
 
-  constructor(private firestoreService: FirestoreService) {}
+  constructor(
+    private firestoreService: FirestoreService,
+    private platform: PlatformService
+  ) {}
 
   ngOnInit() {
-    // Check localStorage flag to show submitted view immediately
-    this.submitted = localStorage.getItem('ratingSubmitted') === 'true';
+    if (this.platform.isBrowser) {
+      this.submitted = localStorage.getItem('ratingSubmitted') === 'true';
+    }
 
     this.ratingsSub = this.firestoreService.getAllRatings().subscribe(ratings => {
       this.totalRatings = ratings.length;
@@ -58,12 +63,14 @@ export class RatingComponent implements OnInit, OnDestroy {
   }
 
   submitRating() {
-    if (this.userRating) {
-      this.firestoreService.submitRating({
+    if (this.platform.isBrowser && this.userRating) {
+      const rating: RatingEntry = {
         rating: this.userRating,
         comment: this.comment,
         submittedAt: new Date()
-      }).then(() => {
+      };
+
+      this.firestoreService.submitRating(rating).then(() => {
         localStorage.setItem('ratingSubmitted', 'true');
         this.isRatingMode = false;
         this.submitted = true;

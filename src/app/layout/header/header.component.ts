@@ -126,9 +126,17 @@ export class HeaderComponent implements OnInit {
           { label: 'HEADER.MENU.NEWS_ITEMS.MUNICIPALITY_NEWS', href: 'https://www.amanathail.gov.sa/new_portal/news?type=baldaia' },
         ],
       },
-      ...(this.isLoggedIn
-        ? [{ label: 'HEADER.MENU.SERVICES_ITEMS.EMPLOYEES', href: 'https://amanathail.gov.sa/new_portal/services?cat=employee' }]
-        : []),
+      {
+        label: 'HEADER.MENU.SERVICES',
+        items: [
+          { label: 'HEADER.MENU.SERVICES_ITEMS.INDIVIDUALS', href: 'https://amanathail.gov.sa/new_portal/services?cat=individuals' },
+          { label: 'HEADER.MENU.SERVICES_ITEMS.BUSINESS', href: 'https://amanathail.gov.sa/new_portal/services?cat=company' },
+          { label: 'HEADER.MENU.SERVICES_ITEMS.GOVERNMENT', href: 'https://amanathail.gov.sa/new_portal/services?cat=government' },
+          ...(this.isLoggedIn
+            ? [{ label: 'HEADER.MENU.SERVICES_ITEMS.EMPLOYEES', href: 'https://amanathail.gov.sa/new_portal/services?cat=employee' }]
+            : []),
+        ],
+      },
     ];
   }
 

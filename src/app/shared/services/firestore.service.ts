@@ -1,5 +1,12 @@
-import { Injectable } from '@angular/core';
-import { Firestore, collection, addDoc, collectionData, query, orderBy } from '@angular/fire/firestore';
+import { Injectable, inject } from '@angular/core';
+import {
+  Firestore,
+  collection,
+  addDoc,
+  collectionData,
+  query,
+  orderBy
+} from '@angular/fire/firestore';
 import { Observable } from 'rxjs';
 
 export interface FeedbackEntry {
@@ -20,7 +27,7 @@ export interface RatingEntry {
   providedIn: 'root'
 })
 export class FirestoreService {
-  constructor(private firestore: Firestore) {}
+  private firestore = inject(Firestore);
 
   submitFeedback(data: any) {
     const feedbackRef = collection(this.firestore, 'WebsiteFeedback');
