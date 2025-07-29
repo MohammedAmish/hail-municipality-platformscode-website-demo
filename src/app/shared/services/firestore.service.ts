@@ -1,4 +1,4 @@
-import { Injectable, inject } from '@angular/core';
+import { Injectable, Inject, PLATFORM_ID } from '@angular/core';
 import {
   Firestore,
   collection,
@@ -7,7 +7,8 @@ import {
   query,
   orderBy
 } from '@angular/fire/firestore';
-import { Observable } from 'rxjs';
+import { isPlatformBrowser } from '@angular/common';
+import { Observable, of } from 'rxjs';
 
 export interface FeedbackEntry {
   useful: boolean;
@@ -27,9 +28,17 @@ export interface RatingEntry {
   providedIn: 'root'
 })
 export class FirestoreService {
-  private firestore = inject(Firestore);
+  private isBrowser: boolean;
+
+  constructor(
+    @Inject(PLATFORM_ID) private platformId: Object,
+    private firestore: Firestore
+  ) {
+    this.isBrowser = isPlatformBrowser(this.platformId);
+  }
 
   submitFeedback(data: any) {
+    if (!this.isBrowser) return Promise.resolve();
     const feedbackRef = collection(this.firestore, 'WebsiteFeedback');
     return addDoc(feedbackRef, {
       ...data,
@@ -38,16 +47,19 @@ export class FirestoreService {
   }
 
   getAllFeedback(): Observable<FeedbackEntry[]> {
+    if (!this.isBrowser) return of([]);
     const feedbackRef = collection(this.firestore, 'WebsiteFeedback');
     return collectionData(feedbackRef, { idField: 'id' }) as Observable<FeedbackEntry[]>;
   }
 
   submitRating(rating: RatingEntry) {
+    if (!this.isBrowser) return Promise.resolve();
     const ratingRef = collection(this.firestore, 'Ratings');
     return addDoc(ratingRef, rating);
   }
 
   getAllRatings(): Observable<RatingEntry[]> {
+    if (!this.isBrowser) return of([]);
     const ratingRef = collection(this.firestore, 'Ratings');
     const ratingQuery = query(ratingRef, orderBy('submittedAt', 'desc'));
     return collectionData(ratingQuery, { idField: 'id' }) as Observable<RatingEntry[]>;

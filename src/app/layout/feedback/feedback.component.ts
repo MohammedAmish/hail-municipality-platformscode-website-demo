@@ -53,15 +53,15 @@ export class FeedbackComponent implements OnInit, OnDestroy {
       if (feedbackSubmitted === 'true') {
         this.feedbackState = 'submitted';
       }
-    }
 
-    runInInjectionContext(this.injector, () => {
-      this.feedbackSub = this.firestoreService.getAllFeedback().subscribe(feedbacks => {
-        this.totalFeedback = feedbacks.length;
-        this.totalYes = feedbacks.filter(f => f.useful === true).length;
-        this.totalNo = feedbacks.filter(f => f.useful === false).length;
+      runInInjectionContext(this.injector, () => {
+        this.feedbackSub = this.firestoreService.getAllFeedback().subscribe(feedbacks => {
+          this.totalFeedback = feedbacks.length;
+          this.totalYes = feedbacks.filter(f => f.useful === true).length;
+          this.totalNo = feedbacks.filter(f => f.useful === false).length;
+        });
       });
-    });
+    }
   }
 
   ngOnDestroy() {

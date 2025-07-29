@@ -2,7 +2,7 @@ import { Component, OnInit, OnDestroy } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms';
 import { TranslateModule } from '@ngx-translate/core';
-import { FirestoreService, RatingEntry } from '../../shared/services/firestore.service'; // <-- Updated import
+import { FirestoreService, RatingEntry } from '../../shared/services/firestore.service';
 import { Subscription } from 'rxjs';
 import { PlatformService } from '../../shared/services/platform.service';
 
@@ -32,17 +32,17 @@ export class RatingComponent implements OnInit, OnDestroy {
   ngOnInit() {
     if (this.platform.isBrowser) {
       this.submitted = localStorage.getItem('ratingSubmitted') === 'true';
-    }
 
-    this.ratingsSub = this.firestoreService.getAllRatings().subscribe(ratings => {
-      this.totalRatings = ratings.length;
-      if (ratings.length > 0) {
-        const sum = ratings.reduce((acc, curr) => acc + curr.rating, 0);
-        this.averageRating = sum / ratings.length;
-      } else {
-        this.averageRating = 0;
-      }
-    });
+      this.ratingsSub = this.firestoreService.getAllRatings().subscribe(ratings => {
+        this.totalRatings = ratings.length;
+        if (ratings.length > 0) {
+          const sum = ratings.reduce((acc, curr) => acc + curr.rating, 0);
+          this.averageRating = sum / ratings.length;
+        } else {
+          this.averageRating = 0;
+        }
+      });
+    }
   }
 
   ngOnDestroy() {

@@ -188,6 +188,7 @@ export const routes: Routes = [
   },
   {
   path: '**',
-  redirectTo: 'page-not-found',
-  },
+  loadComponent: () =>
+    import('./pages/page-not-found/page-not-found.component').then((m) => m.PageNotFoundComponent)
+  }
 ];
