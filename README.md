@@ -1,1 +1,1 @@
-This is a website made using DGA Platforms Code template, made by Mohammed Amish and Abdulaziz Mohammad
+This is a website made using DGA's Platforms Code templates and afyahub-starter template, made by Mohammed Amish and Abdulaziz Mohammad, and Abdullah Mohammed.
