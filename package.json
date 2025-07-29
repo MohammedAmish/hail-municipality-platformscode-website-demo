@@ -1,10 +1,6 @@
 {
   "name": "hail-municipality",
   "version": "1.0.0",
-  "author": {
-    "name": "",
-    "email": ""
-  },
   "repository": {
     "type": "git",
     "url": "https://github.com/MohammedAmish/hail-municipality-platformscode-website-demo.git"
