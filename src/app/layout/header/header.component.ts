@@ -70,9 +70,56 @@ export class HeaderComponent implements OnInit {
     ];
 
     this.mainItems = [
-      { label: 'HEADER.MENU.HOME', routerLink: '/' },
-      // Add your other main menu items here...
-    ];
+  { label: 'HEADER.MENU.HOME', routerLink: '/' },
+  {
+    label: 'HEADER.MENU.MUNICIPALITY',
+    items: [
+      { label: 'HEADER.MENU.MUNICIPALITY_ITEMS.PRINCE', routerLink: '/princes' },
+      { label: 'HEADER.MENU.MUNICIPALITY_ITEMS.HEADS', routerLink: '/mayors' },
+      { label: 'HEADER.MENU.MUNICIPALITY_ITEMS.LOCATION', routerLink: '/hail-area' },
+      { label: 'HEADER.MENU.MUNICIPALITY_ITEMS.GEOGRAPHY', routerLink: '/geography' },
+      { label: 'HEADER.MENU.MUNICIPALITY_ITEMS.GUIDE', href: 'https://amanathail.gov.sa/new_portal/HailGuide' },
+      { label: 'HEADER.MENU.MUNICIPALITY_ITEMS.MUNICIPALITIES', routerLink: '/municipalities' },
+      { label: 'HEADER.MENU.MUNICIPALITY_ITEMS.MANAGEMENT', routerLink: '/departments' },
+      { label: 'HEADER.MENU.MUNICIPALITY_ITEMS.OPEN_DATA', routerLink: '/open-data' },
+      { label: 'HEADER.MENU.MUNICIPALITY_ITEMS.DATA_SHARING', routerLink: '/data-sharing' },
+      { label: 'HEADER.MENU.MUNICIPALITY_ITEMS.STRUCTURE', routerLink: '/organizational-structure' },
+      { label: 'HEADER.MENU.MUNICIPALITY_ITEMS.SYSTEMS', routerLink: '/regulations' },
+    ],
+  },
+  {
+    label: 'HEADER.MENU.STRATEGY',
+    items: [
+      { label: 'HEADER.MENU.STRATEGY_ITEMS.VISION', routerLink: '/vision-mission' },
+      { label: 'HEADER.MENU.STRATEGY_ITEMS.GOALS', routerLink: '/main-goals' },
+      { label: 'HEADER.MENU.STRATEGY_ITEMS.AUDIT', routerLink: '/internal-audit' },
+    ],
+  },
+  {
+    label: 'HEADER.MENU.MAYOR',
+    items: [
+      { label: 'HEADER.MENU.MAYOR_ITEMS.MAYOR_INFO', routerLink: '/mayor-profile' },
+      { label: 'HEADER.MENU.MAYOR_ITEMS.MAYOR_CONTACT', routerLink: '/mayor-contact' },
+      { label: 'HEADER.MENU.MAYOR_ITEMS.MAYOR_ADMIN', routerLink: '/executive-office' },
+    ],
+  },
+  {
+    label: 'HEADER.MENU.NEWS',
+    items: [
+      { label: 'HEADER.MENU.NEWS_ITEMS.HAIL_NEWS', href: 'https://www.amanathail.gov.sa/new_portal/news?type=hail' },
+      { label: 'HEADER.MENU.NEWS_ITEMS.MUNICIPALITY_NEWS', href: 'https://www.amanathail.gov.sa/new_portal/news?type=baldaia' },
+    ],
+  },
+  {
+    label: 'HEADER.MENU.SERVICES',
+    items: [
+      { label: 'HEADER.MENU.SERVICES_ITEMS.INDIVIDUALS', href: 'https://amanathail.gov.sa/new_portal/services?cat=individuals' },
+      { label: 'HEADER.MENU.SERVICES_ITEMS.BUSINESS', href: 'https://amanathail.gov.sa/new_portal/services?cat=company' },
+      { label: 'HEADER.MENU.SERVICES_ITEMS.GOVERNMENT', href: 'https://amanathail.gov.sa/new_portal/services?cat=government' },
+      { label: 'HEADER.MENU.SERVICES_ITEMS.EMPLOYEES', href: 'https://amanathail.gov.sa/new_portal/services?cat=employee' },
+    ],
+  },
+  ];
 
     this.authService.user$.subscribe(user => {
       this.user = user;
