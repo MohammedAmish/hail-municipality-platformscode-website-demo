@@ -81,7 +81,7 @@ export class HeaderComponent implements OnInit {
       }
     });
 
-    this.buildMenu(); // Initial menu
+    this.buildMenu();
   }
 
   buildMenu() {
@@ -94,7 +94,7 @@ export class HeaderComponent implements OnInit {
           { label: 'HEADER.MENU.MUNICIPALITY_ITEMS.HEADS', routerLink: '/mayors' },
           { label: 'HEADER.MENU.MUNICIPALITY_ITEMS.LOCATION', routerLink: '/hail-area' },
           { label: 'HEADER.MENU.MUNICIPALITY_ITEMS.GEOGRAPHY', routerLink: '/geography' },
-          { label: 'HEADER.MENU.MUNICIPALITY_ITEMS.GUIDE', href: 'https://amanathail.gov.sa/new_portal/HailGuide' },
+          { label: 'HEADER.MENU.MUNICIPALITY_ITEMS.GUIDE', routerLink: '/guide' },
           { label: 'HEADER.MENU.MUNICIPALITY_ITEMS.MUNICIPALITIES', routerLink: '/municipalities' },
           { label: 'HEADER.MENU.MUNICIPALITY_ITEMS.MANAGEMENT', routerLink: '/departments' },
           { label: 'HEADER.MENU.MUNICIPALITY_ITEMS.OPEN_DATA', routerLink: '/open-data' },

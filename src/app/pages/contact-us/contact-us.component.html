@@ -3,14 +3,14 @@
   <div class="container mx-auto px-6 lg:px-20 font-ibm">
     <!-- Breadcrumb -->
     <nav class="flex text-sm text-secondary-paragraph mb-6">
-    <a routerLink="/" class="text-primary-paragraph hover:underline">
-      {{ "ABOUTUS.breadcrumb.parent" | translate }}
-    </a>
-    <span class="mx-2">›</span>
-    <span class="font-semibold text-text-display">
-      {{ "CONTACTUS.page.title" | translate }}
-    </span>
-  </nav>
+      <a routerLink="/" class="text-primary-paragraph hover:underline">
+        {{ "ABOUTUS.breadcrumb.parent" | translate }}
+      </a>
+      <span class="mx-2">›</span>
+      <span class="font-semibold text-text-display">
+        {{ "CONTACTUS.page.title" | translate }}
+      </span>
+    </nav>
 
     <!-- Title & Description -->
     <h1 class="font-bold text-3xl text-text-display mb-4">
@@ -28,20 +28,20 @@
   <!-- Main Layout -->
   <div class="grid grid-cols-1 lg:grid-cols-3 gap-8">
     <!-- Contact Form -->
-    <form class="lg:col-span-2 space-y-6">
+    <form class="lg:col-span-2 space-y-6" (ngSubmit)="submitForm()" #contactForm="ngForm">
       <!-- Name -->
       <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
         <div>
           <label class="block text-sm font-semibold text-[#1f2a37] mb-1">
             <strong class="text-[#B42318]">*</strong> {{ "CONTACTUS.form.firstname" | translate }}
           </label>
-          <input type="text" class="w-full border border-gray-300 px-4 py-2" />
+          <input name="firstName" [(ngModel)]="formData.firstName" required type="text" class="w-full border border-gray-300 px-4 py-2" />
         </div>
         <div>
           <label class="block text-sm font-semibold text-[#1f2a37] mb-1">
             <strong class="text-[#B42318]">*</strong> {{ "CONTACTUS.form.lastname" | translate }}
           </label>
-          <input type="text" class="w-full border border-gray-300 px-4 py-2" />
+          <input name="lastName" [(ngModel)]="formData.lastName" required type="text" class="w-full border border-gray-300 px-4 py-2" />
         </div>
       </div>
 
@@ -51,13 +51,13 @@
           <label class="block text-sm font-semibold text-[#1f2a37] mb-1">
             <strong class="text-[#B42318]">*</strong> {{ "CONTACTUS.form.email" | translate }}
           </label>
-          <input type="email" class="w-full border border-gray-300 px-4 py-2" />
+          <input name="email" [(ngModel)]="formData.email" required type="email" class="w-full border border-gray-300 px-4 py-2" />
         </div>
         <div>
           <label class="block text-sm font-semibold text-[#1f2a37] mb-1">
             <strong class="text-[#B42318]">*</strong> {{ "CONTACTUS.form.phone" | translate }}
           </label>
-          <input type="tel" class="w-full border border-gray-300 px-4 py-2" placeholder="+966 00 000 0000" />
+          <input name="phone" [(ngModel)]="formData.phone" required type="tel" class="w-full border border-gray-300 px-4 py-2" placeholder="+966 00 000 0000" />
         </div>
       </div>
 
@@ -67,13 +67,15 @@
           <label class="block text-sm font-semibold text-[#1f2a37] mb-1">
             {{ "CONTACTUS.form.subject" | translate }}
           </label>
-          <input type="text" class="w-full border border-gray-300 px-4 py-2" />
+          <input name="subject" [(ngModel)]="formData.subject" type="text" class="w-full border border-gray-300 px-4 py-2" />
         </div>
         <div>
           <label class="block text-sm font-semibold text-[#1f2a37] mb-1">
             {{ "CONTACTUS.form.category.title" | translate }}
           </label>
           <p-dropdown
+            name="category"
+            [(ngModel)]="formData.category"
             [options]="categories"
             optionLabel="label"
             placeholder="{{ 'CONTACTUS.form.category.placeholder' | translate }}"
@@ -88,7 +90,7 @@
           <label class="block text-sm font-semibold text-[#1f2a37] mb-1">
             {{ "CONTACTUS.form.help" | translate }}
           </label>
-          <textarea rows="5" class="w-full border border-gray-300 px-4 py-2" placeholder="{{ 'CONTACTUS.form.helptext' | translate }}"></textarea>
+          <textarea name="message" [(ngModel)]="formData.message" rows="5" class="w-full border border-gray-300 px-4 py-2" placeholder="{{ 'CONTACTUS.form.helptext' | translate }}"></textarea>
         </div>
         <div>
           <label class="block text-sm font-semibold text-[#1f2a37] mb-1">

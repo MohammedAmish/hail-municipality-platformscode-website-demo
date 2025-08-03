@@ -471,7 +471,8 @@
       "upload": "Upload files",
       "filesize": "Maximum file size allowed is 2MB, supported file formats include .jpg, .png, and .pdf.",
       "uploadbutton": "Browse Files",
-      "submit": "Request permit"
+      "submit": "Request permit",
+      "success": "Sent successfully!"
     },
     "info": {
       "title": "Contact Hail Municipality",
@@ -933,6 +934,19 @@
       "VALUES": ["610,718","623,709","636,087","648,346","660,711","672,961","685,423","700,865","716,021","731,147"]
     },
     "POPULATION_LAST_UPDATE": "Last updated 05/09/2022"
+  },
+
+  "GUIDE": {
+    "page": {
+      "title": "Guide to Hail"
+    },
+    "cards": {
+      "heritage": "Heritage Sites",
+      "tourism": "Entertainment & Tourism",
+      "parks": "Parks and Gardens",
+      "services": "Government Services",
+      "shopping": "Shopping"
+    }
   },
 
   "MUNICIPALITIES": {

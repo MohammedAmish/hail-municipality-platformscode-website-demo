@@ -131,6 +131,11 @@ export const routes: Routes = [
       import('./pages/content/municipalities.component').then((m) => m.MunicipalitiesComponent),
   },
   {
+    path: 'guide',
+    loadComponent: () =>
+      import('./pages/content/guide.component').then((m) => m.GuideComponent),
+  },
+  {
     path: 'municipalities/:name',
     loadComponent: () => import('./pages/content/municipality-details.component').then(m => m.MunicipalityDetailsComponent),
   },

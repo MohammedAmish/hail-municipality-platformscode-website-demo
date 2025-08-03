@@ -1,0 +1,62 @@
+<!-- Top Highlight Section -->
+<div class="w-full bg-[#F3FCF6] py-10">
+  <div class="container mx-auto px-6 lg:px-20 font-ibm">
+    <!-- Breadcrumb -->
+    <nav class="flex text-sm text-secondary-paragraph mb-4">
+      <a routerLink="/" class="text-primary-paragraph hover:underline">
+        {{ "ABOUTUS.breadcrumb.parent" | translate }}
+      </a>
+      <span class="mx-2">›</span>
+      <span class="font-semibold text-text-display">
+        {{ "GUIDE.page.title" | translate }}
+      </span>
+    </nav>
+
+    <!-- Title -->
+    <h1 class="font-bold text-3xl text-text-display mb-2">
+      {{ "GUIDE.page.title" | translate }}
+    </h1>
+  </div>
+</div>
+
+<!-- Cards Section -->
+<div class="container mx-auto py-12 lg:px-20 font-ibm">
+  <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 justify-items-center">
+    <a
+      *ngFor="let section of guideSections"
+      [routerLink]="section.link"
+      class="group relative w-full sm:w-64 h-64 rounded-2xl shadow-md overflow-hidden text-center flex flex-col items-center justify-center transition duration-300"
+    >
+      <!-- Hover Background Fill -->
+      <div
+        class="absolute inset-0 transition duration-300 opacity-0 group-hover:opacity-100 z-0"
+        [ngStyle]="{ backgroundColor: section.color }"
+      ></div>
+
+      <!-- White Card Base (fades out on hover) -->
+      <div
+        class="absolute inset-0 bg-white z-10 transition duration-300 group-hover:bg-transparent"
+      ></div>
+
+      <!-- Icon Circle -->
+      <div
+        class="relative z-20 w-24 h-24 rounded-full flex items-center justify-center mb-4 transition-all duration-300"
+        [ngStyle]="{ backgroundColor: section.color }"
+        [ngClass]="{ 'group-hover:brightness-90': true }"
+      >
+        <img
+          [src]="section.icon"
+          [alt]="section.title"
+          class="w-12 h-12 transition duration-300"
+        />
+      </div>
+
+      <!-- Title -->
+      <p
+        class="relative z-20 text-[#333] text-lg font-semibold transition duration-300 group-hover:text-black"
+      >
+        {{ section.title | translate }}
+      </p>
+    </a>
+  </div>
+</div>

@@ -64,4 +64,10 @@ export class FirestoreService {
     const ratingQuery = query(ratingRef, orderBy('submittedAt', 'desc'));
     return collectionData(ratingQuery, { idField: 'id' }) as Observable<RatingEntry[]>;
   }
+
+  submitContactForm(data: any) {
+  if (!this.isBrowser) return Promise.resolve();
+  const ref = collection(this.firestore, 'ContactUsForms');
+  return addDoc(ref, data);
+  }
 }
