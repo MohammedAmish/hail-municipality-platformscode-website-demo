@@ -17,7 +17,7 @@
         "build": {
           "builder": "@angular-devkit/build-angular:application",
           "options": {
-            "outputPath": "dist/hail-municipality-website",
+            "outputPath": "dist/hail-municipality-website/browser",
             "index": "src/index.html",
             "browser": "src/main.ts",
             "polyfills": [
@@ -104,6 +104,65 @@
               "src/styles.scss"
             ],
             "scripts": []
+          }
+        },
+        "server": {
+          "builder": "@angular-devkit/build-angular:server",
+          "options": {
+            "outputPath": "dist/hail-municipality-website-server",
+            "main": "server.ts",
+            "tsConfig": "tsconfig.server.json"
+          },
+          "configurations": {
+            "production": {
+              "outputHashing": "media",
+              "sourceMap": false,
+              "optimization": true
+            }
+          }
+        },
+        "prerender": {
+          "builder": "@angular-devkit/build-angular:prerender",
+          "options": {
+            "browserTarget": "hail-municipality-website:build:production",
+            "serverTarget": "hail-municipality-website:server:production",
+            "routes": [
+              "/",
+              "/about-us",
+              "/contact-us",
+              "/faqs",
+              "/statistics",
+              "/search",
+              "/social-media",
+              "/e-participation",
+              "/participation-policy",
+              "/consultations",
+              "/co-creation",
+              "/open-data",
+              "/complaints-suggestions",
+              "/beneficiary",
+              "/service",
+              "/sitemap",
+              "/page-not-found",
+              "/princes",
+              "/mayors",
+              "/hail-area",
+              "/geography",
+              "/municipalities",
+              "/guide",
+              "/vision-mission",
+              "/main-goals",
+              "/internal-audit",
+              "/mayor-profile",
+              "/mayor-contact",
+              "/executive-office",
+              "/data-sharing",
+              "/regulations",
+              "/departments",
+              "/organizational-structure",
+              "/content",
+              "/help-support"
+            ]
           }
         }
       }
