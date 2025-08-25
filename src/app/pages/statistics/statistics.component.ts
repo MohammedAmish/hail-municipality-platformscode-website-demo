@@ -1,9 +1,10 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { TranslateService, TranslateModule } from '@ngx-translate/core';
 import { RouterModule } from '@angular/router';
 import { NgChartsModule } from 'ng2-charts';
 import { ChartConfiguration } from 'chart.js';
+import { FirestoreService } from '../../shared/services/firestore.service';
 
 interface StatisticCard {
   icon: string;
@@ -18,37 +19,60 @@ interface StatisticCard {
   templateUrl: './statistics.component.html',
   styleUrl: './statistics.component.scss',
 })
-export class StatisticsComponent {
+export class StatisticsComponent implements OnInit {
   currentLang: string;
 
-  constructor(public translate: TranslateService) {
+  usersCount: number | null = null;
+
+  constructor(
+    public translate: TranslateService,
+    private firestoreService: FirestoreService
+  ) {
     this.currentLang = this.translate.currentLang;
     this.translate.onLangChange.subscribe((event) => {
       this.currentLang = event.lang;
     });
   }
 
+  ngOnInit(): void {
+  // Fetch users count
+  this.firestoreService.getUsersCount().then(count => {
+    this.statistics[0].valueKey = count.toLocaleString(); // Update users card dynamically
+  });
+
+  // Fetch views count for the home page
+  this.firestoreService.getHomePageViewsCount().then(count => {
+    this.statistics[1].valueKey = count.toLocaleString(); // Update views card dynamically
+  });
+}
+
   get isRtl(): boolean {
     return this.currentLang === 'ar';
   }
 
   statistics: StatisticCard[] = [
-    {
-      icon: 'assets/images/icon-user-group.svg',
-      titleKey: 'STATISTICS.cards.users',
-      valueKey: '000,000',
-    },
-    {
-      icon: 'assets/images/icon-star.svg',
-      titleKey: 'STATISTICS.cards.visits',
-      valueKey: '000,000',
-    },
-    {
-      icon: 'assets/images/icon-plus.svg',
-      titleKey: 'STATISTICS.cards.pageviews',
-      valueKey: '000,000',
-    },
-  ];
+  {
+    icon: 'assets/images/icon-user-group.svg',
+    titleKey: 'STATISTICS.cards.users',
+    valueKey: '...', // Will be updated dynamically
+  },
+  {
+    icon: 'assets/images/Icon-eye-g.png',
+    titleKey: 'STATISTICS.cards.visits',
+    valueKey: '...', // Will be updated dynamically
+  },
+  {
+    icon: 'assets/images/Icon-page.png',
+    titleKey: 'STATISTICS.cards.pageviews',
+    valueKey: '000,000',
+  },
+];
+
+  updateStatistics() {
+    if (this.usersCount !== null) {
+      this.statistics[0].valueKey = this.usersCount.toLocaleString();
+    }
+  }
 
   // بيانات مخطط دائري رئيسي
   mainPieData: ChartConfiguration<'pie'> = {

@@ -2,10 +2,15 @@ import { Injectable, Inject, PLATFORM_ID } from '@angular/core';
 import {
   Firestore,
   collection,
+  doc,
   addDoc,
+  setDoc,
+  getDoc,
+  increment,
   collectionData,
   query,
-  orderBy
+  orderBy,
+  getDocs
 } from '@angular/fire/firestore';
 import { isPlatformBrowser } from '@angular/common';
 import { Observable, of } from 'rxjs';
@@ -45,6 +50,29 @@ export class FirestoreService {
       submittedAt: new Date()
     });
   }
+
+  async getUsersCount(): Promise<number> {
+  const usersRef = collection(this.firestore, 'users');
+  const snapshot = await getDocs(usersRef);
+  return snapshot.size;
+}
+
+  async incrementHomePageViews(): Promise<void> {
+  const viewsRef = doc(this.firestore, 'views', 'views');
+  const snapshot = await getDoc(viewsRef);
+
+  if (!snapshot.exists()) {
+    await setDoc(viewsRef, { count: 1 });
+  } else {
+    await setDoc(viewsRef, { count: increment(1) }, { merge: true });
+  }
+}
+
+async getHomePageViewsCount(): Promise<number> {
+  const viewsRef = doc(this.firestore, 'views', 'views');
+  const snapshot = await getDoc(viewsRef);
+  return snapshot.exists() ? snapshot.data()['count'] : 0;
+}
 
   getAllFeedback(): Observable<FeedbackEntry[]> {
     if (!this.isBrowser) return of([]);

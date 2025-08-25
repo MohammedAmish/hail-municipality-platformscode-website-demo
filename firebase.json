@@ -13,5 +13,8 @@
       }
     ],
     "errorPage": "/404.html"
+  },
+  "functions": {
+    "source": "functions"
   }
 }

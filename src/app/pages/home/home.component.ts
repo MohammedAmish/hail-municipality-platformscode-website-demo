@@ -1,9 +1,11 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { HeroSliderComponent } from './components/hero-slider/hero-slider.component';
 import { AboutSectionComponent } from './components/about-section/about-section.component';
 import { ServicesSectionComponent } from './components/services-section/services-section.component';
 import { NewsSectionComponent } from './components/news-section/news-section.component';
 import { PartnersSliderComponent } from './components/partners-slider/partners-slider.component';
+import { FirestoreService } from '../../shared/services/firestore.service';
+
 
 @Component({
   selector: 'app-home',
@@ -18,4 +20,11 @@ import { PartnersSliderComponent } from './components/partners-slider/partners-s
   styleUrl: './home.component.scss',
   standalone: true,
 })
-export class HomeComponent {}
+export class HomeComponent implements OnInit {
+  constructor(private firestoreService: FirestoreService) {}
+
+  ngOnInit(): void {
+    // Increment views for the home page
+    this.firestoreService.incrementHomePageViews();
+  }
+}
